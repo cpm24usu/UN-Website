@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements Summary</title>
+</head>
+
+<body>
+<h1>Features</h1>
+
+<h2>Pages</h2>
+
+<ul>
+  <li>Home page
+    <ul>
+      <li>Named index.html</li>
+    </ul>
+  </li>
+  <li>Team information page
+    <ul>
+      <li>Team members</li>
+      <li>Short bios of each member</li>
+      <li>Role(s) in the project</li>
+      <li>Responsibilities</li>
+      <li>Contributions</li>
+    </ul>
+  </li>
+  <li>Registration Page
+    <ul>
+      <li>Needs minimum <strong>4</strong> fields:
+        <ul>
+          <li>First name</li>
+          <li>Surname</li>
+          <li>Email address</li>
+          <li>Comments</li>
+        </ul>
+      </li>
+      <li>Could make separate pages for signup and login</li>
+        <ul>
+          <li>Shows successful registration, storing details & validation</li>
+        </ul>
+    </ul>
+  </li>
+  <li>Up to 3 pages about UN Sustainable Development Goals</li>
+</ul>
+
+<h2>Other Features</h2>
+
+<ul>
+  <li>(Collapsible) navigation menu</li>
+  <li>Dynamic display/scaling</li>
+</ul>
+
+<h1>Requirements</h1>
+
+<h2>Minimum Frontend Requirements</h2>
+
+<h3>HTML</h3>
+
+<ul>
+  <li>Must all be validated</li>
+  <li>Can contain tags, but no content should be hard-coded in the html files</li>
+  <li>No compiled HTML</li>
+  <li>No deprecated tags</li>
+</ul>
+
+<h3>CSS</h3>
+
+<ul>
+  <li>Must be in an external file
+    <ul>
+      <li>Penalised if embedded/inline</li>
+    </ul>
+  </li>
+  <li>Must all be validated</li>
+  <li>No compiled CSS/SASS</li>
+  <li>Appropriate colour scheme</li>
+  <li>Make use of class &amp; id attributes</li>
+</ul>
+
+<h3>JavaScript</h3>
+
+<ul>
+  <li>Must be in an external file
+    <ul>
+      <li>Penalised if embedded</li>
+    </ul>
+  </li>
+  <li>At least 1 fetch function must be used
+    <ul>
+      <li>e.g. to load the web content and/or submit the form data</li>
+    </ul>
+  </li>
+  <li>Must not use JQuery</li>
+  <li>Must not use any frontend frameworks</li>
+</ul>
+
+<h2>Minimum Backend Requirements</h2>
+
+<h3>Minimum Server Requirements:</h3>
+
+<ul>
+  <li>Must use Node.js</li>
+  <li>Can be run on the local machine and accessed via localhost</li>
+  <li>Use Express Framework</li>
+  <li>HTTP methods should only be used in ways compatible with the definition</li>
+  <li>Should serve static files</li>
+</ul>
+
+<h3 id="form">Form Handling</h3>
+
+<ul>
+  <li>Must receive data from the client with no errors</li>
+  <li>Data received should be stored on the local machine in JSON format</li>
+  <li>Some sort of acknowledgement should be sent to the client and rendered on<br>the webpage to confirm successful registration
+    <ul>
+      <li>e.g., pop-up message once data is received and validated; email sent to<br>the user using the address used in registration</li>
+    </ul>
+  </li>
+</ul>
+<br>
+<br>
+</body>
+</html>

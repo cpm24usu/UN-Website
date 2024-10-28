@@ -1,0 +1,23 @@
+{
+    "testData": {
+            "name": "John Doe",
+            "age": 30,
+            "city": "Anytown"
+        },
+    
+    "media": [ {
+            "UNLogo": "../Media/UN Logo.png",
+            "HorizontalLogo": "../Media/Horizontal UN Logo.png",
+            "homepageTemplate": "../Media/image15.png",
+            "goal6": "../Media/goal6.png",
+            "goal12": "../Media/goal12.png",
+            "goal13": "../Media/goal13.png"
+        },
+        {
+            "temp": "This is to allow the potential for randomly displaying images on the left side of the page",
+            
+            "goal6": "../Media/goal6.png",
+            "goal12": "../Media/goal12.png",
+            "goal13": "../Media/goal13.png"
+        }]
+}
