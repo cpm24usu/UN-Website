@@ -19,7 +19,6 @@
 		- Password
 		- Date of birth
 	- Could make separate pages for signup and login
-	- [[Web-Based Programming C3 Project#Form Handling|Backend Requirements]]
 - Up to 3 pages about UN Sustainable Development Goals 
 
 ### Other Features
