@@ -86,13 +86,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let scrollBox = document.createElement("article");
         let tList = document.createElement("ol");
         let listItems = responseData.goalContent.targets;
-        console.log(listItems);
+        // console.log(listItems);
         for(let i = 0; i < listItems.length; i++){
             let current = listItems[i];
             const target = document.createElement("li");
             target.textContent = current;
             tList.appendChild(target);
-            console.log("hello");
+            
         }
        
         scrollBox.appendChild(tList);
