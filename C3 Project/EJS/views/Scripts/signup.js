@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fNameInput.setAttribute("required", true);
 
             const lNameLabel = document.createElement("label");
-            lNameLabel.textContent = "Last Name*:";
+            lNameLabel.textContent = "Surname*:";
 
             const lNameInput = document.createElement("input");
             lNameInput.setAttribute("id", "lastName");
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             emailInput.setAttribute("required", true);
 
             const messageLabel = document.createElement("label");
-            messageLabel.textContent = "Message:";
+            messageLabel.textContent = "Comments:";
 
             const messageTextarea = document.createElement("textarea");
             messageTextarea.setAttribute("id", "message");
@@ -75,6 +75,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
             testPara.appendChild(paraHeader);
             testPara.appendChild(formSection);
+
+            document.getElementById("submitBtn").addEventListener("click", function(e) {
+                var fd = new FormData();
+                fd.append("firstName", fNameInput.value);
+                fd.append("lastName", lNameInput.value);
+                fd.append("email", emailInput.value);
+                fd.append("message", messageTextarea.value);
+                e.preventDefault();
+                fetch('/signup/submit', {
+                    method: 'POST',
+                    body: fd
+                  })
+                .then(response => {
+                    if (!response.ok) {
+                      throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text(); // get the response as text instead of JSON
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => console.error("Error fetching JSON data:", error));
+            });
 
 
 

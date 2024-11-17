@@ -1,5 +1,5 @@
 
-html{
+html{ /* Min size t ostop nav menu overlapping with logo */
     min-width: 560px;
 }
 
@@ -133,13 +133,18 @@ header{
 
 
 
-/* Bottom Center Section */
+/* Central Form Section */
 
 #mainPara{
     grid-column: 1 / 8;
     grid-row: 2 / 5;
     padding: 10px 20px 10px 10px;
     font-size: x-large;
+}
+
+h2{
+    text-align: center;
+    color: #009FDC;
 }
 
 form{
@@ -149,7 +154,7 @@ form{
 fieldset{
     margin: auto 2%;
     width: 100%;
-    border: 3px solid #7f869a;
+    border: 3px solid #009FDC;
     border-radius: 5px;
 }
 
@@ -171,6 +176,7 @@ label{
     display: block;
     width: 100%;
     margin: 1%;
+    color: #0075a3;
 }
 
 #submitBtn{
