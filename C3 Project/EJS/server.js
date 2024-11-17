@@ -8,7 +8,6 @@ app.use(express.static('views'));
 const bodyParse = require('body-parser');
 app.use(bodyParse.urlencoded({ extended: false }));
 
-// set the view engine to ejs
 app.set('view engine', 'ejs');
 
 
@@ -16,10 +15,9 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
   res.render('pages/index');
 });
-app.get('/index', function(req, res) {
+app.get('/index', function(req, res) { //same as above, just for index in the URL
   res.render('pages/index');
 });
-
 
 // team info page
 app.get('/team', function(req, res) {
@@ -52,9 +50,7 @@ console.log(`listening on port ${port}. Go to http://localhost:${port}`);
 
 
 
-
 app.post('/signup', (req, res) => {
-  // Extract form data from the request body
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const email = req.body.email;
