@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const form = document.createElement("form");
             form.setAttribute("id", "myForm");
+            form.setAttribute("method", "POST");
+            form.setAttribute("action", "/signup");
 
             const fieldset = document.createElement("fieldset");
 
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fNameInput.setAttribute("id", "firstName");
             fNameInput.setAttribute("type", "text");
             fNameInput.setAttribute("required", true);
+            fNameInput.setAttribute("name", "firstName")
 
             const lNameLabel = document.createElement("label");
             lNameLabel.textContent = "Surname*:";
@@ -35,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             lNameInput.setAttribute("id", "lastName");
             lNameInput.setAttribute("type", "text");
             lNameInput.setAttribute("required", true);
+            lNameInput.setAttribute("name", "lastName")
 
             const emailLabel = document.createElement("label");
             emailLabel.textContent = "Email*:";
@@ -43,12 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
             emailInput.setAttribute("id", "email");
             emailInput.setAttribute("type", "email");
             emailInput.setAttribute("required", true);
+            emailInput.setAttribute("name", "email")
 
             const messageLabel = document.createElement("label");
             messageLabel.textContent = "Comments:";
 
             const messageTextarea = document.createElement("textarea");
             messageTextarea.setAttribute("id", "message");
+            messageTextarea.setAttribute("name", "message");
 
             const submitInput = document.createElement("input");
             submitInput.setAttribute("type", "submit");
@@ -75,29 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             testPara.appendChild(paraHeader);
             testPara.appendChild(formSection);
-
-            document.getElementById("submitBtn").addEventListener("click", function(e) {
-                var fd = new FormData();
-                fd.append("firstName", fNameInput.value);
-                fd.append("lastName", lNameInput.value);
-                fd.append("email", emailInput.value);
-                fd.append("message", messageTextarea.value);
-                e.preventDefault();
-                fetch('/signup/submit', {
-                    method: 'POST',
-                    body: fd
-                  })
-                .then(response => {
-                    if (!response.ok) {
-                      throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.text(); // get the response as text instead of JSON
-                })
-                .then(data => {
-                    console.log(data);
-                })
-                .catch(error => console.error("Error fetching JSON data:", error));
-            });
 
 
 

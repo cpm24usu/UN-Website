@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let homeNav = document.getElementById("homeNav");
 
             const home = document.createElement("a");
-            home.href = ".";
+            home.href = "./index";
             home.textContent = "Home";
             home.setAttribute("id", "active");
 

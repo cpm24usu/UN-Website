@@ -1,9 +1,12 @@
+const port = 8080;
+
 var express = require('express');
 var app = express();
 
 app.use(express.static('views'));
 
-app.use(express.json());
+const bodyParse = require('body-parser');
+app.use(bodyParse.urlencoded({ extended: false }));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -44,21 +47,29 @@ app.get('/goal13', function(req, res) {
 });
 
 
-app.post('/signup/submit', (req, res) => {
+app.listen(port);
+console.log(`listening on port ${port}. Go to http://localhost:${port}`);
+
+
+
+
+app.post('/signup', (req, res) => {
   // Extract form data from the request body
-  const { firstName, lastName, email, message } = req.body;
-  console.log(req.body);
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  const email = req.body.email;
+  const message = req.body.message;
 
-  // Log the form data for debugging purposes
-  console.log(`Received form data: First Name - ${firstName}, Last Name - ${lastName}, Email - ${email}, Message - ${message}`);
+  // console.log(`${firstName} ${lastName}, ${email}, ${message}`);
 
-  // Here, you can add your logic to save the data to a database or perform other actions
+  res.send(`<script>alert('You have successfully signed up, ${firstName}!'); window.location.href='../signup';</script>`);
 
-  // Return a response to the client
-  res.send(`Signup successful! Name: ${firstName} ${lastName}, Email: ${email}, Message: ${message}`);
+  // TODO: Save details to database
+
+  // TODO: Verify details
+
+  // TODO: Send confirmation on-screen
+
+  // TODO: Send email of confirmation
 });
-
-
-app.listen(8080);
-console.log(`listening on port 8080. Go to http://localhost:8080`);
 
