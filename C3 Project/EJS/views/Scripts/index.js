@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector('#homepage')){ //checks if the current page is the homepage using an id="homepage" in the opening html tag
-        fetch('../index.json')
+        fetch('../JSON/index.JSON')
         .then(response => response.json())
         .then(data => {
             

@@ -1,20 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en" id="signup">
+  <head>
     <%- include('../partials/head'); %>
-</head>
+    <script src="../Scripts/signup.js"></script>
+    <link rel="stylesheet" href="../CSS/signup.css">
+  </head>
 
-<body>
-    <h1>Sign Up</h1>
-    <ul>
-        <a id="inactive" href="./index">Home</a>
-        <a id="inactive" href="./team">Team Info</a>
-        <a id="active" href="./signup">Sign Up</a>
-    </ul>
-    <ul>
-        <a id="inactive" href="./goal6">Goal 6</a>
-        <a id="inactive" href="./goal12">Goal 12</a>
-        <a id="inactive" href="./goal13">Goal 13</a>
-    </ul>
-</body>
+  <body>
+
+    <header class="wrapper">
+      <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+
+      <%- include('../partials/imgLinks'); %>
+
+      <div id="text1"></div>
+
+      <div id="testPara"></div>
+
+      <div id="externalLinks"></div>
+
+    </main>
+
+    <h3>Contact Norwich Yoga Studio</h3>
+    <section>
+        <form id="myForm">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <label>Name*:</label>
+                <input id="name" type="text" required>
+                <label>Email*:</label>
+                <input id="email" type="email" required>
+                <label>Message:</label>
+                <textarea id="message"></textarea> 
+                <input type="submit" value="Send Message" id="submitBtn">
+                <p id="reqField">
+                    * = Required field
+                </p>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer></footer>
+
+  </body>
 </html>
