@@ -1,5 +1,3 @@
-[Link to live GitHub page](https://cpm24usu.github.io/UN-Website/C3%20Project/html/index.html)
-
 # Features
 ### Pages
 
