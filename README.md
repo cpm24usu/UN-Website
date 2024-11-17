@@ -56,6 +56,12 @@
 - Must not use any frontend frameworks
 
 
+##### Desirables
+
+- Extra marks for:
+	- Dynamic template e.g., EJS, Pug
+	- Sending email to the user after they submit the form, to confirm successful sign-up
+
 
 ## Minimum Backend Requirements
 ##### Minimum Server Requirements:
