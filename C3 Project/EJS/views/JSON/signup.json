@@ -12,26 +12,6 @@
             "goal13": "../Media/goal13.png"
         },
     
-    "links": {
-            "externalHeader": "External Links",
-            "UNHomepage": "https://www.un.org/sustainabledevelopment/",
-            "Goal6": "https://www.un.org/sustainabledevelopment/water-and-sanitation/",
-            "Goal12": "https://www.un.org/sustainabledevelopment/sustainable-consumption-production/",
-            "Goal13": "https://www.un.org/sustainabledevelopment/climate-change/"
-        },
-    
-    "temp": {
-            "header": "I do not know what to put here. Please advise.",
-            "testContent1": "Apart from this section and the images on the left side of the page, The homepage should be finishied.",
-            "testContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "media": {
-                    "homeTemplate": "../Media/image15.png",
-                    "goalTemplate": "../Media/image16.png",
-                    "formTemplate": "../Media/image17.png",
-                    "teamTemplate": "../Media/image18.png"
-            }
-        },
-    
     "footer": {
             "content": "UN Sustainable Development Goals Project - Web-Based Programming Group C3"
         }

@@ -4,34 +4,77 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch('../JSON/signup.json')
         .then(response => response.json())
         .then(data => {
-            
-            /*Goal & Website Introductions*/
-
-            const dataDisplay = document.getElementById("text1");
-
-            const title = document.createElement("h1");
-            title.textContent = data.content.title;
-
-            dataDisplay.appendChild(title);
-
-
 
             /*Loading test content into 2nd central element*/
 
-            const testPara = document.getElementById("testPara");
+            const testPara = document.getElementById("mainPara");
 
             const paraHeader = document.createElement("h2");
-            paraHeader.textContent = data.temp.header;
+            paraHeader.textContent = data.content.title;
 
-            const paraContent1 = document.createElement("p");
-            paraContent1.textContent = data.temp.testContent1;
+            /* Creating tthe form inside a section element */
+            const formSection = document.createElement("section");
 
-            const paraContent2 = document.createElement("p");
-            paraContent2.textContent = data.temp.testContent2;
+            const form = document.createElement("form");
+            form.setAttribute("id", "myForm");
+
+            const fieldset = document.createElement("fieldset");
+
+            const fNameLabel = document.createElement("label");
+            fNameLabel.textContent = "First Name*:";
+
+            const fNameInput = document.createElement("input");
+            fNameInput.setAttribute("id", "firstName");
+            fNameInput.setAttribute("type", "text");
+            fNameInput.setAttribute("required", true);
+
+            const lNameLabel = document.createElement("label");
+            lNameLabel.textContent = "Last Name*:";
+
+            const lNameInput = document.createElement("input");
+            lNameInput.setAttribute("id", "lastName");
+            lNameInput.setAttribute("type", "text");
+            lNameInput.setAttribute("required", true);
+
+            const emailLabel = document.createElement("label");
+            emailLabel.textContent = "Email*:";
+
+            const emailInput = document.createElement("input");
+            emailInput.setAttribute("id", "email");
+            emailInput.setAttribute("type", "email");
+            emailInput.setAttribute("required", true);
+
+            const messageLabel = document.createElement("label");
+            messageLabel.textContent = "Message:";
+
+            const messageTextarea = document.createElement("textarea");
+            messageTextarea.setAttribute("id", "message");
+
+            const submitInput = document.createElement("input");
+            submitInput.setAttribute("type", "submit");
+            submitInput.setAttribute("value", "Send Message");
+            submitInput.setAttribute("id", "submitBtn");
+
+            const reqFieldPara = document.createElement("p");
+            reqFieldPara.setAttribute("id", "reqField");
+            reqFieldPara.textContent = "* = Required field";
+
+            fieldset.appendChild(fNameLabel);
+            fieldset.appendChild(fNameInput);
+            fieldset.appendChild(lNameLabel);
+            fieldset.appendChild(lNameInput);
+            fieldset.appendChild(emailLabel);
+            fieldset.appendChild(emailInput);
+            fieldset.appendChild(messageLabel);
+            fieldset.appendChild(messageTextarea);
+            fieldset.appendChild(submitInput);
+            fieldset.appendChild(reqFieldPara);
+
+            form.appendChild(fieldset);
+            formSection.appendChild(form);
 
             testPara.appendChild(paraHeader);
-            testPara.appendChild(paraContent1);
-            testPara.appendChild(paraContent2);
+            testPara.appendChild(formSection);
 
 
 
@@ -115,49 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
             goal13a.appendChild(goal13img);
             goal13.appendChild(goal13a);
 
-
-
-            /*External links section via JSON*/
-
-            let linkElement = document.getElementById("externalLinks");
-
-            const linkHeader = document.createElement("h3");
-            linkHeader.textContent = data.links.externalHeader;
-
-            const links = document.createElement("ul");
-
-            const UNHomepageElement = document.createElement("li");
-            const UNHomepageLink = document.createElement("a");
-            UNHomepageLink.href = data.links.UNHomepage;
-            UNHomepageLink.textContent = "UN Homepage";
-            UNHomepageElement.appendChild(UNHomepageLink);
-
-
-            const list6Element = document.createElement("li");
-            const goal6Link = document.createElement("a");
-            goal6Link.href = data.links.Goal6;
-            goal6Link.textContent = "UN Goal 6: Clean Water and Sanitation";
-            list6Element.appendChild(goal6Link);
-
-            const list12Element = document.createElement("li");
-            const goal12Link = document.createElement("a");
-            goal12Link.href = data.links.Goal12;
-            goal12Link.textContent = "UN Goal 12: Responsible Consumption and Production";
-            list12Element.appendChild(goal12Link);
-
-            const list13Element = document.createElement("li");
-            const goal13Link = document.createElement("a");
-            goal13Link.href = data.links.Goal13;
-            goal13Link.textContent = "UN Goal 13: Climate Action";
-            list13Element.appendChild(goal13Link);
-
-            linkElement.append(linkHeader);
-            links.appendChild(UNHomepageElement);
-            links.appendChild(list6Element);
-            links.appendChild(list12Element);
-            links.appendChild(list13Element);
-
-            linkElement.appendChild(links);
 
 
             /* Footer */

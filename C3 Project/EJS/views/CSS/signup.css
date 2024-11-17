@@ -133,45 +133,78 @@ header{
 
 
 
-/* Info Section (Top Wide) */
-
-#text1{
-    grid-column: 1 / 8;
-    grid-row: 2 / 3;
-    padding: 0px;
-}
-
-    #text1 h1, #text1 h2{
-        margin: 30px 0px 10px 10px;
-    }
-
-    #text1 p{
-        margin: 0px 0px 10px 20px;
-        padding: 0px 10px 10px 0px;
-        font-size: 18px;
-    }
-
-    #text1 #outro{
-        margin: 30px 0px 0px 10px;
-    }
-
-
-
 /* Bottom Center Section */
 
-#testPara{
+#mainPara{
     grid-column: 1 / 8;
-    grid-row: 3 / 6;
+    grid-row: 2 / 5;
     padding: 10px 20px 10px 10px;
     font-size: x-large;
 }
 
+form{
+    display: flex;
+}
 
-/* Bottom Right Section (External Links) */
+fieldset{
+    margin: auto 2%;
+    width: 100%;
+    border: 3px solid #7f869a;
+    border-radius: 5px;
+}
 
-#externalLinks{
-    grid-column: 8 / 10;
-    grid-row: 5 / 6;
+legend{
+    padding: 5px;
+    font-size: medium;
+    word-spacing: 4px;
+}
+
+input, textarea{
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid dodgerblue;
+}
+
+label{
+    display: block;
+    width: 100%;
+    margin: 1%;
+}
+
+#submitBtn{
+    display: block;
+    background-color: #009FDC;
+    color: #fff;
+    margin: 2% auto;
+    padding: 6px 10px;
+    font-weight: 700px;
+    font-size: 16px;
+    border: 2px solid #0075a3;
+    min-width: 150px;
+    border-radius: 10px;
+    width: 10%;
+}
+
+#submitBtn:hover{
+    background-color: #0075a3;
+    color: #fff;
+    cursor: pointer;
+}
+
+textarea{
+    resize: none;
+    min-height: 100px;
+}
+
+.myClass{
+    color: dodgerblue;
+}
+
+#reqField{
+    color: crimson;
+    text-align: center;
 }
 
 
@@ -179,7 +212,7 @@ header{
 
 footer{
     grid-column: 1 / 10;
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
     text-align: center;
     color: #0075a3;
     font-size: large;
