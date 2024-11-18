@@ -46,32 +46,6 @@ app.get('/goal13', function(req, res) {
 });
 
 
-app.listen(port);
-console.log(`listening on port ${port}. Go to http://localhost:${port}`);
-
-
-/*
-app.post('/signup', (req, res) => {
-  res.render('pages/signup');
-  let firstName = req.body.firstName;
-  let lastName = req.body.lastName;
-  let email = req.body.email;
-  let message = req.body.message;
-
-  // console.log(`${firstName} ${lastName}, ${email}, ${message}`);
-
-  // TODO: Save details to database
-
-  // TODO: Receive verification
-
-  // TODO: Send confirmation on-screen, currently displays success without any verification/storage
-  res.send(`<script>alert('You have successfully signed up, ${firstName}!'); window.location.href='../signup';</script>`);
-
-  // TODO: Send email of confirmation
-});
-*/
-
-
 app.post("/signup", (req, res) => {
   let fName = req.body.fName;
   let lName = req.body.lName;
@@ -82,7 +56,21 @@ app.post("/signup", (req, res) => {
 
   let reply = { fName: fName, lName: lName, email: email, message: message };
 
-  console.log(reply);
-
   res.json(reply);
+
+  // Receieves data and sends it back to confirm it was sent correctly
+  //  (also uses response from server in alert box)
+
+  // TODO: Save details to database
+
+  // TODO: Receive verification from database & send to client
+
+  // TODO: Send email of confirmation
+
 });
+
+
+
+app.listen(port);
+console.log(`listening on port ${port}. Go to http://localhost:${port}`);
+
