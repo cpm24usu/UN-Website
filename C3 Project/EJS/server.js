@@ -5,8 +5,9 @@ var app = express();
 
 app.use(express.static('views'));
 
-const bodyParse = require('body-parser');
-app.use(bodyParse.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+const path = require("path");
 
 app.set('view engine', 'ejs');
 
@@ -49,23 +50,39 @@ app.listen(port);
 console.log(`listening on port ${port}. Go to http://localhost:${port}`);
 
 
-
+/*
 app.post('/signup', (req, res) => {
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
+  res.render('pages/signup');
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
+  let email = req.body.email;
+  let message = req.body.message;
 
   // console.log(`${firstName} ${lastName}, ${email}, ${message}`);
 
-  res.send(`<script>alert('You have successfully signed up, ${firstName}!'); window.location.href='../signup';</script>`);
-
   // TODO: Save details to database
 
-  // TODO: Verify details
+  // TODO: Receive verification
 
-  // TODO: Send confirmation on-screen
+  // TODO: Send confirmation on-screen, currently displays success without any verification/storage
+  res.send(`<script>alert('You have successfully signed up, ${firstName}!'); window.location.href='../signup';</script>`);
 
   // TODO: Send email of confirmation
 });
+*/
 
+
+app.post("/signup", (req, res) => {
+  let fName = req.body.fName;
+  let lName = req.body.lName;
+  let email = req.body.email;
+  let message = req.body.message;
+
+  console.log(req.body);
+
+  let reply = { fName: fName, lName: lName, email: email, message: message };
+
+  console.log(reply);
+
+  res.json(reply);
+});

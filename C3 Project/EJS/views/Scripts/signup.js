@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const form = document.createElement("form");
             form.setAttribute("id", "myForm");
             form.setAttribute("method", "POST");
-            form.setAttribute("action", "/signup");
 
             const fieldset = document.createElement("fieldset");
 
@@ -81,6 +80,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
             testPara.appendChild(paraHeader);
             testPara.appendChild(formSection);
+
+
+            // Sends data to server and receieves response
+            form.addEventListener('submit', (e)=>{
+                e.preventDefault();
+                const formBody = {
+                    fName:fNameInput.value,
+                    lName:lNameInput.value,
+                    email:emailInput.value,
+                    message:messageTextarea.value
+                };
+                const requestHeaders = {
+                    "Content-Type": "application/json"
+                };
+                fetch("/signup", {
+                    method: "POST",
+                    headers: requestHeaders,
+                    body: JSON.stringify(formBody)
+                })
+                .then(response => response.json())
+                .then(responsedata => {
+                    console.log(responsedata);
+                    console.log(responsedata.fName);
+                    console.log(responsedata.lName);
+                    console.log(responsedata.email);
+                    console.log(responsedata.message);
+                })
+                .then(alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}!
+Please check ${formBody.email} for a verification email.`))
+                .then(window.location.reload())
+                .catch(error => console.log(error));
+            });
 
 
 
