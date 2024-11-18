@@ -71,19 +71,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const tempImg1 = document.createElement("img");
             tempImg1.src = data.temp.media.homeTemplate;
-            tempImg1.setAttribute("id", "temp1");
+            tempImg1.setAttribute("id", "temp");
 
             const tempImg2 = document.createElement("img");
             tempImg2.src = data.temp.media.goalTemplate;
-            tempImg2.setAttribute("id", "temp2");
+            tempImg2.setAttribute("id", "temp");
 
             const tempImg3 = document.createElement("img");
             tempImg3.src = data.temp.media.formTemplate;
-            tempImg3.setAttribute("id", "temp3");
+            tempImg3.setAttribute("id", "temp");
 
             const tempImg4 = document.createElement("img");
             tempImg4.src = data.temp.media.teamTemplate;
-            tempImg4.setAttribute("id", "temp4");
+            tempImg4.setAttribute("id", "temp");
 
             goalImages.appendChild(tempImg1);
             goalImages.appendChild(tempImg2);

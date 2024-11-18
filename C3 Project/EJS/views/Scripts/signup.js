@@ -104,9 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log(responsedata.email);
                     console.log(responsedata.message);
                 })
-                .then(alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}!
-Please check ${formBody.email} for a verification email.`))
-                .then(window.location.reload())
+                .then(alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a verification email.`))
+                //.then(window.location.reload())
                 .catch(error => console.log(error));
             });
         })

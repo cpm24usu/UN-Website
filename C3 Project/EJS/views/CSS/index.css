@@ -9,28 +9,8 @@
     grid-row: 2 / 6;
 }
 
-    #temp1, #temp2, #temp3, #temp4{
+    #temp{
         width: 100%;
-    }
-
-    #temp1{
-        grid-template-columns: 1 / 2;
-        grid-template-rows: 1 / 2;
-    }
-
-    #temp2{
-        grid-template-columns: 1 / 2;
-        grid-template-rows: 2 / 3;
-    }
-
-    #temp3{
-        grid-template-columns: 1 / 2;
-        grid-template-rows: 3 / 4;
-    }
-
-    #temp4{
-        grid-template-columns: 1 / 2;
-        grid-template-rows: 4 / 5;
     }
 
 
