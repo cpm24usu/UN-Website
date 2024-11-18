@@ -31,21 +31,37 @@ document.addEventListener("DOMContentLoaded", function () {
             const home = document.createElement("a");
             home.href = ".";
             home.textContent = "Home";
-            home.setAttribute("id", "inactive");
+            if (document.querySelector("#homepage")) {
+                home.setAttribute("id", "active");
+            }
+            else {
+                home.setAttribute("id", "inactive");
+            };
+            
 
             let teamNav = document.getElementById("teamNav");
 
             const team = document.createElement("a");
             team.href = "./team";
             team.textContent = "Team Info";
-            team.setAttribute("id", "inactive");
+            if (document.querySelector("#team")) {
+                team.setAttribute("id", "active");
+            }
+            else {
+                team.setAttribute("id", "inactive");
+            };
 
             let signUpNav = document.getElementById("signUpNav");
 
             const signup = document.createElement("a");
             signup.href = "./signup";
             signup.textContent = "Sign Up";
-            signup.setAttribute("id", "active");
+            if (document.querySelector("#signup")) {
+                signup.setAttribute("id", "active");
+            }
+            else {
+                signup.setAttribute("id", "inactive");
+            };
 
             homeNav.appendChild(home);
             teamNav.appendChild(team);
