@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
 
-            /*Loading content into central element*/
+            /*Loading heading into central element*/
 
-            const mainPara = document.getElementById("mainPara");
+            const mainPara = document.getElementById("formPara");
 
             const paraHeader = document.createElement("h2");
             paraHeader.textContent = data.signup.content.title;
 
-            /* Creating the form inside a section element */
+            /* Creating the form inside a section element (inside the central element) */
             const form = document.createElement("form");
             form.setAttribute("id", "myForm");
             form.setAttribute("method", "POST");
@@ -106,18 +106,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(response => response.json())
                 .then(responsedata => {
                     console.log(responsedata);
-                    console.log(responsedata.signup.fName);
-                    console.log(responsedata.signup.lName);
-                    console.log(responsedata.signup.email);
-                    console.log(responsedata.signup.comments);
-                    sendEmail = responsedata.signup.sendEmail;
+                    console.log(responsedata.fName);
+                    console.log(responsedata.lName);
+                    console.log(responsedata.email);
+                    console.log(responsedata.comments);
+                    sendEmail = responsedata.sendEmail;
                 })
                 .then(() => {
                     alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a verification email (not yet implemented).`);
                     if (sendEmail){ //Checks whether or not to send an email
                         console.log("Will send email once implemented");
                         // TODO: Send email
-                            // PHP, PHPMailer, mailto, nodemailer, http & smtp (built-in node.js modules)
+                            // nodemailer, http & smtp (built-in node.js modules)
                     }
                     else {
                         console.log(`sendEmail: ${sendEmail}, not sending email`);

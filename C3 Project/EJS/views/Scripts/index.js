@@ -67,11 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*Left images section via JSON*/
 
-            const goalImages = document.getElementById("goalImages");
+            const goalsImages = document.getElementById("goalImages");
 
-            const goalVideo = document.createElement("video"); // Video not currently rendering; TODO
-            goalVideo.src = data.homepage.media.goalsVideo;
-            goalVideo.setAttribute("class", "goalVideo");
+            const goalsVideo = document.createElement("video"); // Video not currently rendering; TODO
+            goalsVideo.src = data.homepage.media.goalsVideo;
+            goalsVideo.setAttribute("class", "goalVideo");
+            goalsVideo.setAttribute("controls", "controls");
 
             const goalImg2 = document.createElement("img");
             goalImg2.src = data.homepage.media.goal6;
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             goalImg4.src = data.homepage.media.goal13;
             goalImg4.setAttribute("class", "goalImg");
 
-            goalImages.appendChild(goalVideo);
+            goalImages.appendChild(goalsVideo);
             goalImages.appendChild(goalImg2);
             goalImages.appendChild(goalImg3);
             goalImages.appendChild(goalImg4);
