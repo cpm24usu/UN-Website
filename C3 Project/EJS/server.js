@@ -50,16 +50,17 @@ app.post("/signup", (req, res) => {
   let fName = req.body.fName;
   let lName = req.body.lName;
   let email = req.body.email;
-  let message = req.body.message;
+  let comments = req.body.comments;
+
+  let sendEmail = false;
 
   console.log(req.body);
 
-  let reply = { fName: fName, lName: lName, email: email, message: message };
-
-  res.json(reply);
-
   // Receieves data and sends it back to confirm it was sent correctly
   //  (also uses response from server in alert box)
+  let reply = { fName: fName, lName: lName, email: email, comments: comments, sendEmail: sendEmail };
+
+  res.json(reply);
 
   // TODO: Save details to database
 

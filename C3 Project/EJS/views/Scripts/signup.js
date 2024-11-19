@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector('#signup')){ //checks if the current page is the signup using an id="signup" in the opening html tag
-        fetch('../JSON/signup.json')
+        fetch('../JSON/main.json')
         .then(response => response.json())
         .then(data => {
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const mainPara = document.getElementById("mainPara");
 
             const paraHeader = document.createElement("h2");
-            paraHeader.textContent = data.content.title;
+            paraHeader.textContent = data.signup.content.title;
 
             /* Creating the form inside a section element */
             const form = document.createElement("form");
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const fieldset = document.createElement("fieldset");
 
+            // First Name
             const fNameLabel = document.createElement("label");
             fNameLabel.textContent = "First Name*:";
 
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fNameInput.setAttribute("required", true);
             fNameInput.setAttribute("name", "firstName")
 
+            // Last Name
             const lNameLabel = document.createElement("label");
             lNameLabel.textContent = "Surname*:";
 
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             lNameInput.setAttribute("required", true);
             lNameInput.setAttribute("name", "lastName")
 
+            // Email
             const emailLabel = document.createElement("label");
             emailLabel.textContent = "Email*:";
 
@@ -46,16 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
             emailInput.setAttribute("required", true);
             emailInput.setAttribute("name", "email")
 
-            const messageLabel = document.createElement("label");
-            messageLabel.textContent = "Comments:";
+            // Comments
+            const commentsLabel = document.createElement("label");
+            commentsLabel.textContent = "Comments:";
 
-            const messageTextarea = document.createElement("textarea");
-            messageTextarea.setAttribute("id", "message");
-            messageTextarea.setAttribute("name", "message");
+            const commentsTextarea = document.createElement("textarea");
+            commentsTextarea.setAttribute("id", "comments");
+            commentsTextarea.setAttribute("name", "comments");
 
             const submitInput = document.createElement("input");
             submitInput.setAttribute("type", "submit");
-            submitInput.setAttribute("value", "Send Message");
+            submitInput.setAttribute("value", "Send comments");
             submitInput.setAttribute("id", "submitBtn");
 
             const reqFieldPara = document.createElement("p");
@@ -68,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
             fieldset.appendChild(lNameInput);
             fieldset.appendChild(emailLabel);
             fieldset.appendChild(emailInput);
-            fieldset.appendChild(messageLabel);
-            fieldset.appendChild(messageTextarea);
+            fieldset.appendChild(commentsLabel);
+            fieldset.appendChild(commentsTextarea);
             fieldset.appendChild(submitInput);
             fieldset.appendChild(reqFieldPara);
 
@@ -86,11 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     fName:fNameInput.value,
                     lName:lNameInput.value,
                     email:emailInput.value,
-                    message:messageTextarea.value
+                    comments:commentsTextarea.value
                 };
                 const requestHeaders = {
                     "Content-Type": "application/json"
                 };
+
+                let sendEmail;
+
                 fetch("/signup", {
                     method: "POST",
                     headers: requestHeaders,
@@ -99,12 +106,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(response => response.json())
                 .then(responsedata => {
                     console.log(responsedata);
-                    console.log(responsedata.fName);
-                    console.log(responsedata.lName);
-                    console.log(responsedata.email);
-                    console.log(responsedata.message);
+                    console.log(responsedata.signup.fName);
+                    console.log(responsedata.signup.lName);
+                    console.log(responsedata.signup.email);
+                    console.log(responsedata.signup.comments);
+                    sendEmail = responsedata.signup.sendEmail;
                 })
-                .then(alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a verification email.`))
+                .then(() => {
+                    alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a verification email (not yet implemented).`);
+                    if (sendEmail){ //Checks whether or not to send an email
+                        console.log("Will send email once implemented");
+                        // TODO: Send email
+                            // PHP, PHPMailer, mailto, nodemailer, http & smtp (built-in node.js modules)
+                    }
+                    else {
+                        console.log(`sendEmail: ${sendEmail}, not sending email`);
+                    }
+                })
                 //.then(window.location.reload())
                 .catch(error => console.log(error));
             });
