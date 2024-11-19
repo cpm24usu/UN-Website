@@ -48,6 +48,7 @@ app.get('/goal13', function(req, res) {
 });
 
 
+
 // Functions and variables for sending email after form is received and validated
 
 const nodemailer = require("nodemailer");
@@ -61,7 +62,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "cpm24usu@gmail.com",
-    pass: "lqym imsy ozfh nqmk",
+    pass: "", // generate new password if no longer works from https://myaccount.google.com/apppasswords?pli=1&rapt=AEjHL4PtaIoXu-RWAKJkxzNueYLsFqJIWTaEZH93fZR-3_DOxHNgh8kyU7EXJub0QKlItrrf0lxiIT6Lt5qnKT9SeLkoNyG9DICGV8XDTlmXsMlrIqSm6RY
   },
 });
 
@@ -98,9 +99,12 @@ app.post("/signup", (req, res) => {
   let email = req.body.email;
   let comments = req.body.comments;
 
-  let send = true; // Need to add logic to change this depending on the result of verification
-  // TODO: Add data validation
-    // e.g., check email is valid & in correct format (example@test.com)
+
+  let send;
+
+  if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]$/.test(fName)  && /^[a-zA-Z]$/.test(lName)) {
+    send = true;
+  };
 
   console.log(req.body);
 
@@ -124,7 +128,8 @@ app.post("/signup", (req, res) => {
   }
   else { // Otherwise, contents are sent to console and email is not sent
     options(email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: ${comments}`);
-    console.log(mailOptions)
+    console.log("Email not sent");
+    console.log(`Email options: ${mailOptions}`);
   }
 
 });

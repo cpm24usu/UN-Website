@@ -113,11 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     sendEmail = responsedata.sendEmail;
                 })
                 .then(() => {
-                    alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a verification email (not yet implemented).`);
+                    alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a confirmation email.`);
                     if (sendEmail){ //Checks whether or not to send an email
                         console.log("Will send email once implemented");
-                        // TODO: Send email
-                            // nodemailer, http & smtp (built-in node.js modules)
                     }
                     else {
                         console.log(`sendEmail: ${sendEmail}, not sending email`);
