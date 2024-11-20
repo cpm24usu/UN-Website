@@ -100,10 +100,23 @@ app.post("/signup", (req, res) => {
   let comments = req.body.comments;
 
 
-  let send;
+  let send = false;
 
-  if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]$/.test(fName)  && /^[a-zA-Z]$/.test(lName)) {
+  if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]+$/.test(fName)  && /^[a-zA-Z]+$/.test(lName)) {
+    console.log("Email and name validated");
     send = true;
+  }
+  else {
+    console.log("Email or name not validated");
+    if (!(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email))) {
+      console.log("Email not valid");
+    }
+    if (!(/^[a-zA-Z]$/.test(fName))) {
+      console.log("First name not valid");
+    }
+    if (!(/^[a-zA-Z]$/.test(lName))) {
+      console.log("Last name not valid");
+    }
   };
 
   console.log(req.body);
@@ -129,7 +142,6 @@ app.post("/signup", (req, res) => {
   else { // Otherwise, contents are sent to console and email is not sent
     options(email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: ${comments}`);
     console.log("Email not sent");
-    console.log(`Email options: ${mailOptions}`);
   }
 
 });

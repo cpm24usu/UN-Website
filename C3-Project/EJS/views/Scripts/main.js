@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
 
             /* Header */
-            const logo = document.getElementById("logo");
+            const logo = document.querySelector("#logo");
             const logoDisplay = document.createElement("img");
 
             const x = window.matchMedia("(max-width: 1000px)"); // 1140px
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             logo.appendChild(logoDisplay);
 
 
-            let homeNav = document.getElementById("homeNav");
+            let homeNav = document.querySelector("#homeNav");
 
             const home = document.createElement("a");
             home.href = ".";
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             
 
-            let teamNav = document.getElementById("teamNav");
+            let teamNav = document.querySelector("#teamNav");
 
             const team = document.createElement("a");
             team.href = "./team";
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 team.setAttribute("id", "inactive");
             };
 
-            let signUpNav = document.getElementById("signUpNav");
+            let signUpNav = document.querySelector("#signUpNav");
 
             const signup = document.createElement("a");
             signup.href = "./signup";
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /* Clickable Image Links */
 
-            const goal6 = document.getElementById("goal6");
+            const goal6 = document.querySelector("#goal6");
             const goal6a = document.createElement("a");
             goal6a.href = "goal6";
             const goal6img = document.createElement("img");
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             goal6a.appendChild(goal6img);
             goal6.appendChild(goal6a);
 
-            const goal12 = document.getElementById("goal12");
+            const goal12 = document.querySelector("#goal12");
             const goal12a = document.createElement("a");
             goal12a.href = "./goal12";
             const goal12img = document.createElement("img");
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             goal12a.appendChild(goal12img);
             goal12.appendChild(goal12a);
 
-            const goal13 = document.getElementById("goal13");
+            const goal13 = document.querySelector("#goal13");
             const goal13a = document.createElement("a");
             goal13a.href = "./goal13";
             const goal13img = document.createElement("img");
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             /*External links section via JSON*/
 
-            let linkElement = document.getElementById("externalLinks");
+            let linkElement = document.querySelector("#externalLinks");
 
             const linkHeader = document.createElement("h3");
             linkHeader.textContent = data.common.links.externalHeader;
