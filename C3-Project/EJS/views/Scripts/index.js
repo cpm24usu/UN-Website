@@ -67,25 +67,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*Left images section via JSON*/
 
-            const goalImages = document.getElementById("goalImages");
+            const goalsImages = document.getElementById("goalImages");
 
-            const goalVideo = document.createElement("video"); // Video not currently rendering; TODO
-            goalVideo.src = data.homepage.media.goalsVideo;
-            goalVideo.setAttribute("class", "goalVideo");
+            const goalsVideo = document.createElement("video"); // Video not currently rendering; TODO
+            goalsVideo.src = data.homepage.media.goalsVideo;
+            goalsVideo.setAttribute("class", "goalVideo");
+            goalsVideo.setAttribute("controls", "controls");
+            goalsVideo.setAttribute("alt","Short video from the UN website showing all 17 SDGs");
 
             const goalImg2 = document.createElement("img");
             goalImg2.src = data.homepage.media.goal6;
             goalImg2.setAttribute("class", "goalImg");
+            goalImg2.setAttribute("alt", "Image for goal 6 from the UN website");
 
             const goalImg3 = document.createElement("img");
             goalImg3.src = data.homepage.media.goal12;
             goalImg3.setAttribute("class", "goalImg");
+            goalImg3.setAttribute("alt", "Image for goal 12 from the UN website");
 
             const goalImg4 = document.createElement("img");
             goalImg4.src = data.homepage.media.goal13;
             goalImg4.setAttribute("class", "goalImg");
+            goalImg4.setAttribute("alt", "Image for goal 13 from the UN website");
 
-            goalImages.appendChild(goalVideo);
+            goalImages.appendChild(goalsVideo);
             goalImages.appendChild(goalImg2);
             goalImages.appendChild(goalImg3);
             goalImages.appendChild(goalImg4);

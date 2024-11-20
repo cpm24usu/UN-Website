@@ -1,7 +1,7 @@
 
 /* Central Form Section */
 
-#mainPara{
+#formPara{
     grid-column: 1 / 8;
     grid-row: 1 / 6;
     padding: 10px 20px 10px 10px;
