@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html id="goal6">
 <head>
     <%- include('../partials/head'); %>
+    <script src="../Scripts/goal6.js"></script>
+    <link rel="stylesheet" href="../CSS/goal6.css">
+    
 </head>
 
 <body>
     <header>
-        <h1>Goal 6: Clean Water and Sanitation</h1>
+         <% - include('../partials/header'); %>
     </header>
-    <ul>
+    <!-- <ul>
         <a id="inactive" href="./index">Home</a>
         <a id="inactive" href="./team">Team Info</a>
         <a id="inactive" href="./signup">Sign Up</a>
-    </ul>
-    <ul>
+    </ul> -->
+    <!-- <ul>
         <a id="inactive" href="./goal6">Goal 6</a>
         <a id="inactive" href="./goal12">Goal 12</a>
         <a id="inactive" href="./goal13">Goal 13</a>
-    </ul>
+    </ul> -->
+
+    <main>
+        <%- include('../partials/imgLinks'); %>
+
+        <div id="goalContent"></div>
+
+        <%- include('../partials/externalLinks') %>
+
+       
+    </main>
+
+    <footer></footer>
 </body>
 </html>
