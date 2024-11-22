@@ -1,0 +1,17 @@
+/* goal overview section */
+#goal6{
+    @font-face {
+        font-family: 'Roboto';
+        src: url("../font/roboto/Roboto-Regular.ttf");
+    }
+}
+
+#mainSection{
+    grid-column: 2 / 8;
+    grid-row: 1 / 6;
+    padding: 5px;
+
+
+}
+
+
