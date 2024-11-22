@@ -7,7 +7,6 @@ app.use(express.static('views'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const path = require("path");
 
 app.set('view engine', 'ejs');
 
@@ -15,35 +14,35 @@ app.set('view engine', 'ejs');
 // Rendering pages depending on URL
 
 // index page
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   res.render('pages/index');
 });
-app.get('/index', function(req, res) { //same as above, just for index in the URL
+app.get('/index', (req, res) => { //same as above, just for index in the URL
   res.render('pages/index');
 });
 
 // team info page
-app.get('/team', function(req, res) {
+app.get('/team', (req, res) => {
   res.render('pages/team');
 });
 
 // signup page
-app.get('/signup', function(req, res) {
+app.get('/signup', (req, res) => {
   res.render('pages/signup');
 });
 
 // goial 6 page
-app.get('/goal6', function(req, res) {
+app.get('/goal6', (req, res) => {
   res.render('pages/goal6');
 });
 
 // goal 12 page
-app.get('/goal12', function(req, res) {
+app.get('/goal12', (req, res) => {
   res.render('pages/goal12');
 });
 
 // goal 13 page
-app.get('/goal13', function(req, res) {
+app.get('/goal13', (req, res) => {
   res.render('pages/goal13');
 });
 
@@ -62,11 +61,14 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "cpm24usu@gmail.com",
-    pass: "", // generate new password if no longer works from https://myaccount.google.com/apppasswords?pli=1&rapt=AEjHL4PtaIoXu-RWAKJkxzNueYLsFqJIWTaEZH93fZR-3_DOxHNgh8kyU7EXJub0QKlItrrf0lxiIT6Lt5qnKT9SeLkoNyG9DICGV8XDTlmXsMlrIqSm6RY
+    pass: "",
+    // generate new password if no longer works https://myaccount.google.com/apppasswords
+    // Change email if different account is sending emails
+    // Don't leave password in code when committing, otherwise GitHub sends an email saying you have a data leak
   },
 });
 
-// Changing target email & body
+// Changing target email, subject & body
 let mailOptions;
 
 function options(forename, surname, addressee, body) {
@@ -107,25 +109,18 @@ app.post("/signup", (req, res) => {
     send = true;
   }
   else {
-    console.log("Email or name not validated");
     if (!(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email))) {
       console.log("Email not valid");
     }
-    if (!(/^[a-zA-Z]$/.test(fName))) {
+    if (!(/^[a-zA-Z]+$/.test(fName))) {
       console.log("First name not valid");
     }
-    if (!(/^[a-zA-Z]$/.test(lName))) {
+    if (!(/^[a-zA-Z]+$/.test(lName))) {
       console.log("Last name not valid");
     }
   };
 
   console.log(req.body);
-
-  // Receieves data and returns it to the client for a popup alert box confirming signup
-  let reply = { fName: fName, lName: lName, email: email, comments: comments, sendEmail: sendEmail };
-  res.json(reply);
-  // Move to if statement below once validation is complete
-
 
 
   // TODO: Save details to database
@@ -136,15 +131,24 @@ app.post("/signup", (req, res) => {
 
   // If verification is successful, email is sent
   if (send) {
+    // Receieves data and returns it to the client for a popup alert box confirming signup
+    let reply = { fName: fName, lName: lName, email: email, comments: comments, send:send };
+    res.json(reply);
+
+    // Fills emailOptions with data from form and sends email
     options(fName, lName, email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: \n\n${comments}`);
     sendEmail(mailOptions);
   }
-  else { // Otherwise, contents are sent to console and email is not sent
+  else { // If verification is not successful, email is not sent and client is notified
     options(email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: ${comments}`);
     console.log("Email not sent");
+
+    let reply = { fName: fName, lName: lName, email: email, comments: comments, send: send };
+    res.json(reply);
   }
 
 });
 
+// Start listening on port and print to console
 app.listen(port);
 console.log(`listening on port ${port}. Go to http://localhost:${port}`);

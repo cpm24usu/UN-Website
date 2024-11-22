@@ -9,37 +9,37 @@
     grid-row: 1 / 6;
 }
 
-    .goalImg, .goalVideo{
-        width: 100%;
-    }
+.goalImg, .goalVideo{
+    width: 100%;
+}
 
-    .goalVideo{
-        border: 2px solid #009FDC;
-    }
+.goalVideo{
+    border: 2px solid #009FDC;
+}
 
 
 
 /* Top Center Section */
 
 #mainPara{
-    grid-column: 3 / 8;
-    grid-row: 1 / 4;
-    padding: 0px;
+grid-column: 3 / 8;
+grid-row: 1 / 4;
+padding: 0px;
 }
 
-    #mainPara h1, #mainPara h2{
-        margin: 30px 0px 10px 10px;
-    }
+#mainPara h1, #mainPara h2{
+    margin: 30px 0px 10px 10px;
+}
 
-    #mainPara p{
-        margin: 0px 0px 10px 20px;
-        padding: 0px 10px 10px 0px;
-        font-size: 18px;
-    }
+#mainPara p{
+    margin: 0px 0px 10px 20px;
+    padding: 0px 10px 10px 0px;
+    font-size: 18px;
+}
 
-    #mainPara #outro{
-        margin: 30px 0px 0px 10px;
-    }
+#mainPara #outro{
+    margin: 30px 0px 0px 10px;
+}
 
 
 

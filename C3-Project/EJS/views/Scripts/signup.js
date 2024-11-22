@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Content-Type": "application/json"
                 };
 
-                let sendEmail;
+                let response;
 
                 fetch("/signup", {
                     method: "POST",
@@ -105,21 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                 .then(response => response.json())
                 .then(responsedata => {
-                    console.log(responsedata);
-                    console.log(responsedata.fName);
-                    console.log(responsedata.lName);
-                    console.log(responsedata.email);
-                    console.log(responsedata.comments);
-                    sendEmail = responsedata.sendEmail;
+                    response = responsedata;
                 })
                 .then(() => {
-                    alert(`You have successfully signed up, ${formBody.fName} ${formBody.lName}! Please check ${formBody.email} for a confirmation email.`);
-                    if (sendEmail){ //Checks whether or not to send an email
-                        console.log("Will send email once implemented");
-                    }
-                    else {
-                        console.log(`sendEmail: ${sendEmail}, not sending email`);
-                    }
+                    for (const [key, value] of Object.entries(response)) {console.log(`${key}: ${value}`);};
+                    if (response.send) {console.log("Sending email");};
                 })
                 //.then(window.location.reload())
                 .catch(error => console.log(error));
