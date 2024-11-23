@@ -6,7 +6,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // Main page content //
 
         let goalContent = document.getElementById("mainSection");
+        
+        //const goalSection = document.createElement("section");
+       //  goalSection.setAttribute("id", "goalSection");
+
+        // goalContent.appendChild(goalSection);
         const title = document.createElement("h1");
+        title.setAttribute("id", "pageTitle");
         title.textContent = responseData.goal6.content.title;
         goalContent.appendChild(title);
 
@@ -15,6 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         goalContent.appendChild(goalOverview);
 
         const issue = document.createElement("h3");
+        issue.setAttribute("id", "issueTitle");
         issue.textContent = responseData.goal6.content.issue;
         goalContent.appendChild(issue);
 
@@ -30,6 +37,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targets.appendChild(targetsTitle);
         
         const scrollBox = document.createElement("article");
+        scrollBox.setAttribute("id", "scroll");
         targets.appendChild(scrollBox);
         
         const targetsList = [7];
