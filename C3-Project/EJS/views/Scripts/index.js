@@ -69,9 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const goalsImages = document.getElementById("goalImages");
 
-            const goalsVideo = document.createElement("video"); // Video not currently rendering; TODO
+            const goalsVideo = document.createElement("video");
             goalsVideo.src = data.homepage.media.mp4;
-            goalsVideo.src = data.homepage.media.ogg;
             goalsVideo.setAttribute("class", "goalVideo");
             goalsVideo.setAttribute("controls", "controls");
             goalsVideo.setAttribute("alt","Short video from the UN website showing all 17 SDGs");

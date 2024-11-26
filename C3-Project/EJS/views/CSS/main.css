@@ -1,7 +1,14 @@
 /* Like main.js, this file will hold all page-specific CSS and will contain all other styling once pages are finished */
 
 
-html{ /* Min size to stop nav menu overlapping with logo */
+@font-face {
+    font-family: 'roboto';
+    src: url(../font/roboto/Roboto-Regular.ttf);
+}
+
+html{
+    font-family: 'roboto', sans-serif;
+    color: #0A1131;
     min-width: 600px;
 }
 
@@ -11,7 +18,6 @@ html{ /* Min size to stop nav menu overlapping with logo */
 body div, footer{
     border: 4px solid #009FDC;
     border-radius: 20px;
-    background-color: #ffffffb0;
     padding: 1em;
 }
 
@@ -105,6 +111,11 @@ header{
     grid-template-rows: auto;
     grid-column: 8 / 10;
     grid-row: 1 / 5;
+}
+
+.imageLinks img:hover{
+    opacity: 0.75;
+    transition: opacity .5s ease-in-out;
 }
 
     #imgLink1, #imgLink2, #imgLink3{

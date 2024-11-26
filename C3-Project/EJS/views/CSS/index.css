@@ -29,6 +29,10 @@ html{
     border: 2px solid #009FDC;
 }
 
+.goalVideo:fullscreen{
+    border: none;
+}
+
 
 
 /* Top Center Section */
