@@ -84,9 +84,9 @@ function options(forename, surname, addressee, body) {
 function sendEmail(settings) {
   transporter.sendMail(settings, (error, info) => {
     if (error) {
-      console.error("Error sending email: ", error);
+      console.error("Error sending email: ", error); // Can comment out later, used for testing
     } else {
-      console.log("Email sent: ", info.response);
+      console.log("Email sent: ", info.response); // Can comment out later, used for testing
     }
   });
 };
@@ -105,22 +105,22 @@ app.post("/signup", (req, res) => {
   let send = false;
 
   if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]+$/.test(fName)  && /^[a-zA-Z]+$/.test(lName)) {
-    console.log("Email and name validated");
+    console.log("Email and name validated"); // Can comment out later, used for testing
     send = true;
   }
   else {
     if (!(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email))) {
-      console.log("Email not valid");
+      console.log("Email not valid"); // Can comment out later, used for testing
     }
     if (!(/^[a-zA-Z]+$/.test(fName))) {
-      console.log("First name not valid");
+      console.log("First name not valid"); // Can comment out later, used for testing
     }
     if (!(/^[a-zA-Z]+$/.test(lName))) {
-      console.log("Last name not valid");
+      console.log("Last name not valid"); // Can comment out later, used for testing
     }
   };
 
-  console.log(req.body);
+  console.log(req.body); // Can comment out later, used for testing
 
 
   // TODO: Save details to database
@@ -141,8 +141,9 @@ app.post("/signup", (req, res) => {
   }
   else { // If verification is not successful, email is not sent and client is notified
     options(email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: ${comments}`);
-    console.log("Email not sent");
+    console.log("Email not sent"); // Can comment out later, used for testing
 
+    // Still returns data to client-side for a popup saying unsuccessful signup
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send: send };
     res.json(reply);
   }

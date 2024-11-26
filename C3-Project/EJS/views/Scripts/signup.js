@@ -109,7 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                 .then(() => {
                     for (const [key, value] of Object.entries(response)) {console.log(`${key}: ${value}`);};
-                    if (response.send) {console.log("Sending email");};
+                    if (response.send == true) {
+                        console.log("Sending email");
+                        window.alert(`You have successfully signed up for the newsletter! Check ${response.email} for confirmation.`);
+                    };
                 })
                 //.then(window.location.reload())
                 .catch(error => console.log(error));
