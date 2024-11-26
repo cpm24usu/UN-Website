@@ -53,19 +53,22 @@ app.get('/goal13', (req, res) => {
 const nodemailer = require("nodemailer");
 const { send } = require('process');
 
+// auth details for transporter
+const details = {
+  user: "cpm24usu@gmail.com",
+  pass: "",
+  // generate new password if no longer works at https://myaccount.google.com/apppasswords
+  // Change email if different account is sending emails
+  // Don't leave password in code when committing, otherwise GitHub sends an email saying you have a data leak
+};
+
 // Creating the transporter
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   host: "smtp.gmail.com",
   port: 465,
   secure: true,
-  auth: {
-    user: "cpm24usu@gmail.com",
-    pass: "",
-    // generate new password if no longer works https://myaccount.google.com/apppasswords
-    // Change email if different account is sending emails
-    // Don't leave password in code when committing, otherwise GitHub sends an email saying you have a data leak
-  },
+  auth: details,
 });
 
 // Changing target email, subject & body
@@ -129,7 +132,11 @@ app.post("/signup", (req, res) => {
 
 
 
-  // If verification is successful, email is sent
+  // If verification is successful & password is filled, email is sent
+  if (details.pass === "") {
+    console.log(`Password is empty; not sending email.`);
+    send = false;
+  }
   if (send) {
     // Receieves data and returns it to the client for a popup alert box confirming signup
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send:send };
@@ -147,7 +154,6 @@ app.post("/signup", (req, res) => {
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send: send };
     res.json(reply);
   }
-
 });
 
 // Start listening on port and print to console

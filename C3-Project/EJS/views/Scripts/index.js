@@ -51,18 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const testPara = document.getElementById("testPara");
 
-            const paraHeader = document.createElement("h2");
-            paraHeader.textContent = data.homepage.temp.header;
+            const allGoals = document.createElement("img");
+            allGoals.src = data.homepage.media.allGoals;
+            allGoals.setAttribute("class", "goalImg");
+            allGoals.setAttribute("alt", "Image showing all 17 goals from the UN website");
 
-            const paraContent1 = document.createElement("p");
-            paraContent1.textContent = data.homepage.temp.testContent1;
-
-            const paraContent2 = document.createElement("p");
-            paraContent2.textContent = data.homepage.temp.testContent2;
-
-            testPara.appendChild(paraHeader);
-            testPara.appendChild(paraContent1);
-            testPara.appendChild(paraContent2);
+            testPara.appendChild(allGoals);
 
 
             /*Left images section via JSON*/

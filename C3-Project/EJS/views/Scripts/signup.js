@@ -112,6 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (response.send == true) {
                         console.log("Sending email");
                         window.alert(`You have successfully signed up for the newsletter! Check ${response.email} for confirmation.`);
+                    }
+                    else {
+                        console.log("Not sending email");
+                        window.alert(`One or more fields was not valid. Please try again.`);
                     };
                 })
                 //.then(window.location.reload())
