@@ -8,3 +8,153 @@ html{
     color: #0A1131;
     
 }
+
+
+
+
+
+
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7,80px);
+    grid-template-rows: repeat(3, 80px);
+    border: 4px solid #009fdc;
+    border-radius: 20px;
+    grid-row: 1 /4;
+    grid-column: 1/ 10;
+}
+
+#unlogo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+
+#homepage {
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 4px solid #009fdc;
+    border-radius: 20px;
+}
+
+#teaminfo {
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 4px solid #009fdc;
+    border-radius: 20px;
+
+}
+
+#signup {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 4px solid #009fdc;
+    border-radius: 20px;
+}
+
+.grid-container2 {
+    float: right;
+    display: grid; 
+    grid-template-columns: repeat(1);
+    grid-template-rows: repeat(6, 110px);
+}
+.grid-contents-image-links {
+    float: right;
+    border: 4px solid #009fdc;
+    border-radius: 20px;
+    grid-column: 9 / 10;
+    grid-row: 1/ 10;
+
+}
+
+#unlogo4{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#unlogo5{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+#unlogo6{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+.grid-contents-maincontent{
+    float: left;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    border: 4px solid #009fdc;
+    border-radius: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+}
+
+
+
+
+
+
+#unlogo2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#head1{
+    
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+#head2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#unlogo3{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+#head3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
