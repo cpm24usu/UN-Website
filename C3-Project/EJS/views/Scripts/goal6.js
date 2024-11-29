@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         goalOverview.textContent = responseData.goal6.content.overview;
         goalContent.appendChild(goalOverview);
 
+        const reportCard = document.createElement("img");
+        reportCard.setAttribute("id", "reportImage");
+        reportCard.src = responseData.goal6.content.reportCard;
+        goalContent.appendChild(reportCard);
+
         const issue = document.createElement("h3");
         issue.setAttribute("id", "issueTitle");
         issue.textContent = responseData.goal6.content.issue;
@@ -47,7 +52,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targetsList[3] = responseData.goal6.content.targets.target4;
         targetsList[4] = responseData.goal6.content.targets.target5;
         targetsList[5] = responseData.goal6.content.targets.target6;
-        targetsList[6] = responseData.goal6.content.targets.target7;
     
         
        // console.log(targetsList);

@@ -56,18 +56,18 @@
     "goal6": {
         "content": {
             "title": "Goal 6 - Clean Water and Sanitation",
-            "overview": "Will put text here later. Hello hello hello hi hello hello",
+            "overview": "Access to clean and safe water is a basic human right. However, a rising demand for water due to rapid population growth and urbanization is making it increasingly difficult for fair and equal access. Half of the world is now facing severe water scarcity at least once a month. ",
             "issue": "Why should we focus on this?",
             "issueInfo": "Will put text here later. Hello hello hello hi hello hello",
+            "reportCard": "../Media/goal6reportcard.jpg",
             "targetsTitle": "The UN's Targets",
             "targets": {
-                "target1":"there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here ",
-                "target2": "there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here",
-                "target3": "there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here",
-                "target4": "there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here",
-                "target5": "there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here",
-                "target6": "there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here",
-                "target7": "there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here there will be stuff here"
+                "target1":"By 2030, achieve universal and equitable access to safe and affordable drinking water for all.",
+                "target2": "By 2030, achieve access to adequate and equitable sanitation and hygiene for all and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations.",
+                "target3": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally.",
+                "target4": "By 2030, substantially increase water-use efficiency across all sectors and ensure sustainable withdrawals and supply of freshwater to address water scarcity and substantially reduce the number of people suffering from water scarcity.",
+                "target5": "By 2030, implement integrated water resources management at all levels, including through transboundary cooperation as appropriate.",
+                "target6": " By 2020, protect and restore water-related ecosystems, including mountains, forests, wetlands, rivers, aquifers and lakes"
             
             }
 
