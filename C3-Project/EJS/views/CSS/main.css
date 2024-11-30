@@ -162,3 +162,13 @@ footer{
     margin: 10px 0px;
 }
 
+
+
+
+
+/* Everything for dark mode */
+
+.dark-mode{
+    background-color: #000000d0;
+    color: #fff;
+}

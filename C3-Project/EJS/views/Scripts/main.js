@@ -7,6 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
 
             /* Header */
+
+            // Toggle dark mode button
+            const header = document.querySelector('header');
+            const darkModeButton = document.createElement('button');
+            darkModeButton.textContent = 'Toggle Dark Mode';
+            darkModeButton.classList.add('dark-mode-button');
+            darkModeButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                //header.classList.toggle('dark-header');
+            });
+            header.appendChild(darkModeButton);
+
+
             const logo = document.querySelector("#logo");
             const logoDisplay = document.createElement("img");
 
