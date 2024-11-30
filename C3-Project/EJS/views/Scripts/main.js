@@ -12,14 +12,30 @@ document.addEventListener("DOMContentLoaded", function () {
             const header = document.querySelector('header');
             const darkModeButton = document.createElement('button');
             darkModeButton.textContent = 'Toggle Dark Mode';
-            darkModeButton.classList.add('dark-mode-button');
+            darkModeButton.id = 'toggleDarkMode'
+
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode')
+            };
+
             darkModeButton.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
-                //header.classList.toggle('dark-header');
+
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled')
+                }
+                else {
+                    localStorage.setItem('darkMode', 'disabled')
+                }
+
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.body.classList.add('dark-mode')
+                };
             });
             header.appendChild(darkModeButton);
 
 
+            // Adding the logo to the header
             const logo = document.querySelector("#logo");
             const logoDisplay = document.createElement("img");
 
@@ -39,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             logo.appendChild(logoDisplay);
 
 
+            // Adding the navigation options for the header (not goal pages)
             let homeNav = document.querySelector("#homeNav");
 
             const home = document.createElement("a");
