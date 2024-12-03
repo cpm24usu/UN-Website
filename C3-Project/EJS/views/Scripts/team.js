@@ -17,11 +17,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
         for (var i = 0; i < teamSections.length; i++){
             teamSections[i] = document.createElement("article");
             teamContent.appendChild(teamSections[i]);
+            
         }
+
+        
+
         teamSections[0].setAttribute("id", "ellie");
-        teamSections[1].setAttribute("id", "phil");
-        teamSections[2].setAttribute("id", "nathan");
+        const ellie = document.createElement("h3");
+        ellie.textContent = responseData.team.content.members.member1;
+        const ellieBio = document.createElement("p");
+
+
+        teamSections[1].setAttribute("id", "nathan");
+        const nathan = document.createElement("h3");
+        nathan.textContent = responseData.team.content.members.member2;
+
+        teamSections[2].setAttribute("id", "phil");
+
         teamSections[3].setAttribute("id", "victoria");
+
 
 
 

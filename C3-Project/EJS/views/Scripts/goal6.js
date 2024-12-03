@@ -11,35 +11,56 @@ document.addEventListener('DOMContentLoaded', ()=>{
        //  goalSection.setAttribute("id", "goalSection");
 
         // goalContent.appendChild(goalSection);
-        const title = document.createElement("h1");
-        title.setAttribute("id", "pageTitle");
-        title.textContent = responseData.goal6.content.title;
-        goalContent.appendChild(title);
 
-        const goalOverview = document.createElement("p");
-        goalOverview.textContent = responseData.goal6.content.overview;
-        goalContent.appendChild(goalOverview);
+        const overviewSection = document.createElement("section");
+        overviewSection.setAttribute("id", "goal6Overview");
+        goalContent.append(overviewSection);
+        const title = document.createElement("h1");
+        title.setAttribute("id", "goal6Title");
+        title.textContent = responseData.goal6.content.title;
+        overviewSection.appendChild(title);
+
+        const goalOverview1 = document.createElement("p");
+        goalOverview1.textContent = responseData.goal6.content.overview1;
+        overviewSection.appendChild(goalOverview1);
+        const goalOverview2 = document.createElement("p");
+        goalOverview2.textContent = responseData.goal6.content.overview2;
+        overviewSection.appendChild(goalOverview2);
 
         const reportCard = document.createElement("img");
         reportCard.setAttribute("id", "reportImage");
         reportCard.src = responseData.goal6.content.reportCard;
-        goalContent.appendChild(reportCard);
+        overviewSection.appendChild(reportCard);
+
+        
 
         const issue = document.createElement("h3");
         issue.setAttribute("id", "issueTitle");
         issue.textContent = responseData.goal6.content.issue;
-        goalContent.appendChild(issue);
+        overviewSection.appendChild(issue);
 
         const issueInfo = document.createElement("p");
         issueInfo.textContent = responseData.goal6.content.issueInfo;
-        goalContent.appendChild(issueInfo);
+        overviewSection.appendChild(issueInfo);
 
-        let targets = document.getElementById("goalTargets");
+        
+
+        let targets = document.createElement("section");
+        goalContent.appendChild(targets);
         
         
         const targetsTitle = document.createElement("h2");
         targetsTitle.textContent = responseData.goal6.content.targetsTitle;
         targets.appendChild(targetsTitle);
+
+        const targetsInfo = document.createElement("p");
+        targetsInfo.textContent = responseData.goal6.content.targetsInfo;
+        targets.appendChild(targetsInfo);
+
+        const revealBtn = document.createElement("button");
+        revealBtn.textContent = responseData.goal6.content.reveal;
+        targets.appendChild(revealBtn);
+        // targets.appendChild(revealBtn);
         
         const scrollBox = document.createElement("article");
         scrollBox.setAttribute("id", "scroll");
@@ -52,6 +73,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targetsList[3] = responseData.goal6.content.targets.target4;
         targetsList[4] = responseData.goal6.content.targets.target5;
         targetsList[5] = responseData.goal6.content.targets.target6;
+
     
         
        // console.log(targetsList);
@@ -62,7 +84,28 @@ document.addEventListener('DOMContentLoaded', ()=>{
             tList.appendChild(listItem);
 
         }
-        scrollBox.appendChild(tList);        
+        scrollBox.appendChild(tList);   
+        
+        
+        revealBtn.addEventListener("click", function() {
+            if (scrollBox.style.display == "none"){
+                scrollBox.style.display = "block";
+                revealBtn.textContent = responseData.goal6.content.hide;
+            }
+            else{
+                scrollBox.style.display = "none";
+                revealBtn.textContent = responseData.goal6.content.reveal;
+            }
+
+
+        });
+
+        const videoSection = document.getElementById("video");
+        const goal6Video = document.createElement("video");
+        goal6Video.setAttribute("id", "goal6Vid");
+        videoSection.appendChild(goal6Video);
+        goal6Video.src = responseData.goal6.content.goal6Vid;
+
 
     
 

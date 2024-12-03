@@ -37,6 +37,7 @@
                 "goal12": "../Media/goal12homepage.jpg",
                 "goal13": "../Media/goal13homepage.jpg",
                 "allGoals": "../Media/allGoals.png"
+                
             }
         },
 
@@ -50,11 +51,13 @@
     "goal6": {
         "content": {
             "title": "Goal 6 - Clean Water and Sanitation",
-            "overview": "Access to clean and safe water is a basic human right. However, a rising demand for water due to rapid population growth and urbanization is making it increasingly difficult for fair and equal access. Half of the world is now facing severe water scarcity at least once a month. ",
+            "overview1": "Access to clean and safe water is a basic human right. However, a rising demand for water due to rapid population growth and urbanization is making it increasingly difficult for fair and equal access. Half of the world is now facing severe water scarcity at least once a month. ",
+            "overview2": "The UN aims to improve infrastructure ans sanitation facilities, protect and restore water-related ecosystems and step up hygeine education. By following these crucial steps, it aims to ensure universal access to safe and affordable drinking water for the whole population by 2030. It has already seen a great level of success with this plan, as the proportion of the world's access to safely managed drinking water increases from 69% to 73% from 2015 to 2022. ",
             "issue": "Why should we focus on this?",
-            "issueInfo": "Will put text here later. Hello hello hello hi hello hello",
+            "issueInfo": "Water is essential to not only health, but also poverty reduction, food security, peace and ecosystems. Despite being a basic human right, countries are facing growing challenges linked to water scarcity. In 2022, 2.2 billion people lacked safely managed drinking water, and 3.5 billion lacked safely managed sanitation.",
             "reportCard": "../Media/goal6reportcard.jpg",
             "targetsTitle": "The UN's Targets",
+            "targetsInfo": "The UN has several important targets it wants to meet for this sustainable development goal: ",
             "targets": {
                 "target1":"By 2030, achieve universal and equitable access to safe and affordable drinking water for all.",
                 "target2": "By 2030, achieve access to adequate and equitable sanitation and hygiene for all and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations.",
@@ -63,7 +66,11 @@
                 "target5": "By 2030, implement integrated water resources management at all levels, including through transboundary cooperation as appropriate.",
                 "target6": " By 2020, protect and restore water-related ecosystems, including mountains, forests, wetlands, rivers, aquifers and lakes"
             
-            }
+            },
+            "reveal": "Click me to reveal!",
+            "hide": "Click me to hide!",
+            "goal6Vid":"../Media/The Sustainable Development Goals Explained Clean Water and Sanitation.mp4"
+
 
 
         }
