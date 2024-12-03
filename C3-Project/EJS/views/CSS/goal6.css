@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'roboto';
-    src: url(../font/roboto/Roboto-Regular.ttf);
-}
-
-html{
-    font-family: 'roboto', sans-serif;
-    color: #0A1131;
-    
-}
 
 /* goal overview section */
 
@@ -15,12 +5,7 @@ html{
 #mainSection{
     grid-column: 2 / 8;
     grid-row: 1 / 2;
-    color: #0A1131;
     margin: auto;
-    
-    
-
-
 }
 
 p{

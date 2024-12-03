@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'roboto';
-    src: url(../font/roboto/Roboto-Regular.ttf);
-}
-
-html{
-    font-family: 'roboto', sans-serif;
-    color: #0A1131;
-    
-}
-
-
-
-
-
 
 body div, footer{
     border: 4px solid #009FDC;

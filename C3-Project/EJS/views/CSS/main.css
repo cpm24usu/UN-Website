@@ -172,6 +172,14 @@ footer{
 
 
 
+/* Insert other CSS pages here */
+
+
+
+
+
+
+
 /* Everything for dark mode */
 
 /* Main page background */
@@ -192,7 +200,7 @@ footer{
 }
 
 /* Header links */
-.dark-mode #homeNav a, #teamNav a, #signUpNav a{
+.dark-mode #homeNav a, .dark-mode #teamNav a, .dark-mode #signUpNav a{
     text-decoration: none;
     color: #009FDC;
     padding: 5px;
