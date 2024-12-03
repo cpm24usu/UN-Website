@@ -8,7 +8,7 @@
     font-size: x-large;
 }
 
-h2{
+#formHeading{
     text-align: center;
     color: #0075a3;
 }
@@ -24,18 +24,13 @@ fieldset{
     border-radius: 5px;
 }
 
-legend{
-    padding: 5px;
-    font-size: medium;
-    word-spacing: 4px;
-}
-
 input, textarea{
     display: block;
     width: 95%;
     padding: 10px;
     margin: 0 5px;
-    border: 1px solid dodgerblue;
+    border: 1px solid #0075a3;
+    background-color: #1E8FFF30;
 }
 
 label{
@@ -68,10 +63,6 @@ label{
 textarea{
     resize: none;
     min-height: 100px;
-}
-
-.myClass{
-    color: dodgerblue;
 }
 
 #reqField{
