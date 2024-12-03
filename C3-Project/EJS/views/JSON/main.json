@@ -67,6 +67,29 @@
 
 
         }
+    },
+
+    "team": {
+        "content": {
+            "title": "Team Info",
+            "info": "Learn about the team behind this website.",
+            "members":{
+                "member1": "Ellie",
+                "member2": "Nathan",
+                "member3": "Phil",
+                "member4": "Victoria"
+            },
+            "bios":{
+                "ellieBio": "Bio",
+                "nathanBio": "Bio",
+                "philBio": "Bio",
+                "vicBio": "Bio"
+                
+
+            }
+
+        }
+        
     }
 }
 

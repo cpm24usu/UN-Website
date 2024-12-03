@@ -37,7 +37,7 @@ p{
 
 #video{
     grid-column: 2 / 4;
-    grid row: 3 / 5;
+    grid-row: 3 / 5;
 }
 
 #goalTargets{
