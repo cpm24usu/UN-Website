@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'roboto';
     src: url(../font/roboto/Roboto-Regular.ttf);
+    
 }
 
 html{
     font-family: 'roboto', sans-serif;
     color: #0A1131;
+    font-size: large;
     
 }
 
@@ -23,44 +25,75 @@ html{
 
 }
 
+section{
+    padding: 5px 7px 5px 7px;
+    /* float: left; */
+    display: inline-block;
+    
+}
+
+
+
 p{
     padding: 5px 7px 5px 7px;
-}
+    
+} 
 
 #reportImage{
     width: 60%;
     border: 2px solid #0A1131;
     border-radius: 5px; 
     float: right;
+    margin: 10px;
+    
 
 }
 
 #video{
-    grid-column: 2 / 4;
+    grid-column: 2 / 8;
     grid-row: 3 / 5;
 }
 
-#goalTargets{
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
+
+
+button{
+    background-color: aliceblue;
+    color: #0A1131;
+    border: 1px solid #4aadff;
+    border-radius: 2px; 
+    padding: 10px;
+    float: left;
+    /* margin: 10px 5px 10px 5px; */
+    /* float: left; */
     
 }
 
 #scroll{
+
    
     background-color:aliceblue;
     border: 2px solid #4aadff;
     border-radius: 5px;
-    margin-top: 20px;
-    width: 100%;
+    margin-top: 80px;
+    width: 90%;
     height: 350px;
     overflow-y: auto;
+    /* float: left; */
+    display: none;
+    padding: 20px 20px 10px 20px;
     
 }
 
 #scroll li{
     padding: 10px 10px 10px 10px;
 }
+
+
+#goal6Vid{
+    width: 100%;
+}
+
+
     
     
 
