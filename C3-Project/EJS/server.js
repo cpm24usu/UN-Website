@@ -107,7 +107,7 @@ app.post("/signup", (req, res) => {
 
   let send = false;
 
-  if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]+$/.test(fName)  && /^[a-zA-Z]+$/.test(lName)) {
+  if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]+$/.test(fName)  && /^[a-zA-Z]+$/.test(lName)) { // Using RegEx to validate form details
     console.log("Email and name validated"); // Can comment out later, used for testing
     send = true;
   }
@@ -140,11 +140,13 @@ app.post("/signup", (req, res) => {
   if (send) {
     // Receieves data and returns it to the client for a popup alert box confirming signup
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send:send };
-    res.json(reply);
 
     // Fills emailOptions with data from form and sends email
     options(fName, lName, email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: \n\n${comments}`);
     sendEmail(mailOptions);
+
+    res.json(reply); // Only returns after email is sent
+
   }
   else { // If verification is not successful, email is not sent and client is notified
     options(email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: ${comments}`);

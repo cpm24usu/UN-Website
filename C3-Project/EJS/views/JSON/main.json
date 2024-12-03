@@ -15,7 +15,7 @@
                 "Goal13": "https://www.un.org/sustainabledevelopment/climate-change/"
             },
             "footer": {
-                "content": "UN Sustainable Development Goals Project - Web-Based Programming Group C3"
+                "content": "UN Sustainable Development Goals Project - Web-Based Programming - Group C3"
             }
         },
 
@@ -37,12 +37,6 @@
                 "goal12": "../Media/goal12homepage.jpg",
                 "goal13": "../Media/goal13homepage.jpg",
                 "allGoals": "../Media/allGoals.png"
-            },
-    
-            "temp": {
-                    "header": "I do not know what to put here. Please advise.",
-                    "testContent1": "This section is the only thing left on this page to do.",
-                    "testContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
             }
         },
 

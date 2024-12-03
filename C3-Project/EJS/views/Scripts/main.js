@@ -8,29 +8,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /* Header */
 
-            // Toggle dark mode button
+            // Toggle dark mode button (modified from https://stackoverflow.com/questions/72822021/how-to-set-light-dark-mode-across-multiple-pages)
             const header = document.querySelector('header');
             const darkModeButton = document.createElement('button');
             darkModeButton.textContent = 'Toggle Dark Mode';
             darkModeButton.id = 'toggleDarkMode'
 
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                document.body.classList.add('dark-mode')
+            // This section was modified from https://ultimatecourses.com/blog/detecting-dark-mode-in-javascript
+            // It checks the user's browser preferences to start in either light or dark mode
+            const runColorMode = (fn) => {
+                if (!window.matchMedia) {
+                    return;
+                }
+                
+                const query = window.matchMedia('(prefers-color-scheme: dark)');
+              
+                fn(query.matches);
+              
+                query.addEventListener('change', (event) => fn(event.matches));
             };
+              
+            runColorMode((isDarkMode) => {
+                if (isDarkMode) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+            });
+
+              // First checks if the button has been pressed before to determine mode, if not, then uses browser preferences
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            } else if (localStorage.getItem('darkMode') === 'disabled') {
+                document.body.classList.remove('dark-mode');
+            } else {
+                runColorMode((isDarkMode) => {
+                  if (isDarkMode) {
+                    document.body.classList.add('dark-mode');
+                  } else {
+                    document.body.classList.remove('dark-mode');
+                  }
+                });
+            }
 
             darkModeButton.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('dark-mode'); // Adds/removes dark-mode class to body 
 
                 if (document.body.classList.contains('dark-mode')) {
-                    localStorage.setItem('darkMode', 'enabled')
-                }
+                    localStorage.setItem('darkMode', 'enabled') // Local storage stores info between browsing sessions
+                }                                               // such as different pages of the same site
                 else {
-                    localStorage.setItem('darkMode', 'disabled')
+                    localStorage.setItem('darkMode', 'disabled') // Local storage of whether ndark mode is enabled
                 }
 
                 if (localStorage.getItem('darkMode') === 'enabled') {
-                    document.body.classList.add('dark-mode')
-                };
+                    document.body.classList.add('dark-mode') // If a new page is loaded and dark mode
+                };                                           // should be enabled, add the dark-mode class
             });
             header.appendChild(darkModeButton);
 
@@ -40,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const logoDisplay = document.createElement("img");
 
             const x = window.matchMedia("(max-width: 1000px)"); // 1140px
-            function updateBackground() {
+            function changeLogo() {
                 if (x.matches) { // If the screen is less than 1000px wide
                     logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version without text
                     logoDisplay.setAttribute("id", "narrowLogo");
@@ -49,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     logoDisplay.setAttribute("id", "wideLogo");
                 }
             }
-            x.addEventListener("change", updateBackground);
-            updateBackground();
+            x.addEventListener("change", changeLogo);
+            changeLogo();
 
             logo.appendChild(logoDisplay);
 

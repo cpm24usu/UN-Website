@@ -30,7 +30,7 @@ main{
 }
 
 
-/* Top/Header Section (Logo & Navigation)*/
+/* Top/Header Section (Logo, Navigation & Dark Mode Button)*/
 
 header{
     display: grid;
@@ -99,6 +99,12 @@ header{
     #active{
         border-bottom: #009FDC 5px solid;
         }
+
+    #toggleDarkMode{ /* Dark mode styling starts at line 175 */
+        grid-column: 9 / 10;
+        grid-row: 2 / 3;
+        width: 90%;
+    }
 
 
 
@@ -176,3 +182,15 @@ footer{
 .dark-mode footer{
     color: #fff;
 }
+
+.dark-mode #active:hover, #inactive:hover{
+    color: #fff;
+    background-color: #009fdc80;
+}
+
+.dark-mode #homeNav a, #teamNav a, #signUpNav a{
+    text-decoration: none;
+    color: #009FDC;
+    padding: 5px;
+}
+
