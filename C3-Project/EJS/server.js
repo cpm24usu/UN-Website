@@ -56,10 +56,7 @@ const { send } = require('process');
 // auth details for transporter
 const details = {
   user: "cpm24usu@gmail.com",
-  pass: "",
-  // generate new password if no longer works at https://myaccount.google.com/apppasswords
-  // Change email if different account is sending emails
-  // Don't leave password in code when committing, otherwise GitHub sends an email saying you have a data leak
+  pass: "",  // I would use an authenicator in a more serious case, bbut for this I am using a plaintext password
 };
 
 // Creating the transporter
