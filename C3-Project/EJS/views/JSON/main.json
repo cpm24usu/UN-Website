@@ -90,7 +90,30 @@
 
         }
         
-    }
-}
+    },
 
-    
+
+    "goal12": {
+        "content": {
+            "title": "Goal 12 - Responsible Consumption and Production",
+            "overview": "The industrial revolution has had a knock on effect on the world's ecosystems, adversely affecting the resources that we will later have no other choice but to depend on. for this reason it is up to us as consumers to be more mindful as to how we go about the use of energy and to consider switiching to more sustainable forms of energy​",
+            "uncrpg12": "../Media/uncrpg12.png",
+            "Consumptionh": "Consumption",
+            "Consumptionp": "As of the industrial revolution the planet’s natural climate has taken a turn for the worst. in terms of our day-to-day consumption, our reliance on the use of fossil fuels has become crippling for the ecosystems of the world.",
+            "Productionh": "Production",
+            "Productionp":"One of the ways in which those responsible for production can be more mindful about their works impact on the environment and climate, can come in the form of farmers diversifying their crops and livestock. The reason for which this could help reduce their carbon footprint, is due to the fact that through the use of diversifying their assets, each party wont overwhelm the local climate",
+            "greeng12": "../Media/greeng12.jpg",
+            "HowtheSACplanstotackletheseissuesh": "How the SAC plans to tackle these issues",
+            "HowtheSACplanstotackletheseissuesp":"The substantially commity plan to tacke these issues by raising awareness to the inhabitants of cities known to have a large carbon foot print. By bringing light to thses issues the commity hopes to enlighten enough people to change their ways of consumption and production so that there will be a visivle change in CO2 emmisions in years to come.",
+            "targetsTitle": "The UN's Targets",
+            "targets": {
+                "target1":"Implement the 10-year framework of programmes on sustainable consumption and production, all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries",
+                "target2": "By 2030, achieve the sustainable management and efficient use of natural resources",
+                "target3": "By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses",
+                "target4": "By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment",
+                "target5": "By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse",
+                "target6": "Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle"
+        }
+     }
+} 
+}

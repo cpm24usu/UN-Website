@@ -174,23 +174,32 @@ footer{
 
 /* Everything for dark mode */
 
+/* Main page background */
 .dark-mode{
     background-color: #0A1131;
     color: #fff;
 }
 
+/* Footer */
 .dark-mode footer{
     color: #fff;
 }
 
+/* Header links hover */
 .dark-mode #active:hover, #inactive:hover{
     color: #fff;
     background-color: #009fdc80;
 }
 
+/* Header links */
 .dark-mode #homeNav a, #teamNav a, #signUpNav a{
     text-decoration: none;
     color: #009FDC;
     padding: 5px;
+}
+
+/* External links */
+.dark-mode #externalLinks li a{
+    color: #009FDC;
 }
 
