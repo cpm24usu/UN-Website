@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: 'roboto';
     src: url(../font/roboto/Roboto-Regular.ttf);
@@ -10,6 +11,8 @@ html{
     font-size: large;
     
 }
+=======
+>>>>>>> 124d705f58310013b7953425a0149d8092b0faed
 
 /* goal overview section */
 
@@ -17,12 +20,7 @@ html{
 #mainSection{
     grid-column: 2 / 8;
     grid-row: 1 / 2;
-    color: #0A1131;
     margin: auto;
-    
-    
-
-
 }
 
 section{

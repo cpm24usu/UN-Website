@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const mainPara = document.getElementById("formPara");
 
         const paraHeader = document.createElement("h2");
+        paraHeader.setAttribute("id", "formHeading");
         paraHeader.textContent = data.signup.content.title;
 
         /* Creating the form inside a section element (inside the central element) */

@@ -126,12 +126,6 @@ app.post("/signup", (req, res) => {
   console.log(req.body); // Can comment out later, used for testing
 
 
-  // TODO: Save details to database
-    // Could also only be done if verification is successful
-    // Could wait to send back to client & send email until checking if email already exists in database
-
-
-
   // If verification is successful & password is filled, email is sent
   if (details.pass === "") {
     console.log(`Password is empty; not sending email.`);
