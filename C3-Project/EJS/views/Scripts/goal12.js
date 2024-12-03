@@ -5,53 +5,81 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         // Main page content //
 
-        let goalContent = document.getElementById("mainSection");
-        
+        const goalheader = document.querySelector("#grid-contents-maincontent");
+        const consumptionsec = document.querySelector("#unlogo2");
+        const productionsec = document.querySelector("#head1");
+        const sacsec = document.querySelector("#head2");
+        const targetsec = document.querySelector("#unlogo3");
+
         //const goalSection = document.createElement("section");
        //  goalSection.setAttribute("id", "goalSection");
 
         // goalContent.appendChild(goalSection);
         const title = document.createElement("h1");
-        title.setAttribute("id", "pageTitle");
-        title.textContent = responseData.goal6.content.title;
-        goalContent.appendChild(title);
+        title.setAttribute("id", "title");
+        title.textContent = responseData.goal12.content.title;
+        goalheader.appendChild(title);
 
-        const goalOverview = document.createElement("p");
-        goalOverview.textContent = responseData.goal6.content.overview;
-        goalContent.appendChild(goalOverview);
+        const Overview = document.createElement("p");
+        Overview.setAttribute("id", "Overview")
+        Overview.textContent = responseData.goal12.content.overview;
+        goalheader.appendChild(Overview);
 
-        const reportCard = document.createElement("img");
-        reportCard.setAttribute("id", "reportImage");
-        reportCard.src = responseData.goal6.content.reportCard;
-        goalContent.appendChild(reportCard);
+        const uncrpg12 = document.createElement("img");
+        uncrpg12.setAttribute("id", "uncrpg12");
+        uncrpg12.src = responseData.goal12.content.uncrpg12;
+        consumptionsec.appendChild(uncrpg12);
 
-        const issue = document.createElement("h3");
-        issue.setAttribute("id", "issueTitle");
-        issue.textContent = responseData.goal6.content.issue;
-        goalContent.appendChild(issue);
+        const Consumptionh = document.createElement("h2");
+        Consumptionh.setAttribute("id", "Consumptionh");
+        Consumptionh.textContent = responseData.goal12.content.Consumptionh;
+        consumptionsec.appendChild(Consumptionh);
 
-        const issueInfo = document.createElement("p");
-        issueInfo.textContent = responseData.goal6.content.issueInfo;
-        goalContent.appendChild(issueInfo);
+        const Consumptionp = document.createElement("p");
+        Consumptionp.setAttribute("id", "Consumptionp");
+        Consumptionp.textContent = responseData.goal12.content.Consumptionp;
+        consumptionsec.appendChild(Consumptionp);
 
-        let targets = document.getElementById("goalTargets");
-        
+        const Productionh = document.createElement("h2");
+        Productionh.setAttribute("id", "Productionh");
+        Productionh.textContent = responseData.goal12.content.Productionh;
+        productionsec.appendChild(Productionh);
+
+        const Productionp = document.createElement("p");
+        Productionp.setAttribute("id", "Productionp");
+        Productionp.textContent = responseData.goal12.content.Productionp;
+        productionsec.appendChild(Productionp);
+
+        const greeng12 = document.createElement("img");
+        greeng12.setAttribute("id", "greeng12");
+        greeng12.src = responseData.goal12.content.greeng12;
+        sacsec.appendChild(greeng12);
+
+        const HowtheSACplanstotackletheseissuesh = document.createElement("h2");
+        HowtheSACplanstotackletheseissuesh.setAttribute("id", "HowtheSACplanstotackletheseissuesh");
+        HowtheSACplanstotackletheseissuesh.textContent = responseData.goal12.content.HowtheSACplanstotackletheseissuesh;
+        sacsec.appendChild(HowtheSACplanstotackletheseissuesh);
+
+        const HowtheSACplanstotackletheseissuesp = document.createElement("p");
+        HowtheSACplanstotackletheseissuesp.setAttribute("id", "HowtheSACplanstotackletheseissuesp");
+        HowtheSACplanstotackletheseissuesp.textContent = responseData.goal12.content.HowtheSACplanstotackletheseissuesp;
+        sacsec.appendChild(HowtheSACplanstotackletheseissuesp);
         
         const targetsTitle = document.createElement("h2");
-        targetsTitle.textContent = responseData.goal6.content.targetsTitle;
-        targets.appendChild(targetsTitle);
+        targetsTitle.textContent = responseData.goal12.content.targetsTitle;
+        targetsec.appendChild(targetsTitle);
         
         const scrollBox = document.createElement("article");
         scrollBox.setAttribute("id", "scroll");
-        targets.appendChild(scrollBox);
+        targetsec.appendChild(scrollBox);
         
         const targetsList = [7];
-        targetsList[0] = responseData.goal6.content.targets.target1;
-        targetsList[1] = responseData.goal6.content.targets.target2;
-        targetsList[2] = responseData.goal6.content.targets.target3;
-        targetsList[3] = responseData.goal6.content.targets.target4;
-        targetsList[4] = responseData.goal6.content.targets.target5;
-        targetsList[5] = responseData.goal6.content.targets.target6;
+        targetsList[0] = responseData.goal12.content.targets.target1;
+        targetsList[1] = responseData.goal12.content.targets.target2;
+        targetsList[2] = responseData.goal12.content.targets.target3;
+        targetsList[3] = responseData.goal12.content.targets.target4;
+        targetsList[4] = responseData.goal12.content.targets.target5;
+        targetsList[5] = responseData.goal12.content.targets.target6;
     
         
        // console.log(targetsList);
@@ -62,25 +90,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             tList.appendChild(listItem);
 
         }
-        scrollBox.appendChild(tList);        
-
-    
-
-
+        scrollBox.appendChild(tList);
 
     })
-
-        
-        
-
-
-
-
-
-        
-
-       
-
-    
     .catch(error => console.error("Error fetching JSON data:", error))
 })
