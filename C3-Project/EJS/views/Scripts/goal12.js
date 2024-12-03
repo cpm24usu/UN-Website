@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         // Main page content //
 
-        let goalContent = document.getElementById("mainSection");
+        let goalContent = document.getElementById("grid-contents-maincontent");
         
         //const goalSection = document.createElement("section");
        //  goalSection.setAttribute("id", "goalSection");
 
         // goalContent.appendChild(goalSection);
-        const title = document.createElement("h1");
-        title.setAttribute("id", "pageTitle");
+        const title = document.createElement("head1");
+        title.setAttribute("id", "head1");
         title.textContent = responseData.goal6.content.title;
         goalContent.appendChild(title);
 
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         goalOverview.textContent = responseData.goal6.content.overview;
         goalContent.appendChild(goalOverview);
 
-        const reportCard = document.createElement("img");
-        reportCard.setAttribute("id", "reportImage");
+        const reportCard = document.createElement("unrcrpg12");
+        reportCard.setAttribute("id", "unrcrpg12");
         reportCard.src = responseData.goal6.content.reportCard;
         goalContent.appendChild(reportCard);
 
