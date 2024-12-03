@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targets.appendChild(scrollBox);
         
         const targetsList = [7];
-        targetsList[0] = responseData.goal6.content.targets.target1;
-        targetsList[1] = responseData.goal6.content.targets.target2;
-        targetsList[2] = responseData.goal6.content.targets.target3;
-        targetsList[3] = responseData.goal6.content.targets.target4;
-        targetsList[4] = responseData.goal6.content.targets.target5;
-        targetsList[5] = responseData.goal6.content.targets.target6;
+        targetsList[0] = responseData.goal12.content.targets.target1;
+        targetsList[1] = responseData.goal12.content.targets.target2;
+        targetsList[2] = responseData.goal12.content.targets.target3;
+        targetsList[3] = responseData.goal12.content.targets.target4;
+        targetsList[4] = responseData.goal12.content.targets.target5;
+        targetsList[5] = responseData.goal12.content.targets.target6;
     
         
        // console.log(targetsList);
