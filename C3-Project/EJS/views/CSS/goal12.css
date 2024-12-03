@@ -71,7 +71,6 @@ main{
 }
 
 .grid-contents-maincontent{
-    float: left;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
