@@ -11,34 +11,34 @@ document.addEventListener('DOMContentLoaded', ()=>{
        //  goalSection.setAttribute("id", "goalSection");
 
         // goalContent.appendChild(goalSection);
-        const title = document.createElement("head1");
-        title.setAttribute("id", "head1");
-        title.textContent = responseData.goal6.content.title;
+        const title = document.createElement("title");
+        title.setAttribute("id", "title");
+        title.textContent = responseData.goal12.content.title;
         goalContent.appendChild(title);
 
         const goalOverview = document.createElement("p");
-        goalOverview.textContent = responseData.goal6.content.overview;
+        goalOverview.textContent = responseData.goal12.content.overview;
         goalContent.appendChild(goalOverview);
 
         const reportCard = document.createElement("unrcrpg12");
         reportCard.setAttribute("id", "unrcrpg12");
-        reportCard.src = responseData.goal6.content.reportCard;
+        reportCard.src = responseData.goal12.content.reportCard;
         goalContent.appendChild(reportCard);
 
         const issue = document.createElement("h3");
         issue.setAttribute("id", "issueTitle");
-        issue.textContent = responseData.goal6.content.issue;
+        issue.textContent = responseData.goal12.content.issue;
         goalContent.appendChild(issue);
 
         const issueInfo = document.createElement("p");
-        issueInfo.textContent = responseData.goal6.content.issueInfo;
+        issueInfo.textContent = responseData.goal12.content.issueInfo;
         goalContent.appendChild(issueInfo);
 
         let targets = document.getElementById("goalTargets");
         
         
         const targetsTitle = document.createElement("h2");
-        targetsTitle.textContent = responseData.goal6.content.targetsTitle;
+        targetsTitle.textContent = responseData.goal12.content.targetsTitle;
         targets.appendChild(targetsTitle);
         
         const scrollBox = document.createElement("article");
