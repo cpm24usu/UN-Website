@@ -7,15 +7,22 @@
 }
 
 html{
-    font-family: 'roboto', sans-serif;
+    font-family: 'roboto';
     color: #0A1131;
-    min-width: 800px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(7, auto);
+    grid-column: 1 / 10;
+    grid-row: 1 / 9;
 }
 
 
 /* Creating/Styling the Base Grid */
 
-body div, footer{
+body div{
     border: 4px solid #009FDC;
     border-radius: 20px;
     padding: 1em;
@@ -26,6 +33,8 @@ main{
     grid-template-columns: repeat(9, 1fr);
     gap: 10px;
     grid-template-rows: auto;
+    grid-column: 1 / 10;
+    grid-row: 2 / 8;
     margin-top: 10px;
 }
 
@@ -43,7 +52,6 @@ header{
     min-height: 150px;
     border: 4px solid #009FDC;
     border-radius: 20px;
-
 }
 
     /* Logo */
@@ -98,7 +106,7 @@ header{
     
     #active{
         border-bottom: #009FDC 5px solid;
-        }
+    }
 
     #toggleDarkMode{ /* Dark mode styling starts at line 175 */
         grid-column: 9 / 10;
@@ -165,7 +173,12 @@ footer{
     text-align: center;
     color: #0075a3;
     font-size: large;
-    margin: 10px 0px;
+    margin-top: 10px ;
+    border: 4px solid #009FDC;
+    border-radius: 20px;
+    padding: 1em;
+    grid-column: 1 / 10;
+    grid-row: 8 / 9;
 }
 
 

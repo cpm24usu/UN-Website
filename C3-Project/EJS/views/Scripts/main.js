@@ -72,9 +72,17 @@ document.addEventListener("DOMContentLoaded", function () {
             const logo = document.querySelector("#logo");
             const logoDisplay = document.createElement("img");
 
-            const x = window.matchMedia("(max-width: 1000px)"); // 1140px
+            const x1 = window.matchMedia("(max-width: 1000px)"); // Stops overlap of nav and logo by swapping to no text version
+            const x2 = window.matchMedia("(max-width: 800px)"); // Change back to logo with text for media rule
+            const x3 = window.matchMedia("(max-width: 680px)"); // Stop overlap on smaller screens for media rule
             function changeLogo() {
-                if (x.matches) { // If the screen is less than 1000px wide
+                if (x3.matches) { // If the screen is at least 800px wide (media rule)
+                    logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version with text
+                    logoDisplay.setAttribute("id", "narrowLogo");
+                } else if (x2.matches) { // If the screen is less than 680px wide (media rule)
+                    logoDisplay.src =  data.common.media.logoWithText; // Change the logo to the version without text
+                    logoDisplay.setAttribute("id", "wideLogo");
+                } else if (x1.matches) { // If the screen is less than 1000px wide
                     logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version without text
                     logoDisplay.setAttribute("id", "narrowLogo");
                 } else {
@@ -82,7 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     logoDisplay.setAttribute("id", "wideLogo");
                 }
             }
-            x.addEventListener("change", changeLogo);
+            x1.addEventListener("change", changeLogo);
+            x2.addEventListener("change", changeLogo);
+            x3.addEventListener("change", changeLogo);
             changeLogo();
 
             logo.appendChild(logoDisplay);
@@ -214,5 +224,5 @@ document.addEventListener("DOMContentLoaded", function () {
             const footer = this.querySelector("footer");
             footer.textContent = data.common.footer.content;
         })
-        .catch(error => console.error("Error fetching JSON data:", error));
+        .catch(error => console.error("An error has occured:", error));
     });
