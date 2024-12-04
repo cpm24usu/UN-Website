@@ -74,12 +74,12 @@ padding: 0px;
         border-radius: 20px;
     }
     #logo{
-        grid-column: 1 / 5;
+        grid-column: 1 / 8;
         grid-row: 1 / 5;
         border: 0px;
     }
     #wideLogo{
-        height: 90%;
+        width: 100%;
     }
     #narrowLogo{
         min-height: 50%;
