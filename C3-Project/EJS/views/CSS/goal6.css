@@ -41,8 +41,6 @@ p{
 
 
 button{
-    background-color: aliceblue;
-    color: #0A1131;
     border: 1px solid #4aadff;
     border-radius: 2px; 
     padding: 10px;
@@ -52,16 +50,13 @@ button{
 }
 
 #scroll{
-
-   
-    background-color:aliceblue;
+    background-color: #528da8;
     border: 2px solid #4aadff;
     border-radius: 5px;
     margin-top: 80px;
     width: 75%;
     height: 350px;
     overflow-y: auto;
-   
     display: none;
     padding: 20px 20px 10px 20px;
     
@@ -95,6 +90,7 @@ button{
 }
 
 .headingLinks{
+    color: #0075a3;
     text-align: center;
     font-size: x-large;
     padding: 30px 30px 30px 30px;
