@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const videoSection = document.getElementById("video");
         const goal6Video = document.createElement("video");
         goal6Video.setAttribute("id", "goal6Vid");
+        goal6Video.setAttribute("controls", "controls");
         videoSection.appendChild(goal6Video);
         goal6Video.src = responseData.goal6.content.goal6Vid;
 

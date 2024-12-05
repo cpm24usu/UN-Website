@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dataDisplay.appendChild(outro);
 
 
-        /*Loading test content into 2nd central element*/
+        /*Loading video into 2nd central element*/
 
         const testPara = document.getElementById("testPara");
 
