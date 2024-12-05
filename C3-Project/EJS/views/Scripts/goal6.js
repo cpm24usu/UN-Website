@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // goalContent.appendChild(goalSection);
 
         const overviewSection = document.createElement("section");
+        overviewSection.setAttribute("id", "overviewSection");
+
         overviewSection.setAttribute("id", "goal6Overview");
         goalContent.append(overviewSection);
         const title = document.createElement("h1");
@@ -46,10 +48,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
 
         let targets = document.createElement("section");
+        targets.setAttribute("id", "targets");
         goalContent.appendChild(targets);
         
         
         const targetsTitle = document.createElement("h2");
+        targetsTitle.setAttribute("id", "targetsTitle");
         targetsTitle.textContent = responseData.goal6.content.targetsTitle;
         targets.appendChild(targetsTitle);
 
@@ -100,11 +104,51 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         });
 
+        const conclusion = document.createElement("p");
+        conclusion.textContent = responseData.goal6.content.conclusion;
+        goalContent.appendChild(conclusion);
+
         const videoSection = document.getElementById("video");
         const goal6Video = document.createElement("video");
         goal6Video.setAttribute("id", "goal6Vid");
         videoSection.appendChild(goal6Video);
         goal6Video.src = responseData.goal6.content.goal6Vid;
+
+        const subheadings = document.getElementById("subheadings");
+       
+        const issueLink = document.createElement("a");
+        issueLink.setAttribute("class", "headingLinks");
+        issueLink.textContent = responseData.goal6.content.issue;
+        issueLink.href = "#issueTitle";
+        subheadings.appendChild(issueLink);
+
+        const targetsLink = document.createElement("a");
+        targetsLink.setAttribute("class", "headingLinks");
+        targetsLink.textContent = responseData.goal6.content.targetsTitle;
+        targetsLink.href = "#targetsTitle";
+        subheadings.appendChild(targetsLink);
+
+        const videoLink = document.createElement("a");
+        videoLink.setAttribute("class", "headingLinks");
+        videoLink.textContent = responseData.goal6.content.videoHeading;
+        videoLink.href = "#goal6Vid";
+        subheadings.appendChild(videoLink);
+
+        const targetImg = document.createElement("img");
+        targetImg.src = responseData.goal6.content.targetImg;
+        targetImg.setAttribute("id", "targetImg");
+        subheadings.appendChild(targetImg);
+
+        const topLink = document.createElement("a");
+        topLink.setAttribute("class", "headingLinks");
+        topLink.setAttribute("id", "topLink");
+        topLink.textContent = responseData.goal6.content.back;
+        topLink.href = "#goal6Title";
+        subheadings.appendChild(topLink);
+
+
+
+
 
 
     
@@ -112,6 +156,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
     })
+
 
         
         
