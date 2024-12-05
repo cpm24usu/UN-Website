@@ -228,3 +228,7 @@ footer{
 .dark-mode label, .dark-mode #formHeading{
     color: #fff;
 }
+
+.dark-mode textarea, .dark-mode input{
+    color: #fff;
+}

@@ -108,18 +108,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 response = responsedata;
             })
             .then(() => {
-                for (const [key, value] of Object.entries(response)) {console.log(`${key}: ${value}`);};
-                if (response.send == true) {
-                    console.log("Sending email");
+                //for (const [key, value] of Object.entries(response)) {console.log(`${key}: ${value}`);}; // Logs each key-value pair from the form; for testing
+                if (response.send == `all valid`) {
+                    //console.log("Sending email");
+                    form.reset();
                     window.alert(`You have successfully signed up for the newsletter! Check ${response.email} for confirmation.`);
                 }
                 else {
-                    console.log("Not sending email");
-                    window.alert(`One or more fields was not valid. Please try again.`);
+                    let output = `The following fields were not in a valid format:\n`;
+                    if (response.send.includes(`fName invalid`)) {
+                        output += `\nFirst Name`;
+                    };
+                    if (response.send.includes(`lName invalid`)) {
+                        output += `\nLast Name`;
+                    };
+                    if (response.send.includes(`email invalid format`)) {
+                        output += `\nEmail`; // Appending invalid fields as a list in the popup
+                    };
+                    if (response.send.includes(`password empty`)) {
+                        output += `\n\nPassword empty (server side)`;
+                    };
+                    if (output.includes(`:\n\n\nP`)) { // Should only be active when password is not set server-side
+                        output = `All fields were in a valid format.\nThe password on the server side was empty.\nNot sending email.`;
+                    }
+                    window.alert(output);
+                    //console.log("Not sending email");
                 };
             })
-            //.then(window.location.reload())
-            .catch(error => console.log(error));
+            .catch(error => console.log("Error submitting form:", error));
         });
     })
     .catch(error => console.error("Error fetching JSON data:", error));

@@ -102,21 +102,24 @@ app.post("/signup", (req, res) => {
   let comments = req.body.comments;
 
 
-  let send = false;
+  let send;
 
   if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]+$/.test(fName)  && /^[a-zA-Z]+$/.test(lName)) { // Using RegEx to validate form details
-    console.log("Email and name validated"); // Can comment out later, used for testing
-    send = true;
+    //console.log("Email and name validated"); // Can comment out later, used for testing
+    send = `all valid`;
   }
   else {
     if (!(/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email))) {
-      console.log("Email not valid"); // Can comment out later, used for testing
+      //console.log("Email not valid"); // Can comment out later, used for testing
+      send = `${send}; email invalid format`;
     }
     if (!(/^[a-zA-Z]+$/.test(fName))) {
-      console.log("First name not valid"); // Can comment out later, used for testing
+      //console.log("First name not valid"); // Can comment out later, used for testing
+      send = `${send}; fName invalid`;
     }
     if (!(/^[a-zA-Z]+$/.test(lName))) {
-      console.log("Last name not valid"); // Can comment out later, used for testing
+      //console.log("Last name not valid"); // Can comment out later, used for testing
+      send = `${send}; lName invalid`;
     }
   };
 
@@ -125,10 +128,10 @@ app.post("/signup", (req, res) => {
 
   // If verification is successful & password is filled, email is sent
   if (details.pass === "") {
-    console.log(`Password is empty; not sending email.`);
-    send = false;
+    //console.log(`Password is empty; not sending email.`);
+    send = `${send}; password empty`;
   }
-  if (send) {
+  if (send == `all valid`) {
     // Receieves data and returns it to the client for a popup alert box confirming signup
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send:send };
 
@@ -141,14 +144,16 @@ app.post("/signup", (req, res) => {
   }
   else { // If verification is not successful, email is not sent and client is notified
     options(email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: ${comments}`);
-    console.log("Email not sent"); // Can comment out later, used for testing
+    //console.log("Email not sent"); // Can comment out later, used for testing
 
-    // Still returns data to client-side for a popup saying unsuccessful signup
+    // Still returns data to client-side for a customizable popup
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send: send };
     res.json(reply);
   }
+
+  console.log(`send: ${send}\n\n`); // Used for testing & checking custom popup messages client-side
 });
 
 // Start listening on port and print to console
 app.listen(port);
-console.log(`listening on port ${port}. Go to http://localhost:${port}`);
+console.log(`listening on port ${port}. Go to http://localhost:${port}\n`);
