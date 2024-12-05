@@ -69,7 +69,15 @@
             },
             "reveal": "Click me to reveal!",
             "hide": "Click me to hide!",
-            "goal6Vid":"../Media/The Sustainable Development Goals Explained Clean Water and Sanitation.mp4"
+            "goal6Vid":"../Media/The Sustainable Development Goals Explained Clean Water and Sanitation.mp4",
+            "conclusion": "To achieve the UN's main goal of ensuring equal access to safe water, sanitation and hygeine, lots of steps need to be taken. There needs to be a substantial increase in currrent global rates in progress: sixfold for drinking water, fivefold for sanitation and threefold for hygeine. Many of the challenges to achieving universal access are compounded by conflicts and climate change. Increasing sector-wide investment, promoting innovation and adopting a more integreated and holistic approach to water management.",
+            "videoHeading": "Clean Water and Sanitation Video",
+            "targetImg": "../Media/goal6-target.png",
+            "back": "Back to the top"
+
+            
+
+            
 
 
 
@@ -121,6 +129,7 @@
                 "target5": "By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse",
                 "target6": "Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle"
         }
+        
      }
 } 
 }
