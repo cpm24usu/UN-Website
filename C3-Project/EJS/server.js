@@ -50,14 +50,16 @@ app.get('/goal13', (req, res) => {
 
 // Functions and variables for sending email after form is received and validated
 
+// Importing modules
 const nodemailer = require("nodemailer");
 const { send } = require('process');
+const fs = require('fs');
 
 // auth details for transporter
 const details = {
   user: "cpm24usu@gmail.com",
   pass: "",  // I would use an authenicator in a more serious case, bbut for this I am using a plaintext password
-};
+}; // https://myaccount.google.com/apppasswords
 
 // Creating the transporter
 const transporter = nodemailer.createTransport({
@@ -69,7 +71,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Changing target email, subject & body
-let mailOptions;
+let mailOptions; // Declaring the variable here so it is accessible outside the function
 
 function options(forename, surname, addressee, body) {
   mailOptions = {
@@ -92,18 +94,58 @@ function sendEmail(settings) {
 };
 
 
+// Function to write user details to a JSON file on form submission
+// This is called after validation so don't need to validate again here
+let successfulWrite;
+function addUser(fName, lName, email, comments) {
+  let data;
+  try {
+    // Read the existing data from the file
+    data = JSON.parse(fs.readFileSync('../users.json', 'utf8'));
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      // If the file doesn't exist, create an empty array for users
+      data = { users: [] };
+    } else {
+      throw err;
+    }
+  }
+
+  // Checks if the entered email already exists in the file
+  const existingUser = data.users.find(user => user.email === email);
+  if (existingUser) {
+    //console.log('Email already exists');
+    successfulWrite = `duplicateEmail`;
+  }
+  else { // Only attempts to add user if email does not exist
+    // Add the new user to the users array
+    data.users.push({ fName, lName, email, comments });
+
+    // Write the updated data back to the file
+    try{
+      fs.writeFileSync('../users.json', JSON.stringify(data, null, 2));
+      successfulWrite = `true`;
+    } catch (err){
+      console.log(err);
+      successfulWrite = `false`;
+    };
+    //console.log('User added successfully');
+  }
+}
+
 
 // Actions when form is submitted
 
 app.post("/signup", (req, res) => {
+  // Assigning data received from form
   let fName = req.body.fName;
   let lName = req.body.lName;
   let email = req.body.email;
   let comments = req.body.comments;
 
-
   let send;
 
+  // Validating form data
   if (/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email) && /^[a-zA-Z]+$/.test(fName)  && /^[a-zA-Z]+$/.test(lName)) { // Using RegEx to validate form details
     //console.log("Email and name validated"); // Can comment out later, used for testing
     send = `all valid`;
@@ -123,21 +165,28 @@ app.post("/signup", (req, res) => {
     }
   };
 
-  console.log(req.body); // Can comment out later, used for testing
-
-
   // If verification is successful & password is filled, email is sent
   if (details.pass === "") {
     //console.log(`Password is empty; not sending email.`);
     send = `${send}; password empty`;
   }
   if (send == `all valid`) {
+    //console.log(`all fields valid; password present; writing to JSON and sending email.`); // Used for testing
     // Receieves data and returns it to the client for a popup alert box confirming signup
     let reply = { fName: fName, lName: lName, email: email, comments: comments, send:send };
 
-    // Fills emailOptions with data from form and sends email
-    options(fName, lName, email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: \n\n${comments}`);
-    sendEmail(mailOptions);
+    // Writes data to JSON file
+    addUser(fName, lName, email, comments);
+    if (successfulWrite == `true`) {
+      //console.log(`Sending email (successfulWrite = true)`);
+      // Fills emailOptions with data from form and sends email only if data was written to JSON successfully
+      options(fName, lName, email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: \n\n${comments}`);
+      sendEmail(mailOptions);
+      //console.log(`Email sent to ${email}`);
+    }
+    else if (successfulWrite == `duplicateEmail`) {
+      reply.send = `${send}; duplicate email`;
+    };
 
     res.json(reply); // Only returns after email is sent
 
@@ -151,9 +200,9 @@ app.post("/signup", (req, res) => {
     res.json(reply);
   }
 
-  console.log(`send: ${send}\n\n`); // Used for testing & checking custom popup messages client-side
+  //console.log(`send: ${send}\n\n`); // Used for testing & checking custom popup messages client-side
 });
 
-// Start listening on port and print to console
+// Start listening on port and print to //console
 app.listen(port);
 console.log(`listening on port ${port}. Go to http://localhost:${port}\n`);

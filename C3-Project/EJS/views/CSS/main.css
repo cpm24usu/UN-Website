@@ -113,6 +113,7 @@ header{
         grid-column: 9 / 10;
         grid-row: 2 / 3;
         width: 90%;
+        background-color: #1E8FFF30;
     }
 
 

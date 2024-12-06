@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             darkModeButton.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode'); // Adds/removes dark-mode class to body 
+                darkModeButton.classList.toggle(`dark-mode`);
 
                 if (document.body.classList.contains('dark-mode')) {
                     localStorage.setItem('darkMode', 'enabled') // Local storage stores info between browsing sessions

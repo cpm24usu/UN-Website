@@ -110,9 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(() => {
                 //for (const [key, value] of Object.entries(response)) {console.log(`${key}: ${value}`);}; // Logs each key-value pair from the form; for testing
                 if (response.send == `all valid`) {
-                    //console.log("Sending email");
                     form.reset();
                     window.alert(`You have successfully signed up for the newsletter! Check ${response.email} for confirmation.`);
+                }
+                else if (response.send.includes(`duplicate email`)) {
+                    window.alert(`This email is already registered for our newsletter!`);
                 }
                 else {
                     let output = `The following fields were not in a valid format:\n`;
