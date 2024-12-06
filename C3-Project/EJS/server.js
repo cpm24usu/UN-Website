@@ -73,12 +73,12 @@ const transporter = nodemailer.createTransport({
 // Changing target email, subject & body
 let mailOptions; // Declaring the variable here so it is accessible outside the function
 
-function options(forename, surname, addressee, body) {
+function options(forename, surname, email, comments) {
   mailOptions = {
     from: "cpm24usu@gmail.com",
-    to: addressee,
-    subject: "UN Sustainable Development Newsletter (Test Email)",
-    text: `This email is a test email to ${forename} ${surname} at ${addressee}.\n\n${body}`,
+    to: email,
+    subject: "Confirmation of Registration",
+    text: `This is a confirmation email intended for ${forename} ${surname} at ${email}.\n\nThank you for registering for our Sustainable Development newsletter!\n\nThe following comments were provided at the time of registration:\n\n${comments}`,
   };
 };
 
@@ -180,7 +180,7 @@ app.post("/signup", (req, res) => {
     if (successfulWrite == `true`) {
       //console.log(`Sending email (successfulWrite = true)`);
       // Fills emailOptions with data from form and sends email only if data was written to JSON successfully
-      options(fName, lName, email, `Hello, ${fName} ${lName}. Your email: ${email}. Your comments: \n\n${comments}`);
+      options(fName, lName, email, comments);
       sendEmail(mailOptions);
       //console.log(`Email sent to ${email}`);
     }
