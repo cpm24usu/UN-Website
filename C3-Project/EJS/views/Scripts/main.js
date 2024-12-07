@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
               
             runColorMode((isDarkMode) => {
                 if (isDarkMode) {
+                    darkModeButton.classList.add('darkMode');
                     document.body.classList.add('dark-mode');
                 }
             });

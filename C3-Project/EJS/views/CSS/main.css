@@ -199,7 +199,7 @@ footer{
 
 /* Main page background */
 .darkMode{
-    color: #fff;
+    color: #fff !important;
 }
 
 .dark-mode{
