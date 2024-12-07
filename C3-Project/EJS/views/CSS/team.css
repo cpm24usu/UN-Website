@@ -1,7 +1,13 @@
+html{
+    font-size: large;
+    display: grid;
+}
+
 
 #teamSection{
     grid-column: 1 / 8;
     grid-row: 1 / 5;
+    
     
 }
 
@@ -9,15 +15,30 @@ h1{
     text-align: center;
 }
 
-article{
-    background-color: aliceblue;
-    border: 2px solid #4aadff;
-    border-radius: 5px;
-    margin: auto;
-    width: 100%;
-    padding: 5px;
-    margin: 10px 10px 10px 10px;
-    height: 350px;
-    display: inline-block;
+h3{
+    padding: 5px 5px 5px 5px;
+    
 }
+
+.members{
+    border: 2px solid #009FDC;
+    border-radius: 5px;
+    padding: 50px 50px 50px 50px;
+    display: inline- block;
+    width: 30%;
+    color: #0075a3;
+    
+    
+
+}
+
+#ellie, #phil{
+    float: left
+}
+
+#nathan, #vic{
+    float: right;
+}
+
+
 
