@@ -40,13 +40,21 @@ p{
 
 
 
-button{
+#revealTargets{
     border: 1px solid #4aadff;
     border-radius: 2px; 
     padding: 10px;
     float: left;
+    background-color: white;
+    color: #009FDC;
+    cursor:pointer;
     
     
+}
+
+#revealTargets:hover{
+    background-color: #0A1131;
+    color: white;
 }
 
 #scroll{

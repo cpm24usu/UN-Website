@@ -6,7 +6,10 @@ html{
 
 #teamSection{
     grid-column: 1 / 8;
-    grid-row: 1 / 5;
+    grid-row: 1 / 6;
+    position: relative;
+    
+    
     
     
 }
@@ -20,25 +23,42 @@ h3{
     
 }
 
+#teamOverview{
+    text-align: center;
+}
+
 .members{
     border: 2px solid #009FDC;
     border-radius: 5px;
     padding: 50px 50px 50px 50px;
-    display: inline- block;
-    width: 30%;
-    color: #0075a3;
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5%
+    
+
     
     
 
 }
 
-#ellie, #phil{
-    float: left
+#bannerContainer{
+    display: flex;
+    border: 3px solid #009FDC;
+    border-radius: 5px;
+    padding: 20px 20px 20px 20px;
 }
 
-#nathan, #vic{
-    float: right;
+#banner{
+    width: 100%;
+    margin: auto;
+
+
 }
+
+
+
+
 
 
 

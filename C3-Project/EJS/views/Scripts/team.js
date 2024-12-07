@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         teamContent.appendChild(title);
 
         const overview = document.createElement("p");
+        overview.setAttribute("id", "teamOverview");
         overview.textContent = responseData.team.content.info;
         teamContent.appendChild(overview);
+
 
         const ellieSection = document.createElement("article");
         ellieSection.setAttribute("class", "members")
@@ -21,8 +23,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         ellie.textContent = responseData.team.content.members.member1;
         ellieSection.appendChild(ellie);
         const eBio = document.createElement("p");
+        eBio.setAttribute("class", "bios");
         eBio.textContent = responseData.team.content.bios.ellieBio;
         ellieSection.appendChild(eBio);
+     
 
         const nathSection = document.createElement("article");
         nathSection.setAttribute("class", "members")
@@ -32,8 +36,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         nathan.textContent = responseData.team.content.members.member2;
         nathSection.appendChild(nathan);
         const nBio = document.createElement("p");
+        nBio.setAttribute("class", "bios");
         nBio.textContent = responseData.team.content.bios.nathanBio;
         nathSection.appendChild(nBio);
+        
         
 
         const philSection = document.createElement("article");
@@ -44,8 +50,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         phil.textContent = responseData.team.content.members.member3;
         philSection.appendChild(phil);
         const pBio = document.createElement("p");
+        pBio.setAttribute("class", "bios");
         pBio.textContent = responseData.team.content.bios.philBio;
         philSection.appendChild(pBio);
+        
 
         const vicSection = document.createElement("article");
         vicSection.setAttribute("class", "members");
@@ -55,8 +63,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
         vic.textContent = responseData.team.content.members.member4;
         vicSection.appendChild(vic);
         const vBio = document.createElement("p");
+        vBio.setAttribute("class", "bios");
         vBio.textContent = responseData.team.content.bios.vicBio;
         vicSection.appendChild(vBio);
+
+        const container = document.createElement("section");
+        container.setAttribute("id", "bannerContainer");
+        teamContent.appendChild(container);
+       
+
+        const banner = document.createElement("img");
+        banner.setAttribute("id", "banner");
+        banner.src = responseData.team.content.goalsBanner;
+        container.appendChild(banner);
+
+       
+
+        
 
 
 

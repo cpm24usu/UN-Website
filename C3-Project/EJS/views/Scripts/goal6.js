@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targets.appendChild(targetsInfo);
 
         const revealBtn = document.createElement("button");
+        revealBtn.setAttribute("id", "revealTargets");
         revealBtn.textContent = responseData.goal6.content.reveal;
         targets.appendChild(revealBtn);
         // targets.appendChild(revealBtn);
