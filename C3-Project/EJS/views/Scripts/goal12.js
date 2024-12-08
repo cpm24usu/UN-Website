@@ -3,23 +3,50 @@ document.addEventListener('DOMContentLoaded', ()=>{
     .then(response => response.json())
     .then(responseData =>{
 
-        // Main page content //
-
         const goalheader = document.querySelector("#grid-contents-maincontent");
-        const consumptionsec = document.querySelector("#unlogo2");
+        const consumptionsec = document.querySelector("#unlogoc");
         const productionsec = document.querySelector("#head1");
         const sacsec = document.querySelector("#head2");
         const targetsec = document.querySelector("#unlogo3");
         const articlesec = document.querySelector('#articlelinks');
-        //const goalSection = document.createElement("section");
-       //  goalSection.setAttribute("id", "goalSection");
 
-        // goalContent.appendChild(goalSection);
-        
-        const articlelinks = document.createElement("h1");
-        articlelinls.setAttribute("id", "articlelinks");
-        articlelinks.textContent = responseData.goal12.content.articlelinks;
-        articlesec.appendChild(articlelinks);
+        // const articlelinks = document.createElement("p");
+        // articlelinks.setAttribute("id", "articlelinks");
+        // articlelinks.textContent = responseData.goal12.content.articlelinks;
+        // articlesec.appendChild(articlelinks);
+
+        const unlogocLink = document.createElement("a");
+        unlogocLink.setAttribute("class", "articlelinks");
+        unlogocLink.textContent = responseData.goal12.content.consumptionlink;
+        unlogocLink.href = "#unlogoc";
+        articlesec.appendChild(unlogocLink);
+
+        const head1Link = document.createElement("a");
+        head1Link.setAttribute("class", "articlelinks");
+        head1Link.textContent = responseData.goal12.content.productionlink;
+        head1Link.href = "#head1";
+        articlesec.appendChild(head1Link);
+
+        const head2Link = document.createElement("a");
+        head2Link.setAttribute("class", "articlelinks");
+        head2Link.textContent = responseData.goal12.content.SAClink;
+        head2Link.href = "#head2";
+        articlesec.appendChild(head2Link);
+
+
+        const consumptionvideo = document.createElement("video");
+        consumptionvideo.setAttribute("class", "articlelinks");
+        consumptionvideo.setAttribute("id", "consumptionvideo");
+        consumptionvideo.setAttribute("controls", "controls");
+        consumptionvideo.src = responseData.goal12.content.consumptionvideo;
+        articlesec.appendChild(consumptionvideo);
+
+        const topLink = document.createElement("a");
+        topLink.setAttribute("class", "subheadinglinkstop");
+        topLink.setAttribute("id", "topLink");
+        topLink.textContent = responseData.goal12.content.top;
+        topLink.href = "#top";
+        articlesec.appendChild(topLink);
 
         const title = document.createElement("h1");
         title.setAttribute("id", "title");

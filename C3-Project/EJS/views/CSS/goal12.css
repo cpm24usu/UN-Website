@@ -1,20 +1,4 @@
 
-body div, footer{
-    border: 4px solid #009FDC;
-    border-radius: 20px;
-    padding: 1em;
-}
-
-main{
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 10px;
-    grid-template-rows: auto;
-    margin-top: 10px;
-}
-
-
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(7,80px);
@@ -32,7 +16,18 @@ main{
     grid-row-end: 2;
 
 }
+ 
+#uncrpg12 {
+    width: 400px;
+    height: auto;
+    float: left; 
+}
 
+#greeng12{
+    width: 400px;
+    height: auto;
+    float: right;
+}
 
 #unlogo4{
     grid-column-start: 1;
@@ -62,37 +57,52 @@ main{
     border: 4px solid #009fdc;
     border-radius: 20px;
     grid-column: 3 / 8;
-    grid-row: 1/10
-
+    grid-row: 1/6   ;
+    gap: 10px
 }
 
-/*#articlelinks{
+#articlelinks{
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 4;
-}*/
+    grid-row-end: 6;
+}
+#title{
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
 
-
-#unlogo2{
-    grid-column-start: 2;
-    grid-column-end: 4;
+#Overview {
+    float: left;
+    grid-column-start: 1;
+    grid-column-end: 10;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-#head1{
-    
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-#head2{
+#unlogoc{
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 10;
     grid-row-start: 3;
     grid-row-end: 4;
+    text-align: right;
+}
+
+#head1{
+    
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+#head2{
+    float: right;
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
 
 #unlogo3{
@@ -119,4 +129,35 @@ main{
     overflow-y: auto;
     display: none;
     padding: 20px 20px 10px 20px;
+}
+
+.articlelinks{
+    color: #0075a3;
+    text-align: center;
+    font-size: x-large;
+    padding: 30px 30px 30px 30px;
+    display: inline-block;
+    border: 1px solid #f00;
+    border-radius: 5px;
+    margin: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+    
+}
+
+.subheadinglinkstop{
+    color: #0075a3;
+    text-align: center;
+    font-size: x-large;
+    padding: 30px 30px 30px 30px;
+    display: inline-block;
+    border: 1px solid #4aadff;
+    border-radius: 5px;
+    margin: 900px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+}
+
+#consumptionvideo{
+    width: 300px !important;
+    margin: 0px !important;
+    padding: 0px !important;
 }
