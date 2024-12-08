@@ -54,7 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
         goalsVideo.src = data.homepage.media.mp4;
         goalsVideo.setAttribute("class", "goalVideo");
         goalsVideo.setAttribute("controls", "controls");
-        goalsVideo.setAttribute("alt","Short video from the UN website showing all 17 SDGs");
+        
+        const videoAlt = document.createElement("p");
+        videoAlt.textContent = data.homepage.altText.video;
 
         testPara.appendChild(goalsVideo);
 
@@ -66,27 +68,27 @@ document.addEventListener("DOMContentLoaded", function () {
         const allGoals = document.createElement("img");
         allGoals.src = data.homepage.media.allGoals;
         allGoals.setAttribute("class", "goalImg");
-        allGoals.setAttribute("alt", "Image showing all 17 goals from the UN website");
+        allGoals.setAttribute("alt", data.homepage.altText.allGoals);
+
+        const goalImg1 = document.createElement("img");
+        goalImg1.src = data.homepage.media.goal6;
+        goalImg1.setAttribute("class", "goalImg");
+        goalImg1.setAttribute("alt", data.homepage.altText.goalImg1);
 
         const goalImg2 = document.createElement("img");
-        goalImg2.src = data.homepage.media.goal6;
+        goalImg2.src = data.homepage.media.goal12;
         goalImg2.setAttribute("class", "goalImg");
-        goalImg2.setAttribute("alt", "Image for goal 6 from the UN website");
+        goalImg2.setAttribute("alt", data.homepage.altText.goalImg2);
 
         const goalImg3 = document.createElement("img");
-        goalImg3.src = data.homepage.media.goal12;
+        goalImg3.src = data.homepage.media.goal13;
         goalImg3.setAttribute("class", "goalImg");
-        goalImg3.setAttribute("alt", "Image for goal 12 from the UN website");
-
-        const goalImg4 = document.createElement("img");
-        goalImg4.src = data.homepage.media.goal13;
-        goalImg4.setAttribute("class", "goalImg");
-        goalImg4.setAttribute("alt", "Image for goal 13 from the UN website");
+        goalImg3.setAttribute("alt", data.homepage.altText.goalImg3);
 
         goalImages.appendChild(allGoals);
+        goalImages.appendChild(goalImg1);
         goalImages.appendChild(goalImg2);
         goalImages.appendChild(goalImg3);
-        goalImages.appendChild(goalImg4);
     })
     .catch(error => console.error("Error fetching JSON data:", error));
 });

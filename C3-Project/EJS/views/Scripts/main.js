@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Toggle dark mode button (modified from https://stackoverflow.com/questions/72822021/how-to-set-light-dark-mode-across-multiple-pages)
             const header = document.querySelector('header');
             const darkModeButton = document.createElement('button');
-            darkModeButton.textContent = 'Toggle Dark Mode';
+            darkModeButton.textContent = data.common.headerText.darkModeButton;
             darkModeButton.id = 'toggleDarkMode'
 
             // This section was modified from https://ultimatecourses.com/blog/detecting-dark-mode-in-javascript
@@ -69,15 +69,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (x3.matches) { // If the screen is at least 800px wide (media rule)
                     logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version with text
                     logoDisplay.setAttribute("id", "narrowLogo");
+                    logoDisplat.setAttribute("alt", data.common.headerText.logoAlts.narrowLogo);
                 } else if (x2.matches) { // If the screen is less than 680px wide (media rule)
                     logoDisplay.src =  data.common.media.logoWithText; // Change the logo to the version without text
                     logoDisplay.setAttribute("id", "wideLogo");
+                    logoDisplat.setAttribute("alt", data.common.headerText.logoAlts.wideLogo);
                 } else if (x1.matches) { // If the screen is less than 1000px wide
                     logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version without text
                     logoDisplay.setAttribute("id", "narrowLogo");
+                    logoDisplay.setAttribute("alt", data.common.headerText.logoAlts.narrowLogo);
                 } else {
                     logoDisplay.src =  data.common.media.logoWithText; // Otherwise, show the version with text
                     logoDisplay.setAttribute("id", "wideLogo");
+                    logoDisplat.setAttribute("alt" , data.common.headerText.logoAlts.wideLogo);
                 }
             }
             x1.addEventListener("change", changeLogo);
@@ -93,12 +97,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const home = document.createElement("a");
             home.href = ".";
-            home.textContent = "Home";
+            home.textContent = data.common.headerText.homeLink;
             if (document.querySelector("#homepage")) { // Checks if the current page is the homepage
                 home.setAttribute("id", "active");
             }
             else {
-                home.setAttribute("id", "inactive");
+                home.setAttribute("class", "inactive");
             };
             
 
@@ -106,19 +110,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const team = document.createElement("a");
             team.href = "./team";
-            team.textContent = "Team Info";
+            team.textContent = data.common.headerText.teamLink;
             if (document.querySelector("#team")) { // Checks if the current page is the team info page
-                team.setAttribute("id", "active");
+                team.setAttribute("class", "active");
             }
             else {
-                team.setAttribute("id", "inactive");
+                team.setAttribute("class", "inactive");
             };
 
             let signUpNav = document.querySelector("#signUpNav");
 
             const signup = document.createElement("a");
             signup.href = "./signup";
-            signup.textContent = "Sign Up";
+            signup.textContent = data.common.headerText.signUpLink;
             if (document.querySelector("#signup")) { // Checks if the current page is the signup page
                 signup.setAttribute("id", "active");
             }
@@ -178,26 +182,26 @@ document.addEventListener("DOMContentLoaded", function () {
             const UNHomepageElement = document.createElement("li");
             const UNHomepageLink = document.createElement("a");
             UNHomepageLink.href = data.common.links.UNHomepage;
-            UNHomepageLink.textContent = "UN Homepage";
+            UNHomepageLink.textContent = data.common.externalLinks.UNHomepage;
             UNHomepageElement.appendChild(UNHomepageLink);
 
 
             const list6Element = document.createElement("li");
             const goal6Link = document.createElement("a");
             goal6Link.href = data.common.links.Goal6;
-            goal6Link.textContent = "UN Goal 6: Clean Water and Sanitation";
+            goal6Link.textContent = data.common.externalLinks.goal6;
             list6Element.appendChild(goal6Link);
 
             const list12Element = document.createElement("li");
             const goal12Link = document.createElement("a");
             goal12Link.href = data.common.links.Goal12;
-            goal12Link.textContent = "UN Goal 12: Responsible Consumption and Production";
+            goal12Link.textContent = data.common.externalLinks.goal12;
             list12Element.appendChild(goal12Link);
 
             const list13Element = document.createElement("li");
             const goal13Link = document.createElement("a");
             goal13Link.href = data.common.links.Goal13;
-            goal13Link.textContent = "UN Goal 13: Climate Action";
+            goal13Link.textContent = data.common.externalLinks.goal13;
             list13Element.appendChild(goal13Link);
 
             linkElement.append(linkHeader);

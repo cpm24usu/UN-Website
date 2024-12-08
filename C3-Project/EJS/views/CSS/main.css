@@ -100,12 +100,12 @@ header{
         grid-row: 2 / 3;
     }
 
-    #active:hover, #inactive:hover{
+    .active:hover, .inactive:hover{
         color: #000;
         background-color: #009fdc80;
     }
     
-    #active{
+    .active{
         border-bottom: #009FDC 5px solid;
     }
 
