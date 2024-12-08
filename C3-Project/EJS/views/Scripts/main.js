@@ -69,11 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (x3.matches) { // If the screen is at least 800px wide (media rule)
                     logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version with text
                     logoDisplay.setAttribute("id", "narrowLogo");
-                    logoDisplat.setAttribute("alt", data.common.headerText.logoAlts.narrowLogo);
+                    logoDisplay.setAttribute("alt", data.common.headerText.logoAlts.narrowLogo);
                 } else if (x2.matches) { // If the screen is less than 680px wide (media rule)
                     logoDisplay.src =  data.common.media.logoWithText; // Change the logo to the version without text
                     logoDisplay.setAttribute("id", "wideLogo");
-                    logoDisplat.setAttribute("alt", data.common.headerText.logoAlts.wideLogo);
+                    logoDisplay.setAttribute("alt", data.common.headerText.logoAlts.wideLogo);
                 } else if (x1.matches) { // If the screen is less than 1000px wide
                     logoDisplay.src =  data.common.media.logoWithoutText; // Change the logo to the version without text
                     logoDisplay.setAttribute("id", "narrowLogo");
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     logoDisplay.src =  data.common.media.logoWithText; // Otherwise, show the version with text
                     logoDisplay.setAttribute("id", "wideLogo");
-                    logoDisplat.setAttribute("alt" , data.common.headerText.logoAlts.wideLogo);
+                    logoDisplay.setAttribute("alt" , data.common.headerText.logoAlts.wideLogo);
                 }
             }
             x1.addEventListener("change", changeLogo);
