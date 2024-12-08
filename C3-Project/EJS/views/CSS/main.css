@@ -198,6 +198,10 @@ footer{
 /* Everything for dark mode */
 
 /* Main page background */
+.darkMode{
+    color: #fff !important;
+}
+
 .dark-mode{
     background-color: #0A1131;
     color: #fff;

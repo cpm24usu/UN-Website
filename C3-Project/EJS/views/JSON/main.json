@@ -95,13 +95,15 @@
                 "member4": "Victoria"
             },
             "bios":{
-                "ellieBio": "Bio",
-                "nathanBio": "Bio",
-                "philBio": "Bio",
-                "vicBio": "Bio"
+                "ellieBio": "I worked on the content and layout of the Clean Water and Sanitation page and the team information page. I also designed the moodboard and colour scheme for the website.",
+                "nathanBio": "I worked on the homepage and signup page, as well as the backend server and its interaction with the client. I also designed the inital wireframes for the website.",
+                "philBio": "I worked on the content and layout of the Responsible Consumption and Production page. I also designed the site map for the website. ",
+                "vicBio": "I worked on the content and layout of the Climate Action page."
                 
 
-            }
+            },
+            "revealBios": "Click me to reveal",
+            "goalsBanner": "../Media/goalsBanner.png"
 
         }
         

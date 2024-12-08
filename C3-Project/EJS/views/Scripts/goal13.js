@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () =>{
-    fetch("../JSON/main.json")
+    fetch('../JSON/main.JSON')
     .then(response => response.json())
     .then(responseData => {
-
-        let main = document.getElementById("main");
 
         let description = document.querySelector('#description');
         let goalArticle = document.createElement('article');
@@ -170,6 +168,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         concFigure.appendChild(concImg);
         concFigure.appendChild(concFigcap);
         concFigcap.appendChild(concText);  
+        concFigcap.appendChild(concText);
+
+
+         /* Footer */
+         const footer = document.querySelector("footer");
+         footer.textContent = responseData.common.footer.content;
     })
 
     .catch(error =>{ console.error("Error fetching JSON data", error);
