@@ -139,20 +139,14 @@
         "images":{
             "climateAction": "Media/goal13.png",
             "imgone": "Media/forestFire.jpg",
-            "imgtwo": "Media/tornado.png",
-            "imgthree":"Media/plant.jpg",
-            "breakimg": "Media/standin.jpg",
-            "imgfour": "Media/plantHand.jpg"
+            "imgtwo": "Media/tornado.png"
 
         },
 
         "alt":{
             "climateAction": "Goal 13 - Climate Action Logo", 
             "forest": "Forst Fire",
-            "tornado": "Tornado",
-            "plant": "Plant",
-            "plantinhand": "Plant In Hand",
-            "break": "Image"
+            "tornado": "Tornado"
 
         },
 
@@ -169,11 +163,15 @@
         "stats":{
             "statstitle": "Our goals:",
             "plasticVal": "By 2060",
-            "plastic": "no more plastic waste and ... ",
+            "plastic": "a 60% reduction in plastic waste ",
             "disasterVal": "By 2050",
-            "disaster": "a 20% percent reduction in natural disasters",
+            "disaster": "a 20% reduction in natural disasters",
             "paperVal": "By 2055",
-            "paper": "a 50% reduection in paper use and waste"
+            "paper": "a 50% reduection in paper use and waste",
+            "climateVal": "By 2028",
+            "climate": "Integrate climate change measures into national policies, strategies and planning",
+            "resVal": "By 2030",
+            "res": "Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries"
         }
     }
 }

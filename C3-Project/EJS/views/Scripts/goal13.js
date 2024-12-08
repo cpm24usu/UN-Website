@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         let G13title = document.createElement('h1');
         G13title.textContent  = responseData.goal13.filler.G13title
+        G13title.id = "G13title";
 
         goalArticle.id = "goal";
         let goalfigure = document.createElement('figure');
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         let mainHeading = document.createElement('h1');
         mainHeading.textContent = responseData.goal13.filler.mainheading; 
+        mainHeading.id = "mainHeading";
 
         let infoFigure = document.createElement('figure');
         infoFigure.classList.add("left");
@@ -49,15 +51,17 @@ document.addEventListener('DOMContentLoaded', () =>{
         let infoImg = document.createElement('img');
         infoImg.src = responseData.goal13.images.imgone;
         infoImg.alt = responseData.goal13.alt.forest;
-        infoImg.id = "forest"
+        infoImg.id = "forest";
 
         let figcapOne = document.createElement('figcaption');
         let infoText = document.createElement('p');
         infoText.textContent = responseData.goal13.filler.effects;
 
         let infoArticleOne = document.createElement('article');
+        infoArticleOne.id = "moreInfo";
         let infoFigureOne = document.createElement('figure');
-        infoFigureOne.classList.add("right");
+        
+
 
         let infoImgOne = document.createElement('img');
         infoImgOne.src = responseData.goal13.images.imgtwo;
@@ -83,20 +87,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         infoFigureOne.appendChild(figcapTwo);
         figcapTwo.appendChild(infoTextOne);
 
-        //break away image 
-
-        let breakImg = document.createElement('img');
-        breakImg.src = responseData.goal13.images.breakimg;
-        breakImg.alt = responseData.goal13.alt.break;
-
-        // stats section 
+        // stats section ("our goals")
 
         let stats = document.querySelector('#stats');
 
         let statsArticle = document.createElement('article');
         statsArticle.id = "statsArticle";
 
-        let statsTitle = document.createElement('h2');
+        let statsTitle = document.createElement('h1');
         statsTitle.textContent = responseData.goal13.stats.statstitle;
 
         let plasticStatVal = document.createElement('p');
@@ -123,6 +121,23 @@ document.addEventListener('DOMContentLoaded', () =>{
         paperStat.textContent = responseData.goal13.stats.paper;
         paperStat.classList.add("facts");
 
+        let climateStatVal = document.createElement('p');
+        climateStatVal.textContent = responseData.goal13.stats.climateVal;
+        climateStatVal.classList.add("dates");
+
+        let climateStat = document.createElement('p');
+        climateStat.textContent = responseData.goal13.stats.climate;
+        climateStat.classList.add("facts");
+
+
+        let resStatVal = document.createElement('p');
+        resStatVal.textContent = responseData.goal13.stats.resVal;
+        resStatVal.classList.add("dates");
+
+        let resStat = document.createElement('p');
+        resStat.textContent = responseData.goal13.stats.res;
+        resStat.classList.add("facts");
+
 
         //combining stats elemnets 
 
@@ -135,10 +150,10 @@ document.addEventListener('DOMContentLoaded', () =>{
         statsArticle.appendChild(paperStat);
         statsArticle.appendChild(disasterStatVal);
         statsArticle.appendChild(disasterStat);
-
-        // inserting the break away image between sections two and three (main info and stats)
-        // main.insertBefore(breakImg, stats);
-
+        statsArticle.appendChild(climateStatVal);
+        statsArticle.appendChild(climateStat);
+        statsArticle.appendChild(resStatVal);
+        statsArticle.appendChild(resStat);
 
         // last section
         let conclusion = document.getElementById('conclusion');
@@ -147,15 +162,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         let concTitle = document.createElement('h1');
         concTitle.textContent = responseData.goal13.filler.conctitle;
-        let concFigure = document.createElement('figure');
-        concFigure.classList.add("left");
-
-        let concImg = document.createElement('img');
-        concImg.src = responseData.goal13.images.imgfour;
-        concImg.alt = responseData.goal13.alt.plantinhand;
-        concImg.id = "plant";
-
-        let concFigcap = document.createElement('figcaption');
+        concTitle.id = "concTitle";
         let concText = document.createElement('p');
 
         concText.textContent = responseData.goal13.filler.change;
@@ -164,13 +171,41 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         conclusion.appendChild(concArticle);
         concArticle.appendChild(concTitle);
-        concArticle.appendChild(concFigure);
-        concFigure.appendChild(concImg);
-        concFigure.appendChild(concFigcap);
-        concFigcap.appendChild(concText);  
-        concFigcap.appendChild(concText);
+        concArticle.appendChild(concText);  
+
+        /* links */ 
+
+        let subheading = document.getElementById("headings");
+
+        let goalLink = document.createElement("a");
+        goalLink.classList.add("links");
+        goalLink.textContent = responseData.goal13.filler.G13title;
+        goalLink.href = "#13Title";
+        subheading.appendChild(goalLink);
+
+        let factsLink = document.createElement("a");
+        factsLink.classList.add("links");
+        factsLink.textContent = responseData.goal13.filler.mainheading;
+        factsLink.href = "#mainHeading";
+        subheading.appendChild(factsLink);
 
 
+        let concLink = document.createElement("a");
+        concLink.classList.add("links");
+        concLink.textContent = responseData.goal13.filler.conctitle;
+        concLink.href = "#concTitle";
+        subheading.appendChild(concLink);
+
+
+
+        let toTop = document.getElementById("top");
+        let topLink = document.createElement("a");
+        topLink.classList.add("links");
+        topLink.textContent = responseData.goal6.content.back;
+        topLink.href = "#G13title";
+        toTop.appendChild(topLink);
+
+        
          /* Footer */
          const footer = document.querySelector("footer");
          footer.textContent = responseData.common.footer.content;

@@ -1,11 +1,6 @@
-/* positioning images to the left or right of their figcap */
-.left{
-    display: flex;
-    float: right;
-}
-
-.right{
-    float: right;
+#mainInfo{
+    display: grid;    
+    text-align: center;
 }
 
 figcaption{
@@ -14,21 +9,20 @@ figcaption{
     
 }
 
-
 #description{
     grid-column: 3 / 8;
     text-align: center;
 }
 
 #mainInfo{
-    grid-column: 1 / 8;
+    grid-column: 3 / 8;
 }
 
-/* content on the top left hand side ("our goals")*/
+/* our goals */
 
 #stats{
     grid-column: 1 / 3;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 #statsArticle{
@@ -36,12 +30,15 @@ figcaption{
 }
 
 .dates{
-    border: 2px solid  #009FDC;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 5px;
+    color: #0075a3;
     text-align: center;
-    width: 100px;
+    font-size: x-large;
+    padding: 30px 30px 30px 30px;
+    display: inline-block;
+    border: 1px solid #4aadff;
+    border-radius: 5px;
+    margin: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
 }
 
 .facts{
@@ -50,8 +47,11 @@ figcaption{
     font-size: large;
 }
 
+
+/* conclusion */
+
 #conclusion{
-    grid-column: 1 / 8;
+    grid-column: 3 / 8;
 }
 
 /*images */
@@ -66,22 +66,42 @@ figcaption{
 
 #forest{
     height: 400px;
-    width: 400px;
-    padding: 10px;
+    width: 450px;
+    border: 2px solid green;
+    border-radius: 25px;
 }
 
 
 #tornado{
     height: 400px;
-    width: 400px;
-    padding: 10px;
+    width: 450px;
+    border: 2px solid green;
+    border-radius: 25px;
 
 }
 
-#plant{
-    height: 400px;
-    width: 400px;
-    padding: 10px;
+/*subheading */
+
+#headings{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.links{
+    color: #0075a3;
+    text-align: center;
+    font-size: x-large;
+    padding: 30px 30px 30px 30px;
+    display: inline-block;
+    border: 1px solid #4aadff;
+    border-radius: 5px;
+    margin: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+}
+
+#top{
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
 }
 
 
