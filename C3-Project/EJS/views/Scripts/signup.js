@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const fNameInput = document.createElement("input");
         fNameInput.setAttribute("id", "firstName");
         fNameInput.setAttribute("type", "text");
-        fNameInput.setAttribute("required", true);
+        fNameInput.setAttribute("required", "required");
         fNameInput.setAttribute("name", "firstName")
 
         // Last Name
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const lNameInput = document.createElement("input");
         lNameInput.setAttribute("id", "lastName");
         lNameInput.setAttribute("type", "text");
-        lNameInput.setAttribute("required", true);
+        lNameInput.setAttribute("required", "required");
         lNameInput.setAttribute("name", "lastName")
 
         // Email
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailInput = document.createElement("input");
         emailInput.setAttribute("id", "email");
         emailInput.setAttribute("type", "email");
-        emailInput.setAttribute("required", true);
+        emailInput.setAttribute("required", "required");
         emailInput.setAttribute("name", "email")
 
         // Comments

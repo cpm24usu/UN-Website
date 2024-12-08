@@ -10,11 +10,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const productionsec = document.querySelector("#head1");
         const sacsec = document.querySelector("#head2");
         const targetsec = document.querySelector("#unlogo3");
-
+        const articlesec = document.querySelector('#articlelinks');
         //const goalSection = document.createElement("section");
        //  goalSection.setAttribute("id", "goalSection");
 
         // goalContent.appendChild(goalSection);
+        
+        const articlelinks = document.createElement("h1");
+        articlelinls.setAttribute("id", "articlelinks");
+        articlelinks.textContent = responseData.goal12.content.articlelinks;
+        articlesec.appendChild(articlelinks);
+
         const title = document.createElement("h1");
         title.setAttribute("id", "title");
         title.textContent = responseData.goal12.content.title;

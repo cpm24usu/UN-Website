@@ -1,11 +1,27 @@
 {
     "common": {
+            "headerText": {
+                "darkModeButton": "Toggle Dark Mode",
+                "homeLink": "Home",
+                "teamLink": "Team Info",
+                "signUpLink": "Sign Up",
+                "logoAlts": {
+                    "wideLogo": "UN Logo with 'United Nations' written next to it",
+                    "narrowLogo": "UN Logo without text"
+                }
+            },
             "media": {
-                "logoWithoutText": "../Media/UN Logo.png",
-                "logoWithText": "../Media/Horizontal UN Logo.png",
+                "logoWithoutText": "../Media/UNLogo.png",
+                "logoWithText": "../Media/HorizontalUNLogo.png",
                 "goal6": "../Media/goal6.png",
                 "goal12": "../Media/goal12.png",
                 "goal13": "../Media/goal13.png"
+            },
+            "externalLinks": {
+                "UNHomepage": "UN Homepage",
+                "goal6": "UN Goal 6: Clean Water and Sanitation",
+                "goal12": "UN Goal 12: Responsible Consumption and Production",
+                "goal13": "UN Goal 13: Climate Action"
             },
             "links": {
                 "externalHeader": "External Links",
@@ -37,7 +53,13 @@
                 "goal12": "../Media/goal12homepage.jpg",
                 "goal13": "../Media/goal13homepage.jpg",
                 "allGoals": "../Media/allGoals.png"
-                
+            },
+            "altText": {
+                "video": "A video from the UN YouTube Channel showcasing all 17 SDGs",
+                "allGoals": "Image showing all 17 goals from the UN website",
+                "goalImg1": "Image for goal 6 from the UN website",
+                "goalImg2": "Image for goal 12 from the UN website",
+                "goalImg3": "Image for goal 13 from the UN website"
             }
         },
 
@@ -112,6 +134,7 @@
 
     "goal12": {
         "content": {
+            "articlelinks": "Article section Links",
             "title": "Goal 12 - Responsible Consumption and Production",
             "overview": "The industrial revolution has had a knock on effect on the world's ecosystems, adversely affecting the resources that we will later have no other choice but to depend on. for this reason it is up to us as consumers to be more mindful as to how we go about the use of energy and to consider switiching to more sustainable forms of energy​",
             "uncrpg12": "../Media/uncrpg12.png",
