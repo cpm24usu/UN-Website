@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         let concImg = document.createElement('img');
         concImg.src = responseData.goal13.images.imgfour;
         concImg.alt = responseData.goal13.alt.plantinhand;
+        concImg.id = "plant";
 
         let concFigcap = document.createElement('figcaption');
         let concText = document.createElement('p');
