@@ -7,18 +7,18 @@ html{
 #teamSection{
     grid-column: 1 / 8;
     grid-row: 1 / 6;
-    position: relative;
     
     
     
     
-}
+    
+} /* styling for main section of the page */
 
-h1{
+#teamTitle{
     text-align: center;
 }
 
-h3{
+.names{
     padding: 5px 5px 5px 5px;
     
 }
