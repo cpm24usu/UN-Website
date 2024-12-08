@@ -1,11 +1,27 @@
 {
     "common": {
+            "headerText": {
+                "darkModeButton": "Toggle Dark Mode",
+                "homeLink": "Home",
+                "teamLink": "Team Info",
+                "signUpLink": "Sign Up",
+                "logoAlts": {
+                    "wideLogo": "UN Logo with 'United Nations' written next to it",
+                    "narrowLogo": "UN Logo without text"
+                }
+            },
             "media": {
-                "logoWithoutText": "../Media/UN Logo.png",
-                "logoWithText": "../Media/Horizontal UN Logo.png",
+                "logoWithoutText": "../Media/UNLogo.png",
+                "logoWithText": "../Media/HorizontalUNLogo.png",
                 "goal6": "../Media/goal6.png",
                 "goal12": "../Media/goal12.png",
                 "goal13": "../Media/goal13.png"
+            },
+            "externalLinks": {
+                "UNHomepage": "UN Homepage",
+                "goal6": "UN Goal 6: Clean Water and Sanitation",
+                "goal12": "UN Goal 12: Responsible Consumption and Production",
+                "goal13": "UN Goal 13: Climate Action"
             },
             "links": {
                 "externalHeader": "External Links",
@@ -37,7 +53,13 @@
                 "goal12": "../Media/goal12homepage.jpg",
                 "goal13": "../Media/goal13homepage.jpg",
                 "allGoals": "../Media/allGoals.png"
-                
+            },
+            "altText": {
+                "video": "A video from the UN YouTube Channel showcasing all 17 SDGs",
+                "allGoals": "Image showing all 17 goals from the UN website",
+                "goalImg1": "Image for goal 6 from the UN website",
+                "goalImg2": "Image for goal 12 from the UN website",
+                "goalImg3": "Image for goal 13 from the UN website"
             }
         },
 
@@ -140,40 +162,44 @@
      }
 }, 
 
-    "images":{
-        "climateAction": "media/goal13.png",
-        "imgone": "media/forestFire.jpg",
-        "imgtwo": "media/tornado.png",
-        "imgthree":"media/plant.jpg",
-        "breakimg": "media/standin.jpg",
-        "imgfour": "media/plantHand.jpg"
+    "goal13": {
+        "images":{
+            "climateAction": "Media/goal13.png",
+            "imgone": "Media/forestFire.jpg",
+            "imgtwo": "Media/tornado.png"
 
-    },
+        },
 
-    "alt":{
-        "climateAction": "Goal 13 - Climate Action Logo", 
-        "forest": "Forst Fire",
-        "tornado": "Tornado",
-        "plant": "Plant",
-        "plantinhand": "Plant In Hand",
-        "break": "Image"
+        "alt":{
+            "climateAction": "Goal 13 - Climate Action Logo", 
+            "forest": "Forst Fire",
+            "tornado": "Tornado"
 
-    },
+        },
 
-    "filler": {
-        "description": "There's a climate cataclysm approaching which will affect everyone and its impact is being underestimated and so there are vital steps people can take to limit their carbon footprint. The increasing effects of climate change are more harmful to society than are currently being  acknowledged. The worse climate change gets the more intense natural disasters (wildfires, hurricanes, droughts, floods etc.)  will be which can impact infrastructure, crops  and development.",
-        "effects": "Climate change is a cyclical cycle and so its effects and causes will snowball into one. This is not only detrimental to developing and emerging countries who are the most vulnerable but also developed countries who still have vulnerable people within them and will impact the standard of living of everyone. The increasing intensity of these natural disasters has led to a 15x higher mortality rate to natural disasters in low vulnerability areas.  The increasing severity of these natural disasters also means that developing and emerging countries are using resources unnecessarily in aims to defend themselves from the effects of these natural disasters. This is a further waste of resources, time and energy and provides an opportunity cost. ​If action is not taken now, then the effects of these disasters will only become more intense and have increasingly harmful effects on this generation and the next. This is why sustainable development is necessary as it helps ensure future generations are taken care of while still fulfilling the needs of the current one.",
-        "solutions": "To ensure that the impact of climate change is limited we need to change our way of living. This includes choosing more carbon neutral or cordon free alternatives like using renewable energy, but this alone won't do. We need to implement planet healthy initiatives in every aspect of our lives; food, transport, industry, energy, agriculture, forestry to ensure that sea temperatures stop rising.​ Additionally, greater investments into the mitigation of climate change will  result in a faster and greater change. This is why it is important to promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth and local and marginalized communities, find a Goal 13 charity you want to support. Any donation, big or small, can make a difference! and choose reusable products. Use an eco-bag for shopping and a reusable water bottle or a cup to reduce your plastic waste.",
-        "change": "Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible."
-    }, 
+        "filler": {
+            "G13title": "Goal 13 - What is Climate Action?",
+            "mainheading": "The facts...",
+            "conctitle": "In conclusion...",
+            "description": "There's a climate cataclysm approaching which will affect everyone and its impact is being underestimated and so there are vital steps people can take to limit their carbon footprint. The increasing effects of climate change are more harmful to society than are currently being  acknowledged. The worse climate change gets the more intense natural disasters (wildfires, hurricanes, droughts, floods etc.)  will be which can impact infrastructure, crops  and development.",
+            "effects": "Climate change is a cyclical cycle and so its effects and causes will snowball into one. This is not only detrimental to developing and emerging countries who are the most vulnerable but also developed countries who still have vulnerable people within them and will impact the standard of living of everyone. The increasing intensity of these natural disasters has led to a 15x higher mortality rate to natural disasters in low vulnerability areas.  The increasing severity of these natural disasters also means that developing and emerging countries are using resources unnecessarily in aims to defend themselves from the effects of these natural disasters. This is a further waste of resources, time and energy and provides an opportunity cost. ​If action is not taken now, then the effects of these disasters will only become more intense and have increasingly harmful effects on this generation and the next. This is why sustainable development is necessary as it helps ensure future generations are taken care of while still fulfilling the needs of the current one.",
+            "solutions": "To ensure that the impact of climate change is limited we need to change our way of living. This includes choosing more carbon neutral or cordon free alternatives like using renewable energy, but this alone won't do. We need to implement planet healthy initiatives in every aspect of our lives; food, transport, industry, energy, agriculture, forestry to ensure that sea temperatures stop rising.​ Additionally, greater investments into the mitigation of climate change will  result in a faster and greater change. This is why it is important to promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth and local and marginalized communities, find a Goal 13 charity you want to support. Any donation, big or small, can make a difference! and choose reusable products. Use an eco-bag for shopping and a reusable water bottle or a cup to reduce your plastic waste.",
+            "change": "Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible."
+        }, 
 
-    "stats":{
-        "plasticVal": "By 2060",
-        "plastic": "no more plastic waste and ... ",
-        "disasterVal": "By 2050",
-        "disaster": "a 20% percent reduction in natural disasters",
-        "paperVal": "BY 2055",
-        "paper": "a 50% reduection in paper use and waste"
+        "stats":{
+            "statstitle": "Our goals:",
+            "plasticVal": "By 2060",
+            "plastic": "a 60% reduction in plastic waste ",
+            "disasterVal": "By 2050",
+            "disaster": "a 20% reduction in natural disasters",
+            "paperVal": "By 2055",
+            "paper": "a 50% reduection in paper use and waste",
+            "climateVal": "By 2028",
+            "climate": "Integrate climate change measures into national policies, strategies and planning",
+            "resVal": "By 2030",
+            "res": "Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries"
+        }
     }
 }
     

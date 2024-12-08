@@ -5,23 +5,29 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         let description = document.querySelector('#description');
         let goalArticle = document.createElement('article');
+
+        let G13title = document.createElement('h1');
+        G13title.textContent  = responseData.goal13.filler.G13title
+        G13title.id = "G13title";
+
         goalArticle.id = "goal";
         let goalfigure = document.createElement('figure');
 
         let goalimg = document.createElement('img');
         //fetching image from json file
-        goalimg.src = responseData.images.climateAction;
-        goalimg.alt = responseData.alt.climateAction;
+        goalimg.src = responseData.goal13.images.climateAction;
+        goalimg.alt = responseData.goal13.alt.climateAction;
         goalimg.id = "goalimg";
 
         
         let figcap = document.createElement('figcaption');
         let goalText = document.createElement('p');
         //fetching text from json file
-        goalText.textContent = responseData.filler.description;
+        goalText.textContent = responseData.goal13.filler.description;
 
         //combining the first set of elements 
         description.appendChild(goalArticle);
+        goalArticle.appendChild(G13title);
         goalArticle.appendChild(goalfigure);
         goalfigure.appendChild(goalimg);
         goalfigure.appendChild(figcap);
@@ -34,33 +40,42 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         let infoArticle = document.createElement('article');
         infoArticle.id = "info";
+
+        let mainHeading = document.createElement('h1');
+        mainHeading.textContent = responseData.goal13.filler.mainheading; 
+        mainHeading.id = "mainHeading";
+
         let infoFigure = document.createElement('figure');
         infoFigure.classList.add("left");
 
         let infoImg = document.createElement('img');
-        infoImg.src = responseData.images.imgone;
-        infoImg.alt = responseData.alt.forest;
-        infoImg.id = "forest"
+        infoImg.src = responseData.goal13.images.imgone;
+        infoImg.alt = responseData.goal13.alt.forest;
+        infoImg.id = "forest";
 
         let figcapOne = document.createElement('figcaption');
         let infoText = document.createElement('p');
-        infoText.textContent = responseData.filler.effects;
+        infoText.textContent = responseData.goal13.filler.effects;
 
         let infoArticleOne = document.createElement('article');
+        infoArticleOne.id = "moreInfo";
         let infoFigureOne = document.createElement('figure');
+        
+
 
         let infoImgOne = document.createElement('img');
-        infoImgOne.src = responseData.images.imgtwo;
-        infoImgOne.alt = responseData.alt.tornado;
+        infoImgOne.src = responseData.goal13.images.imgtwo;
+        infoImgOne.alt = responseData.goal13.alt.tornado;
         infoImgOne.id = "tornado";
 
         let figcapTwo = document.createElement('figcaption');
         let infoTextOne = document.createElement('p');
-        infoTextOne.textContent = responseData.filler.solutions;
+        infoTextOne.textContent = responseData.goal13.filler.solutions;
 
         //adding the main info elemnets together 
 
         mainInfo.appendChild(infoArticle);
+        infoArticle.appendChild(mainHeading);
         infoArticle.appendChild(infoFigure);
         infoFigure.appendChild(infoImg);
         infoFigure.appendChild(figcapOne);
@@ -72,73 +87,125 @@ document.addEventListener('DOMContentLoaded', () =>{
         infoFigureOne.appendChild(figcapTwo);
         figcapTwo.appendChild(infoTextOne);
 
-        //break away image 
-
-        let breakImg = document.createElement('img');
-        breakImg.src = responseData.images.breakimg;
-        breakImg.alt = responseData.alt.break;
-
-        // stats section 
+        // stats section ("our goals")
 
         let stats = document.querySelector('#stats');
 
+        let statsArticle = document.createElement('article');
+        statsArticle.id = "statsArticle";
+
+        let statsTitle = document.createElement('h1');
+        statsTitle.textContent = responseData.goal13.stats.statstitle;
+
         let plasticStatVal = document.createElement('p');
-        plasticStatVal.textContent = responseData.stats.plasticVal;
+        plasticStatVal.textContent = responseData.goal13.stats.plasticVal;
+        plasticStatVal.classList.add("dates");
 
         let plasticStat = document.createElement('p');
-        plasticStat.textContent = responseData.stats.plastic;
+        plasticStat.textContent = responseData.goal13.stats.plastic;
+        plasticStat.classList.add("facts");
 
         let disasterStatVal = document.createElement('p');
-        disasterStatVal.textContent = responseData.stats.disasterVal;
+        disasterStatVal.textContent = responseData.goal13.stats.disasterVal;
+        disasterStatVal.classList.add("dates");
 
         let disasterStat = document.createElement('p');
-        disasterStat.textContent = responseData.stats.disaster;
+        disasterStat.textContent = responseData.goal13.stats.disaster;
+        disasterStat.classList.add("facts");
 
         let paperStatVal = document.createElement('p');
-        paperStatVal.textContent = responseData.stats.paperVal;
+        paperStatVal.textContent = responseData.goal13.stats.paperVal;
+        paperStatVal.classList.add("dates");
 
         let paperStat = document.createElement('p');
-        paperStat.textContent = responseData.stats.paper;
+        paperStat.textContent = responseData.goal13.stats.paper;
+        paperStat.classList.add("facts");
+
+        let climateStatVal = document.createElement('p');
+        climateStatVal.textContent = responseData.goal13.stats.climateVal;
+        climateStatVal.classList.add("dates");
+
+        let climateStat = document.createElement('p');
+        climateStat.textContent = responseData.goal13.stats.climate;
+        climateStat.classList.add("facts");
+
+
+        let resStatVal = document.createElement('p');
+        resStatVal.textContent = responseData.goal13.stats.resVal;
+        resStatVal.classList.add("dates");
+
+        let resStat = document.createElement('p');
+        resStat.textContent = responseData.goal13.stats.res;
+        resStat.classList.add("facts");
 
 
         //combining stats elemnets 
 
-        stats.appendChild(plasticStatVal);
-        stats.appendChild(plasticStat);
-        stats.appendChild(paperStatVal);
-        stats.appendChild(paperStat);
-        stats.appendChild(disasterStatVal);
-        stats.appendChild(disasterStat);
-
-        // inserting the break away image between sections two and three (main info and stats)
-        // main.insertBefore(breakImg, stats);
-
+        stats.appendChild(statsTitle);
+        stats.appendChild(statsArticle);
+        
+        statsArticle.appendChild(plasticStatVal);
+        statsArticle.appendChild(plasticStat);
+        statsArticle.appendChild(paperStatVal);
+        statsArticle.appendChild(paperStat);
+        statsArticle.appendChild(disasterStatVal);
+        statsArticle.appendChild(disasterStat);
+        statsArticle.appendChild(climateStatVal);
+        statsArticle.appendChild(climateStat);
+        statsArticle.appendChild(resStatVal);
+        statsArticle.appendChild(resStat);
 
         // last section
         let conclusion = document.getElementById('conclusion');
 
         let concArticle = document.createElement('article');
-        let concFigure = document.createElement('figure');
-        concFigure.classList.add("left");
 
-        let concImg = document.createElement('img');
-        concImg.src = responseData.images.imgfour;
-        concImg.alt = responseData.alt.plantinhand;
-
-        let concFigcap = document.createElement('figcaption');
+        let concTitle = document.createElement('h1');
+        concTitle.textContent = responseData.goal13.filler.conctitle;
+        concTitle.id = "concTitle";
         let concText = document.createElement('p');
 
-        concText.textContent = responseData.filler.change;
+        concText.textContent = responseData.goal13.filler.change;
 
         // combining elements 
 
         conclusion.appendChild(concArticle);
-        concArticle.appendChild(concFigure);
-        concFigure.appendChild(concImg);
-        concFigure.appendChild(concFigcap);
-        concFigcap.appendChild(concText);
+        concArticle.appendChild(concTitle);
+        concArticle.appendChild(concText);  
+
+        /* links */ 
+
+        let subheading = document.getElementById("headings");
+
+        let goalLink = document.createElement("a");
+        goalLink.classList.add("links");
+        goalLink.textContent = responseData.goal13.filler.G13title;
+        goalLink.href = "#13Title";
+        subheading.appendChild(goalLink);
+
+        let factsLink = document.createElement("a");
+        factsLink.classList.add("links");
+        factsLink.textContent = responseData.goal13.filler.mainheading;
+        factsLink.href = "#mainHeading";
+        subheading.appendChild(factsLink);
 
 
+        let concLink = document.createElement("a");
+        concLink.classList.add("links");
+        concLink.textContent = responseData.goal13.filler.conctitle;
+        concLink.href = "#concTitle";
+        subheading.appendChild(concLink);
+
+
+
+        let toTop = document.getElementById("top");
+        let topLink = document.createElement("a");
+        topLink.classList.add("links");
+        topLink.textContent = responseData.goal6.content.back;
+        topLink.href = "#G13title";
+        toTop.appendChild(topLink);
+
+        
          /* Footer */
          const footer = document.querySelector("footer");
          footer.textContent = responseData.common.footer.content;

@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     .then(response => response.json())
     .then(responseData =>{
 
-        const top = document.getElementById("top");
+        const top = document.createElement("h1");
+        top.setAttribute("id", "top");
 
 
         // Main page content //
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
         const scrollBox = document.createElement("article");
         scrollBox.setAttribute("id", "scroll");
+        scrollBox.style.display = "none";
         targets.appendChild(scrollBox);
         // creates an article element which will hold the targets
         
