@@ -537,4 +537,46 @@ footer{
         font-size: x-large;
     }
 
+
+    /* Team Page */
+
+
+
+    /* Goal 6 Page */
+
+
+
+    /* Goal 12 Page*/
+
+
+
+    /* Goal 13 Page*/
+    #headings{
+        grid-column: 1 / 4 !important;
+        grid-row: 2 / 3 !important;
+    }
+
+    #stats{
+        grid-row: 3 / 6 !important;
+        grid-column: 1 / 4 !important;
+    }
+
+    #description{
+        grid-column: 4 / 10 !important;
+    }
+
+    #mainInfo{
+        grid-column: 4 / 10 !important;
+        grid-row: 3 / 6 !important;
+    }
+
+    #conclusion{
+        grid-row: 6 / 7 !important;
+        grid-column: 4 / 10 !important;
+    }
+
+    #topLink{
+        grid-row: 6 / 7 !important;
+        grid-column: 1 / 4 !important;
+    }
 }

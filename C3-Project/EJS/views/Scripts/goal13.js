@@ -198,11 +198,11 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
 
-        let toTop = document.getElementById("top");
+        let toTop = document.getElementById("topLink");
         let topLink = document.createElement("a");
         topLink.classList.add("links");
         topLink.textContent = responseData.goal6.content.back;
-        topLink.href = "#G13title";
+        topLink.href = "#top";
         toTop.appendChild(topLink);
 
         
