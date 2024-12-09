@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const reportCard = document.createElement("img"); // creates image element to the goal page
         reportCard.setAttribute("id", "reportImage");
         reportCard.src = responseData.goal6.content.reportCard;
+        reportCard.alt = responseData.goal6.content.reportAlt;
         overviewSection.appendChild(reportCard);
 
         
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         const targetImg = document.createElement("img");
         targetImg.src = responseData.goal6.content.targetImg;
+        targetImg.alt = responseData.goal6.content.targetAlt;
         targetImg.setAttribute("id", "targetImg");
         subheadings.appendChild(targetImg);
         // creates an image element for the target image

@@ -537,4 +537,41 @@ footer{
         font-size: x-large;
     }
 
+    /* Goal 6 Page */
+    #mainSection{
+        grid-column: 4 / 10 !important;
+        grid-row: 2 / 4 !important;
+        padding: 10px 10px 10px 10px;
+
+    }
+
+    #video{
+        grid-column: 4 / 10 !important;
+        grid-row: 4 / 7 !important;
+        padding: 10px 10px 10px 10px;
+    }
+
+    #subheadings{
+        grid-column: 1 / 4 !important;
+        grid-row: 2 / 7 !important;
+        padding: 10px 10px 10px 10px;
+    }
+
+    /* .subheadings{
+        grid-column: 1 / 4 !important;
+        grid-row: 2 / 7 !important;
+        padding: 10px 10px 10px 10px;
+
+    } */
+
+    /* Team Page */
+    #teamSection{
+        grid-column: 1 / 10 !important;
+        grid-row: 2 / 7 !important;
+        padding: 10px 10px 10px 10px;
+    }
+
+
+    
+
 }
