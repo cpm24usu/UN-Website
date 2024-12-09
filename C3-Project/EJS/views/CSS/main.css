@@ -278,7 +278,7 @@ footer{
 
 #subheadings{ /* styling for the subheadings section */
     grid-column: 1 / 3;
-    grid-row: 1 / 6;
+    grid-row: 1 / 5;
 }
 
 .headingLinks{ /* styling for subheading hyperlinks */
@@ -302,9 +302,11 @@ footer{
     border-radius: 5px;
 }
 
-#topLink{ /* styling for the hyperlink that takes the user back to the top of the page */
-    margin-top: 600px;
+#topLink{
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
 }
+
 
 /* TEAM PAGE CSS */
 #teamPage{
@@ -537,7 +539,7 @@ footer{
         font-size: x-large;
     }
 
-<<<<<<< HEAD
+
     /* Goal 6 Page */
     #mainSection{
         grid-column: 4 / 10 !important;
@@ -556,6 +558,7 @@ footer{
         grid-column: 1 / 4 !important;
         grid-row: 2 / 7 !important;
         padding: 10px 10px 10px 10px;
+        min-width: fit-content;
     }
 
     /* .subheadings{

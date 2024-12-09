@@ -155,13 +155,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         subheadings.appendChild(targetImg);
         // creates an image element for the target image
 
-        const topLink = document.createElement("a");
+        const topTop = document.getElementById("topLink")
+        let topLink = document.createElement("a");
         topLink.setAttribute("class", "headingLinks");
         topLink.setAttribute("id", "topLink");
         topLink.textContent = responseData.goal6.content.back;
         topLink.href = "#top";
-        subheadings.appendChild(topLink);
-        // creates link element to take the user back to the top of the page
+        topTop.appendChild(topLink);        // creates link element to take the user back to the top of the page
 
 
 
