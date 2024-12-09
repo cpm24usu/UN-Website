@@ -279,7 +279,7 @@ footer{
 #subheadings{ /* styling for the subheadings section */
     display: inline-block;
     grid-column: 1 / 3;
-    grid-row: 1 / 6;
+    grid-row: 1 / 5;
     justify-items: center;
 }
 
@@ -290,21 +290,35 @@ footer{
     display: inline-block;
     border: 1px solid #4aadff;
     border-radius: 5px;
-    margin: 30px;
+    margin: 30px 20px;
     padding: 10px;
     font-size: calc(max(1vw + 1vh, 12px));
 }
 
 #targetImg{ /* styling for target image*/
+<<<<<<< HEAD
     width: 100%;
+    margin-top: 800px;
+=======
+    width: 90%;
     margin-top: 100px;
+>>>>>>> 6d496f82faf50599aa9674984406c6b083fde885
     border: 2px solid #4aadff;
     border-radius: 5px;
+    margin: 3%;
 }
 
-#topLink6{ /* styling for the hyperlink that takes the user back to the top of the page */
-    margin-top: 600px;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6d496f82faf50599aa9674984406c6b083fde885
+#topLink{
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
 }
+
+
+
 
 /* TEAM PAGE CSS */
 #teamPage{
@@ -316,11 +330,7 @@ footer{
 #teamSection{
     grid-column: 1 / 8;
     grid-row: 1 / 6;
-    
-    
-    
-    
-    
+ 
 } /* styling for main section of the page */
 
 #teamTitle{
@@ -537,6 +547,10 @@ footer{
         font-size: x-large;
     }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6d496f82faf50599aa9674984406c6b083fde885
     /* Goal 6 Page */
     #mainSection{
         grid-column: 4 / 10 !important;
@@ -553,8 +567,9 @@ footer{
 
     #subheadings{
         grid-column: 1 / 4 !important;
-        grid-row: 2 / 7 !important;
-        padding: 10px 10px 10px 10px;
+        grid-row: 2 / 6  !important;
+        padding: 10px 0;
+        min-width: fit-content;
     }
 
     /* .subheadings{
@@ -608,6 +623,6 @@ footer{
     }
 
     .links{
-        margin: 30px 0 !important;
+        margin: 30px 5px !important;
     }
 }

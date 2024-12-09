@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targets.appendChild(scrollBox);
         // creates an article element which will hold the targets
         
-        const targetsList = [7];
+        const targetsList = [6];
         targetsList[0] = responseData.goal6.content.targets.target1;
         targetsList[1] = responseData.goal6.content.targets.target2;
         targetsList[2] = responseData.goal6.content.targets.target3;
@@ -155,13 +155,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         subheadings.appendChild(targetImg);
         // creates an image element for the target image
 
-        const topLink = document.createElement("a");
+        const topTop = document.getElementById("topLink")
+        let topLink = document.createElement("a");
         topLink.setAttribute("class", "headingLinks");
         topLink.setAttribute("id", "topLink6");
         topLink.textContent = responseData.goal6.content.back;
         topLink.href = "#top";
-        subheadings.appendChild(topLink);
-        // creates link element to take the user back to the top of the page
+        topTop.appendChild(topLink);        // creates link element to take the user back to the top of the page
 
 
 
