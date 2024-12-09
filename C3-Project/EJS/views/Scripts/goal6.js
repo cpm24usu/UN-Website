@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     .then(response => response.json())
     .then(responseData =>{
 
-        const top = document.createElement("h1");
-        top.setAttribute("id", "top");
-
-
         // Main page content //
 
         let goalContent = document.getElementById("mainSection"); 
