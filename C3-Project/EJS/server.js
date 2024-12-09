@@ -203,6 +203,6 @@ app.post("/signup", (req, res) => {
   //console.log(`send: ${send}\n\n`); // Used for testing & checking custom popup messages client-side
 });
 
-// Start listening on port and print to //console
+// Start listening on port and print to console
 app.listen(port);
 console.log(`listening on port ${port}. Go to http://localhost:${port}\n`);
