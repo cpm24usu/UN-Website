@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         targets.appendChild(scrollBox);
         // creates an article element which will hold the targets
         
-        const targetsList = [7];
+        const targetsList = [6];
         targetsList[0] = responseData.goal6.content.targets.target1;
         targetsList[1] = responseData.goal6.content.targets.target2;
         targetsList[2] = responseData.goal6.content.targets.target3;
