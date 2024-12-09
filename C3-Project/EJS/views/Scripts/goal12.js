@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const sacsec = document.querySelector("#head2");
         const targetsec = document.querySelector("#unlogo3");
         const articlesec = document.querySelector('#articlelinks');
+        const backtotopsec = document.querySelector('#backtotop')
 
         // const articlelinks = document.createElement("p");
         // articlelinks.setAttribute("id", "articlelinks");
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         topLink.setAttribute("id", "topLink");
         topLink.textContent = responseData.goal12.content.top;
         topLink.href = "#top";
-        articlesec.appendChild(topLink);
+        backtotopsec.appendChild(topLink);
 
         const title = document.createElement("h1");
         title.setAttribute("id", "title");
@@ -98,21 +99,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
         HowtheSACplanstotackletheseissuesp.textContent = responseData.goal12.content.HowtheSACplanstotackletheseissuesp;
         sacsec.appendChild(HowtheSACplanstotackletheseissuesp);
         
-        const targetsTitle = document.createElement("h2");
-        targetsTitle.textContent = responseData.goal12.content.targetsTitle;
-        targetsec.appendChild(targetsTitle);
+        const targetsh = document.createElement("h2");
+        targetsh.textContent = responseData.goal12.content.targetsh;
+        targetsec.appendChild(targetsh);
         
-        const scrollBox = document.createElement("article");
-        scrollBox.setAttribute("id", "scroll");
-        targetsec.appendChild(scrollBox);
+        const targetsp = document.createElement("article");
+        targetsp.setAttribute("id", "Scroll");
+        targetsp.textContent = responseData.goal12.content.targetOverview;
+        targetsec.appendChild(targetsp);
         
-        const targetsList = [7];
-        targetsList[0] = responseData.goal12.content.targets.target1;
-        targetsList[1] = responseData.goal12.content.targets.target2;
-        targetsList[2] = responseData.goal12.content.targets.target3;
-        targetsList[3] = responseData.goal12.content.targets.target4;
-        targetsList[4] = responseData.goal12.content.targets.target5;
-        targetsList[5] = responseData.goal12.content.targets.target6;
+        const targetsList = [6];
+        targetsList[0] = responseData.goal12.content.targetsp.target1;
+        targetsList[1] = responseData.goal12.content.targetsp.target2;
+        targetsList[2] = responseData.goal12.content.targetsp.target3;
+        targetsList[3] = responseData.goal12.content.targetsp.target4;
+        targetsList[4] = responseData.goal12.content.targetsp.target5;
+        targetsList[5] = responseData.goal12.content.targetsp.target6;
     
         
        // console.log(targetsList);
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             tList.appendChild(listItem);
 
         }
-        scrollBox.appendChild(tList);
+        targetsp.appendChild(tList);
 
     })
     .catch(error => console.error("Error fetching JSON data:", error))

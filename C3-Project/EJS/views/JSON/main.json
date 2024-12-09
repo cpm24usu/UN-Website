@@ -151,8 +151,9 @@
             "greeng12": "../Media/greeng12.jpg",
             "HowtheSACplanstotackletheseissuesh": "How the SAC plans to tackle these issues",
             "HowtheSACplanstotackletheseissuesp":"The substantially commity plan to tacke these issues by raising awareness to the inhabitants of cities known to have a large carbon foot print. By bringing light to thses issues the commity hopes to enlighten enough people to change their ways of consumption and production so that there will be a visivle change in CO2 emmisions in years to come.",
-            "targetsTitle": "The UN's Targets",
-            "targets": {
+            "targetsh": "The UN's Targets",
+            "targetOverview": "The UN has several important targets it wants to meet for this sustainable development goal:",
+            "targetsp": {
                 "target1":"Implement the 10-year framework of programmes on sustainable consumption and production, all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries",
                 "target2": "By 2030, achieve the sustainable management and efficient use of natural resources",
                 "target3": "By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses",
