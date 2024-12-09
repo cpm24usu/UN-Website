@@ -78,6 +78,7 @@
             "issue": "Why should we focus on this?",
             "issueInfo": "Water is essential to not only health, but also poverty reduction, food security, peace and ecosystems. Despite being a basic human right, countries are facing growing challenges linked to water scarcity. In 2022, 2.2 billion people lacked safely managed drinking water, and 3.5 billion lacked safely managed sanitation.",
             "reportCard": "../Media/goal6reportcard.jpg",
+            "reportAlt": "Global report card on clean water and sanitation",
             "targetsTitle": "The UN's Targets",
             "targetsInfo": "The UN has several important targets it wants to meet for this sustainable development goal: ",
             "targets": {
@@ -95,6 +96,7 @@
             "conclusion": "To achieve the UN's main goal of ensuring equal access to safe water, sanitation and hygeine, lots of steps need to be taken. There needs to be a substantial increase in currrent global rates in progress: sixfold for drinking water, fivefold for sanitation and threefold for hygeine. Many of the challenges to achieving universal access are compounded by conflicts and climate change. Increasing sector-wide investment, promoting innovation and adopting a more integreated and holistic approach to water management.",
             "videoHeading": "Clean Water and Sanitation Video",
             "targetImg": "../Media/goal6-target.png",
+            "targetAlt": "The UN's main target is to provide clean water and sanitation for all by 2030.",
             "back": "Back to the top"
 
             
