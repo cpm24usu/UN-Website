@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const topTop = document.getElementById("topLink")
         let topLink = document.createElement("a");
         topLink.setAttribute("class", "headingLinks");
-        topLink.setAttribute("id", "topLink");
+        topLink.setAttribute("id", "topLink6");
         topLink.textContent = responseData.goal6.content.back;
         topLink.href = "#top";
         topTop.appendChild(topLink);        // creates link element to take the user back to the top of the page
