@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         let infoArticleOne = document.createElement('article');
         infoArticleOne.id = "moreInfo";
+        let infoHeading = document.createElement('h1');
+        infoHeading.textContent = responseData.goal13.filler.moreInfo;
         let infoFigureOne = document.createElement('figure');
         
 
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         figcapOne.appendChild(infoText);
 
         mainInfo.appendChild(infoArticleOne);
+        infoArticleOne.appendChild(infoHeading);
         infoArticleOne.appendChild(infoFigureOne);
         infoFigureOne.appendChild(infoImgOne)
         infoFigureOne.appendChild(figcapTwo);
@@ -141,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         //combining stats elemnets 
 
-        stats.appendChild(statsTitle);
+        statsArticle.appendChild(statsTitle);
         stats.appendChild(statsArticle);
         
         statsArticle.appendChild(plasticStatVal);

@@ -82,6 +82,7 @@
             "targetsTitle": "The UN's Targets",
             "targetsInfo": "The UN has several important targets it wants to meet for this sustainable development goal: ",
             "targets": {
+                "targetHeader": "The UN's Goals:",
                 "target1":"By 2030, achieve universal and equitable access to safe and affordable drinking water for all.",
                 "target2": "By 2030, achieve access to adequate and equitable sanitation and hygiene for all and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations.",
                 "target3": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally.",
@@ -92,19 +93,12 @@
             },
             "reveal": "Click me to reveal!",
             "hide": "Click me to hide!",
-            "goal6Vid":"../Media/The Sustainable Development Goals Explained Clean Water and Sanitation.mp4",
+            "goal6Vid":"../Media/The-Sustainable-Development-Goals-Explained-Clean-Water-and-Sanitation.mp4",
             "conclusion": "To achieve the UN's main goal of ensuring equal access to safe water, sanitation and hygeine, lots of steps need to be taken. There needs to be a substantial increase in currrent global rates in progress: sixfold for drinking water, fivefold for sanitation and threefold for hygeine. Many of the challenges to achieving universal access are compounded by conflicts and climate change. Increasing sector-wide investment, promoting innovation and adopting a more integreated and holistic approach to water management.",
             "videoHeading": "Clean Water and Sanitation Video",
             "targetImg": "../Media/goal6-target.png",
             "targetAlt": "The UN's main target is to provide clean water and sanitation for all by 2030.",
             "back": "Back to the top"
-
-            
-
-            
-
-
-
         }
     },
 
@@ -151,33 +145,31 @@
             "greeng12": "../Media/greeng12.jpg",
             "HowtheSACplanstotackletheseissuesh": "How the SAC plans to tackle these issues",
             "HowtheSACplanstotackletheseissuesp":"The substantially commity plan to tacke these issues by raising awareness to the inhabitants of cities known to have a large carbon foot print. By bringing light to thses issues the commity hopes to enlighten enough people to change their ways of consumption and production so that there will be a visivle change in CO2 emmisions in years to come.",
-            "targetsh": "The UN's Targets",
             "targetOverview": "The UN has several important targets it wants to meet for this sustainable development goal:",
             "targetsp": {
+                "targetsh": "The UN's Targets",
                 "target1":"Implement the 10-year framework of programmes on sustainable consumption and production, all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries",
                 "target2": "By 2030, achieve the sustainable management and efficient use of natural resources",
                 "target3": "By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses",
                 "target4": "By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment",
                 "target5": "By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse",
                 "target6": "Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle"
+            }
+            
         }
-        
-     }
-}, 
+    }, 
 
     "goal13": {
         "images":{
             "climateAction": "Media/goal13.png",
             "imgone": "Media/forestFire.jpg",
             "imgtwo": "Media/tornado.png"
-
         },
 
         "alt":{
             "climateAction": "Goal 13 - Climate Action Logo", 
             "forest": "Forst Fire",
             "tornado": "Tornado"
-
         },
 
         "filler": {
@@ -187,7 +179,8 @@
             "description": "There's a climate cataclysm approaching which will affect everyone and its impact is being underestimated and so there are vital steps people can take to limit their carbon footprint. The increasing effects of climate change are more harmful to society than are currently being  acknowledged. The worse climate change gets the more intense natural disasters (wildfires, hurricanes, droughts, floods etc.)  will be which can impact infrastructure, crops  and development.",
             "effects": "Climate change is a cyclical cycle and so its effects and causes will snowball into one. This is not only detrimental to developing and emerging countries who are the most vulnerable but also developed countries who still have vulnerable people within them and will impact the standard of living of everyone. The increasing intensity of these natural disasters has led to a 15x higher mortality rate to natural disasters in low vulnerability areas.  The increasing severity of these natural disasters also means that developing and emerging countries are using resources unnecessarily in aims to defend themselves from the effects of these natural disasters. This is a further waste of resources, time and energy and provides an opportunity cost. ​If action is not taken now, then the effects of these disasters will only become more intense and have increasingly harmful effects on this generation and the next. This is why sustainable development is necessary as it helps ensure future generations are taken care of while still fulfilling the needs of the current one.",
             "solutions": "To ensure that the impact of climate change is limited we need to change our way of living. This includes choosing more carbon neutral or cordon free alternatives like using renewable energy, but this alone won't do. We need to implement planet healthy initiatives in every aspect of our lives; food, transport, industry, energy, agriculture, forestry to ensure that sea temperatures stop rising.​ Additionally, greater investments into the mitigation of climate change will  result in a faster and greater change. This is why it is important to promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth and local and marginalized communities, find a Goal 13 charity you want to support. Any donation, big or small, can make a difference! and choose reusable products. Use an eco-bag for shopping and a reusable water bottle or a cup to reduce your plastic waste.",
-            "change": "Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible."
+            "change": "Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible.",
+            "moreInfo": "What Can We Do?"
         }, 
 
         "stats":{

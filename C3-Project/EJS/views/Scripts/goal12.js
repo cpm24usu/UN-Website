@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         const uncrpg12 = document.createElement("img");
         uncrpg12.setAttribute("id", "uncrpg12");
+        uncrpg12.setAttribute("alt", "Image from the UN website showing a man cleaning hazardous materials");
         uncrpg12.src = responseData.goal12.content.uncrpg12;
         consumptionsec.appendChild(uncrpg12);
 
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         const greeng12 = document.createElement("img");
         greeng12.setAttribute("id", "greeng12");
+        greeng12.setAttribute("alt", "Weighing scales made of grass/leaves in a field");
         greeng12.src = responseData.goal12.content.greeng12;
         sacsec.appendChild(greeng12);
 
@@ -100,13 +102,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         sacsec.appendChild(HowtheSACplanstotackletheseissuesp);
         
         const targetsh = document.createElement("h2");
-        targetsh.textContent = responseData.goal12.content.targetsh;
-        targetsec.appendChild(targetsh);
+        targetsh.textContent = responseData.goal12.content.targetsp.targetsh;
         
         const targetsp = document.createElement("article");
         targetsp.setAttribute("id", "Scroll");
         targetsp.textContent = responseData.goal12.content.targetOverview;
         targetsec.appendChild(targetsp);
+        targetsp.prepend(targetsh);
         
         const targetsList = [6];
         targetsList[0] = responseData.goal12.content.targetsp.target1;

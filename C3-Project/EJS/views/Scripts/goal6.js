@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // targets.appendChild(revealBtn);
         
         const scrollBox = document.createElement("article");
+        const scrollHeader = document.createElement("h3");
+        scrollHeader.textContent = responseData.goal6.content.targets.targetHeader;
         scrollBox.setAttribute("id", "scroll");
         scrollBox.style.display = "none";
         targets.appendChild(scrollBox);
@@ -88,6 +90,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // appends the json text for each target to an array
 
     
+        scrollBox.appendChild(scrollHeader);
         
        // console.log(targetsList);
         const tList = document.createElement("ol");  // creates an ordered list element

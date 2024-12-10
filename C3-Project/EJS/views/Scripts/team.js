@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         // creates section for each member to hold name and bios
 
-        const container = document.createElement("section");
+        const container = document.createElement("div");
         container.setAttribute("id", "bannerContainer");
         teamContent.appendChild(container);
         // creates a section to hold the goals image
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         const banner = document.createElement("img");
         banner.setAttribute("id", "banner");
+        banner.setAttribute("alt", "A banner saying 'Sustainable Development Goals'");
         banner.src = responseData.team.content.goalsBanner;
         container.appendChild(banner);
         // creates image element to display the goal image
