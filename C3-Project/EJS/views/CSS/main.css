@@ -575,7 +575,20 @@ footer{
 
     /* Goal 12 Page*/
 
+    #grid-contents-maincontent{
+        grid-row: 2 / 7 !important;
+        grid-column: 4 / 10 !important;
+    }
 
+    #articlelinks{
+        grid-row: 2 / 6 !important;
+        grid-column: 1 / 4 !important;
+    }
+
+    #backtotop{
+        grid-row: 6 / 7 !important;
+        grid-column: 1 / 4 !important;
+    }
 
     /* Goal 13 Page*/
     #headings{
