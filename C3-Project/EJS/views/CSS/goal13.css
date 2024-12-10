@@ -38,8 +38,8 @@ figcaption{
     display: inline-block;
     border: 1px solid #4aadff;
     border-radius: 5px;
-    margin: 30px 30px 30px 30px;
-    padding: 30px 30px 30px 30px;
+    margin: 30px 15px;
+    padding: 30px;
 }
 
 .facts{
@@ -92,8 +92,8 @@ figcaption{
     border: 1px solid #4aadff;
     border-radius: 5px;
     margin: 30px 5px;
-    padding: 30px 30px 30px 30px;
-    font-size: calc(max(12px, 1vw + 1vh)) !important;
+    padding: 30px 15px;
+    font-size: calc(max(12px, 1vw + 1vh));
 }
 
 #topLink{
