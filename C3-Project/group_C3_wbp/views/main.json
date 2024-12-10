@@ -1,0 +1,201 @@
+{
+    "common": {
+            "headerText": {
+                "darkModeButton": "Toggle Dark Mode",
+                "homeLink": "Home",
+                "teamLink": "Team Info",
+                "signUpLink": "Sign Up",
+                "logoAlts": {
+                    "wideLogo": "UN Logo with 'United Nations' written next to it",
+                    "narrowLogo": "UN Logo without text"
+                }
+            },
+            "media": {
+                "logoWithoutText": "../Media/UNLogo.png",
+                "logoWithText": "../Media/HorizontalUNLogo.png",
+                "goal6": "../Media/goal6.png",
+                "goal12": "../Media/goal12.png",
+                "goal13": "../Media/goal13.png"
+            },
+            "externalLinks": {
+                "UNHomepage": "UN Homepage",
+                "goal6": "UN Goal 6: Clean Water and Sanitation",
+                "goal12": "UN Goal 12: Responsible Consumption and Production",
+                "goal13": "UN Goal 13: Climate Action"
+            },
+            "links": {
+                "externalHeader": "External Links",
+                "UNHomepage": "https://www.un.org/sustainabledevelopment/",
+                "Goal6": "https://www.un.org/sustainabledevelopment/water-and-sanitation/",
+                "Goal12": "https://www.un.org/sustainabledevelopment/sustainable-consumption-production/",
+                "Goal13": "https://www.un.org/sustainabledevelopment/climate-change/"
+            },
+            "footer": {
+                "content": "UN Sustainable Development Goals Project - Web-Based Programming - Group C3"
+            }
+        },
+
+    "homepage": {
+            "content": {
+                "title": "About this website",
+                "intro": "Welcome to our site, dedicated to raising awareness and understanding for three of the United Nations Sustainable Development Goals: Clean Water and Sanitation, Goal 6; Responsible Consumption and Production, Goal 12; and Climate Action, Goal 13.",
+                "goal6header": "Goal 6: Clean Water and Sanitation",
+                "goal6": "Water, sanitation and hygiene are basic requirements for health, dignity, and sustainable development. Goal 6 is to ensure all people have access to sufficient, safe, and affordable drinking water, with adequate and equitable access to sanitation.",
+                "goal12header": "Goal 12: Responsible Consumption and Production",
+                "goal12": "Goal 12 deals with ensuring production is sustainable with respect to consumption, reducing waste, preserving resources, and protection of the environment.",
+                "goal13header": "Goal 13: Climate Action",
+                "goal13": "Climate change is currently one of the most important threats to the environmentand human health in every continent. Goal 13 calls for urgent action both at the national levels and internationally that will help to reduce the effects of climate change.",
+                "outro": "Click on the images on the right side of the page to find out more about each of the goals."
+            },
+            "media": {
+                "mp4": "../Media/17Goals.mp4",
+                "goal6": "../Media/goal6homepage.jpg",
+                "goal12": "../Media/goal12homepage.jpg",
+                "goal13": "../Media/goal13homepage.jpg",
+                "allGoals": "../Media/allGoals.png"
+            },
+            "altText": {
+                "video": "A video from the UN YouTube Channel showcasing all 17 SDGs",
+                "allGoals": "Image showing all 17 goals from the UN website",
+                "goalImg1": "Image for goal 6 from the UN website",
+                "goalImg2": "Image for goal 12 from the UN website",
+                "goalImg3": "Image for goal 13 from the UN website"
+            }
+        },
+
+    "signup": {
+            "content": {
+                "title": "Sign Up For Our Newsletter",
+                "intro": "Fill in the form below to join the mailing list for our newsletter"
+            }
+        },
+
+    "goal6": {
+        "content": {
+            "title": "Goal 6 - Clean Water and Sanitation",
+            "overview1": "Access to clean and safe water is a basic human right. However, a rising demand for water due to rapid population growth and urbanization is making it increasingly difficult for fair and equal access. Half of the world is now facing severe water scarcity at least once a month. ",
+            "overview2": "The UN aims to improve infrastructure ans sanitation facilities, protect and restore water-related ecosystems and step up hygeine education. By following these crucial steps, it aims to ensure universal access to safe and affordable drinking water for the whole population by 2030. It has already seen a great level of success with this plan, as the proportion of the world's access to safely managed drinking water increases from 69% to 73% from 2015 to 2022. ",
+            "issue": "Why should we focus on this?",
+            "issueInfo": "Water is essential to not only health, but also poverty reduction, food security, peace and ecosystems. Despite being a basic human right, countries are facing growing challenges linked to water scarcity. In 2022, 2.2 billion people lacked safely managed drinking water, and 3.5 billion lacked safely managed sanitation.",
+            "reportCard": "../Media/goal6reportcard.jpg",
+            "reportAlt": "Global report card on clean water and sanitation",
+            "targetsTitle": "The UN's Targets",
+            "targetsInfo": "The UN has several important targets it wants to meet for this sustainable development goal: ",
+            "targets": {
+                "targetHeader": "The UN's Goals:",
+                "target1":"By 2030, achieve universal and equitable access to safe and affordable drinking water for all.",
+                "target2": "By 2030, achieve access to adequate and equitable sanitation and hygiene for all and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations.",
+                "target3": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally.",
+                "target4": "By 2030, substantially increase water-use efficiency across all sectors and ensure sustainable withdrawals and supply of freshwater to address water scarcity and substantially reduce the number of people suffering from water scarcity.",
+                "target5": "By 2030, implement integrated water resources management at all levels, including through transboundary cooperation as appropriate.",
+                "target6": " By 2020, protect and restore water-related ecosystems, including mountains, forests, wetlands, rivers, aquifers and lakes"
+            
+            },
+            "reveal": "Click me to reveal!",
+            "hide": "Click me to hide!",
+            "goal6Vid":"../Media/The-Sustainable-Development-Goals-Explained-Clean-Water-and-Sanitation.mp4",
+            "conclusion": "To achieve the UN's main goal of ensuring equal access to safe water, sanitation and hygeine, lots of steps need to be taken. There needs to be a substantial increase in currrent global rates in progress: sixfold for drinking water, fivefold for sanitation and threefold for hygeine. Many of the challenges to achieving universal access are compounded by conflicts and climate change. Increasing sector-wide investment, promoting innovation and adopting a more integreated and holistic approach to water management.",
+            "videoHeading": "Clean Water and Sanitation Video",
+            "targetImg": "../Media/goal6-target.png",
+            "targetAlt": "The UN's main target is to provide clean water and sanitation for all by 2030.",
+            "back": "Back to the top"
+        }
+    },
+
+    "team": {
+        "content": {
+            "title": "Team Info",
+            "info": "Learn about the team behind this website.",
+            "members":{
+                "member1": "Ellie",
+                "member2": "Nathan",
+                "member3": "Phil",
+                "member4": "Victoria"
+            },
+            "bios":{
+                "ellieBio": "I worked on the content and layout of the Clean Water and Sanitation page and the team information page. I also designed the moodboard and colour scheme for the website.",
+                "nathanBio": "I worked on the homepage and signup page, as well as the backend server and its interaction with the client. I also designed the inital wireframes for the website.",
+                "philBio": "I worked on the content and layout of the Responsible Consumption and Production page. I also designed the site map for the website. ",
+                "vicBio": "I worked on the content and layout of the Climate Action page."
+                
+
+            },
+            "revealBios": "Click me to reveal",
+            "goalsBanner": "../Media/goalsBanner.png"
+
+        }
+        
+    },
+
+
+    "goal12": {
+        "content": {
+            "consumptionlink": "Consumption",
+            "productionlink": "Production",
+            "SAClink": "How the SAC plans to tackle these issues",
+            "top": "Back to the top",
+            "consumptionvideo": "../Media/consumption.mp4",
+            "title": "Goal 12 - Responsible Consumption and Production",
+            "overview": "The industrial revolution has had a knock on effect on the world's ecosystems, adversely affecting the resources that we will later have no other choice but to depend on. for this reason it is up to us as consumers to be more mindful as to how we go about the use of energy and to consider switiching to more sustainable forms of energy​",
+            "uncrpg12": "../Media/consumption2.jpg",
+            "Consumptionh": "Consumption",
+            "Consumptionp": "As of the industrial revolution the planet’s natural climate has taken a turn for the worst. in terms of our day-to-day consumption, our reliance on the use of fossil fuels has become crippling for the ecosystems of the world.",
+            "Productionh": "Production",
+            "Productionp":"One of the ways in which those responsible for production can be more mindful about their works impact on the environment and climate, can come in the form of farmers diversifying their crops and livestock. The reason for which this could help reduce their carbon footprint, is due to the fact that through the use of diversifying their assets, each party wont overwhelm the local climate",
+            "greeng12": "../Media/greeng12.jpg",
+            "HowtheSACplanstotackletheseissuesh": "How the SAC plans to tackle these issues",
+            "HowtheSACplanstotackletheseissuesp":"The substantially commity plan to tacke these issues by raising awareness to the inhabitants of cities known to have a large carbon foot print. By bringing light to thses issues the commity hopes to enlighten enough people to change their ways of consumption and production so that there will be a visivle change in CO2 emmisions in years to come.",
+            "targetOverview": "The UN has several important targets it wants to meet for this sustainable development goal:",
+            "targetsp": {
+                "targetsh": "The UN's Targets",
+                "target1":"Implement the 10-year framework of programmes on sustainable consumption and production, all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries",
+                "target2": "By 2030, achieve the sustainable management and efficient use of natural resources",
+                "target3": "By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses",
+                "target4": "By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment",
+                "target5": "By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse",
+                "target6": "Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle"
+            }
+            
+        }
+    }, 
+
+    "goal13": {
+        "images":{
+            "climateAction": "Media/goal13.png",
+            "imgone": "Media/forestFire.jpg",
+            "imgtwo": "Media/tornado.png"
+        },
+
+        "alt":{
+            "climateAction": "Goal 13 - Climate Action Logo", 
+            "forest": "Forst Fire",
+            "tornado": "Tornado"
+        },
+
+        "filler": {
+            "G13title": "Goal 13 - What is Climate Action?",
+            "mainheading": "The facts...",
+            "conctitle": "In conclusion...",
+            "description": "There's a climate cataclysm approaching which will affect everyone and its impact is being underestimated and so there are vital steps people can take to limit their carbon footprint. The increasing effects of climate change are more harmful to society than are currently being  acknowledged. The worse climate change gets the more intense natural disasters (wildfires, hurricanes, droughts, floods etc.)  will be which can impact infrastructure, crops  and development.",
+            "effects": "Climate change is a cyclical cycle and so its effects and causes will snowball into one. This is not only detrimental to developing and emerging countries who are the most vulnerable but also developed countries who still have vulnerable people within them and will impact the standard of living of everyone. The increasing intensity of these natural disasters has led to a 15x higher mortality rate to natural disasters in low vulnerability areas.  The increasing severity of these natural disasters also means that developing and emerging countries are using resources unnecessarily in aims to defend themselves from the effects of these natural disasters. This is a further waste of resources, time and energy and provides an opportunity cost. ​If action is not taken now, then the effects of these disasters will only become more intense and have increasingly harmful effects on this generation and the next. This is why sustainable development is necessary as it helps ensure future generations are taken care of while still fulfilling the needs of the current one.",
+            "solutions": "To ensure that the impact of climate change is limited we need to change our way of living. This includes choosing more carbon neutral or cordon free alternatives like using renewable energy, but this alone won't do. We need to implement planet healthy initiatives in every aspect of our lives; food, transport, industry, energy, agriculture, forestry to ensure that sea temperatures stop rising.​ Additionally, greater investments into the mitigation of climate change will  result in a faster and greater change. This is why it is important to promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth and local and marginalized communities, find a Goal 13 charity you want to support. Any donation, big or small, can make a difference! and choose reusable products. Use an eco-bag for shopping and a reusable water bottle or a cup to reduce your plastic waste.",
+            "change": "Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible.",
+            "moreInfo": "What Can We Do?"
+        }, 
+
+        "stats":{
+            "statstitle": "Our goals:",
+            "plasticVal": "By 2060",
+            "plastic": "a 60% reduction in plastic waste ",
+            "disasterVal": "By 2050",
+            "disaster": "a 20% reduction in natural disasters",
+            "paperVal": "By 2055",
+            "paper": "a 50% reduection in paper use and waste",
+            "climateVal": "By 2028",
+            "climate": "Integrate climate change measures into national policies, strategies and planning",
+            "resVal": "By 2030",
+            "res": "Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries"
+        }
+    }
+}
+    

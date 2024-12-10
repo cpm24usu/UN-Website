@@ -1,0 +1,2 @@
+SMTP details:
+    pass: "qwos zapm nglk cypj"
