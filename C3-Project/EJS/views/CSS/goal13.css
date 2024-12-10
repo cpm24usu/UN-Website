@@ -58,25 +58,20 @@ figcaption{
 
 /*images */
 #goalimg{
-    height: 350px;
-    width: 400px;
+    width: 100%;
     border-radius: 25px;
-    border: 2px solid green;
-    
-    
+    border: 2px solid green;  
 } 
 
 #forest{
-    height: 400px;
-    width: 450px;
+    width: 100%;
     border: 2px solid green;
     border-radius: 25px;
 }
 
 
 #tornado{
-    height: 400px;
-    width: 450px;
+    width: 100%;
     border: 2px solid green;
     border-radius: 25px;
 
@@ -93,12 +88,12 @@ figcaption{
     color: #0075a3;
     text-align: center;
     font-size: x-large;
-    padding: 30px 30px 30px 30px;
     display: inline-block;
     border: 1px solid #4aadff;
     border-radius: 5px;
-    margin: 30px 30px 30px 30px;
+    margin: 30px 5px;
     padding: 30px 30px 30px 30px;
+    font-size: calc(max(12px, 1vw + 1vh)) !important;
 }
 
 #topLink{

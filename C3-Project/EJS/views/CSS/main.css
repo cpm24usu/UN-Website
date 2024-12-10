@@ -581,6 +581,8 @@ footer{
     #headings{
         grid-column: 1 / 4 !important;
         grid-row: 2 / 3 !important;
+        padding: 10px auto !important;
+        display: inline-block;
     }
 
     #stats{
